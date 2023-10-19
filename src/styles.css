@@ -1,0 +1,52 @@
+/* Ensure the body takes the full height and reset some default styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* website name, WeCare */
+.navbar .website-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* navigation links */
+.navbar .nav-links {
+    display: flex;
+    gap: 15px; 
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+/* Navlink on hover */
+.navbar .nav-links a:hover {
+    color: #007BFF; 
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    padding: 5px 10px; 
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+
