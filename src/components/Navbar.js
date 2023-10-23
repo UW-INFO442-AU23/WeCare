@@ -8,10 +8,13 @@ function Navbar() {
           <a className="navbar-brand" href="/">WeCare</a>
         </div>
         <ul className="nav navbar-nav navbar-right">
+          <li><Link to="/login">Login</Link></li>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/quiz">Quiz</Link></li>
           <li><Link to="/resources">Resources</Link></li>
           <li><Link to="/profile">Profile</Link></li>
+          
+
         </ul>
       </div>
     </nav>

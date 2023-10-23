@@ -5,6 +5,8 @@ import Home from './components/Home';
 import Quiz from './components/Quiz';
 import Resources from './components/Resources';
 import Profile from './components/Profile';
+import Login from './components/Login';
+
 import './styles.css';
 
 
@@ -19,6 +21,8 @@ function App() {
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/login" element={<Login />} />
+  
           </Routes>
         </div>
       </Router>
