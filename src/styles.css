@@ -39,6 +39,25 @@ body, html {
     color: #007BFF; 
 }
 
+.home-img {
+    width: 100%; 
+    height: 500px;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}
+
+.container {
+    padding-bottom: 30px;
+}
+
+p.mission {
+    padding: 20px;
+}
+
+/* .quiz-button {
+   
+} */
+
 .footer {
     position: fixed;
     bottom: 0;
