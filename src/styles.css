@@ -47,6 +47,12 @@ body, html {
     padding: 5px 10px; 
     background-color: #f4f4f4;
     text-align: left;
+    font-size: 14px;
+}
+
+.footer h1 {
+    font-size: 17px;
+    font-weight: bold;
 }
 
 
