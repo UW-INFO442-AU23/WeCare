@@ -48,11 +48,58 @@ return(
 )
 }
 
+function Testing2(){
+  return(
+    <div class="container">
+  <h1>My First Bootstrap Page</h1>
+  <p>This is some text.</p> 
+</div>
+  )
+
+}
+
 function Resources() {
-        Testing();
+        Testing2();
     return (
       <div>
-        <div>Welcome to the WeCare Resources Page!</div>
+        
+          <h2>Learn more</h2>
+      
+        <div class="row, resourcerow">
+  <div class="column">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Charity Navigator</h4>
+        <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Charity Navigator</h4>
+        <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Charity Navigator</h4>
+        <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Charity Navigator</h4>
+        <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
+      </div>
+    </div>
+  </div>
+</div>
+      
       </div>
     
     
