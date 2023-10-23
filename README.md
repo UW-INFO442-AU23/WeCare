@@ -26,6 +26,12 @@ In the words of Daniel C., "Why is the public not more involved in a debate on t
 
 The aim of our project is to bridge this gap of awareness, believing that enlightenment and awareness-building are vital tools in the battle against the global hunger crisis.
 
+## Features
+- Quiz
+- Resources
+- Favorite charities
+- Log in and customize profile
+
 ## Installation & Setup
 
 1. Clone the repository to your local machine.
