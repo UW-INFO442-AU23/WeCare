@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -12,7 +13,7 @@ import Register from './components/Register';
 import './styles.css';
 
 
-function App() {
+function App(props) {
   return (
     <div className="app-container">
       <Router>
@@ -21,7 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/quiz" element={<Quiz />} />
-            <Route path="/resources" element={<Resources />} />
+            <Route path="/resources" element={<Resources res={props.res}/>} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />}/>

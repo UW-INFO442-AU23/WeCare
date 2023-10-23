@@ -10,6 +10,7 @@ function QuizContent({ questions, onAnswer }) {
     };
 
     // Check if we've reached the end of the questions array
+    // Change this to return the quiz results page that aligns with user chosen questions 
     if (currentQuestion >= questions.length) {
         return <div className="text-center mt-4">Thank you for taking the quiz!</div>;
     }
