@@ -2,17 +2,22 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-      <div className="navbar">
-          <div className="website-name">WeCare</div>
-          <div className="nav-links">
-              <a href="/">Home</a>
-              <a href="/quiz">Quiz</a>
-              <a href="/profile">Profile</a>
-              <a href="/resources">Resources</a>
-          </div>
+    <nav className="navbar navbar-default">
+      <div className="container-fluid">
+        <div className="navbar-header">
+          <a className="navbar-brand" href="#">WeCare</a>
+        </div>
+        <ul className="nav navbar-nav navbar-right">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/quiz">Quiz</Link></li>
+          <li><Link to="/resources">Resources</Link></li>
+          <li><Link to="/profile">Profile</Link></li>
+        </ul>
       </div>
+    </nav>
   );
 }
+
 
 
 export default Navbar;
