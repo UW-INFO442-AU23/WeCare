@@ -10,19 +10,22 @@ import './styles.css';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/resources" element={<Resources />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-      </div>
+    <div className="app-container">
+      <Router>
+        <Navbar />
+        <div className="content-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes>
+        </div>
+      </Router>
       <Footer />
-    </Router>
+    </div>
   );
 }
+
 
 export default App;

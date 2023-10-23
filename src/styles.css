@@ -7,25 +7,9 @@ body, html {
 }
 
 /* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 10px 20px;
-    background-color: #f4f4f4;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* website name, WeCare */
-.navbar .website-name {
+.navbar .navbar-brand {
     font-size: 1.5em;
     font-weight: bold;
-}
-
-/* navigation links */
-.navbar .nav-links {
-    display: flex;
-    gap: 15px; 
 }
 
 .navbar .nav-links a {
@@ -36,15 +20,11 @@ body, html {
 
 /* Navlink on hover */
 .navbar .nav-links a:hover {
-    color: #007BFF; 
+    color: #007BFF;
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%; 
-    padding: 5px 10px; 
+    padding: 5px 10px;
     background-color: #f4f4f4;
     text-align: left;
     font-size: 14px;
@@ -54,5 +34,17 @@ body, html {
     font-size: 17px;
     font-weight: bold;
 }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* take up at least the full height of the viewport */
+  }
+
+  .content-container {
+    flex: 1; /* take up all available space */
+  }
+
+
 
 
