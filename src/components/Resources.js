@@ -31,7 +31,7 @@ function Resources(props) {
     return (
       <div>
         
-          <h2>Learn more</h2>
+          <h2 class="learnmore">Learn more</h2>
           {newCardArray}
       
         {/* <div class="row, resourcerow">
