@@ -5,7 +5,7 @@ function Navbar() {
     <nav className="navbar navbar-default">
       <div className="container-fluid">
         <div className="navbar-header">
-          <a className="navbar-brand" href="#">WeCare</a>
+          <a className="navbar-brand" href="/">WeCare</a>
         </div>
         <ul className="nav navbar-nav navbar-right">
           <li><Link to="/">Home</Link></li>
