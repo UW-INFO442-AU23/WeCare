@@ -8,6 +8,7 @@ import Resources from './components/Resources';
 import Profile from './components/Profile';
 import Login from './components/Login';
 import Register from './components/Register';
+import Logout from './components/Logout'
 
 
 import './styles.css';
@@ -26,6 +27,7 @@ function App(props) {
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />}/>
+            <Route path="/logout" element={<Logout />} />
 
   
           </Routes>
