@@ -176,3 +176,23 @@ p.mission {
 .register div {
   margin-top: 7px;
 }
+
+/* Style for the quiz results page */
+.card-charities {
+  flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  background-color: #dcdcdc; /*can add image for background as well */
+  }
+
+.card-charities > div {
+  margin: 10px; 
+}
+
+.charityhead {
+  margin: 50px;
+}
+
