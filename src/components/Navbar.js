@@ -13,9 +13,11 @@ function Navbar() {
           <li><Link to="/quiz">Quiz</Link></li>
           <li><Link to="/resources">Resources</Link></li>
           <li><Link to="/profile">Profile</Link></li>
-          <li><Link to="/logout">Logout</Link></li>
+          {/*<li><Link to="/logout">Logout</Link></li>*/}
           
 
+          {/* <li><Link to ="/quizresult1">QuizResult1</Link></li>
+          <li><Link to ="/quizresult2">QuizResult2</Link></li> */}
         </ul>
       </div>
     </nav>

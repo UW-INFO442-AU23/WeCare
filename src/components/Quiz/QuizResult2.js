@@ -1,5 +1,4 @@
-// make cards + content here (5 cards)
-
+//add option b charities 
 function QuizResult2 () {
     return (
         <div>
