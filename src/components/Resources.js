@@ -33,41 +33,6 @@ function Resources(props) {
         
           <h2 class="learnmore">Learn more</h2>
           {newCardArray}
-      
-        {/* <div class="row, resourcerow">
-  <div class="column">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Charity Navigator</h4>
-        <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Charity Navigator</h4>
-        <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Charity Navigator</h4>
-        <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Charity Navigator</h4>
-        <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
-      </div>
-    </div>
-  </div>
-</div> */}
       </div>
     
     
