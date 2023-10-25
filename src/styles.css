@@ -23,6 +23,7 @@ body, html {
     color: #007BFF;
 }
 
+/* Styling for home page banner */
 .home-img {
     width: 100%;
     height: 500px;
@@ -30,13 +31,34 @@ body, html {
     padding-bottom: 10px; 
 }
 
-p.mission {
-    font-size: 16px;
+/* Mission Title styling */
+h1.mission-title {
+    margin-left: 25px;
 }
 
+/* Mission Statement styling */
+p.mission {
+    margin: 20px;
+    padding: 25px;
+    font-size: 16px;
+    border-radius: 20px;
+    box-shadow: rgba(0,0,0,0.9) 0 0 10px;
+    background-color:cornsilk;
+}
+
+/* Embedded media element styling */
+.media-element {
+    margin: 25px;
+    width: 560px;
+    height: 315px;
+    box-shadow: rgba(0,0,0,0.7) 0 0 10px;
+}
+
+/* Take Quiz Button styling */
 .btn {
     font-size: 18px;
     margin: 20px;
+    margin-top: 30px;
 }
 
 .footer {
