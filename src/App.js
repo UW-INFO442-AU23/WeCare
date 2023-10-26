@@ -8,7 +8,8 @@ import Resources from './components/Resources';
 import Profile from './components/Profile';
 import Login from './components/Login';
 import Register from './components/Register';
-//import Logout from './components/Logout'
+import Logout from './components/Logout'
+import ForgotPassword from './components/ForgotPassword';
 
 // import QuizResult1 from './components/Quiz/QuizResult1'
 // import QuizResult2 from './components/Quiz/QuizResult2'
@@ -26,10 +27,11 @@ function App(props) {
             <Route path="/" element={<Home />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/resources" element={<Resources res={props.res}/>} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile" element={<Profile />} /> 
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />}/>
-            {/*<Route path="/logout" element={<Logout />} />*/}
+            <Route path="/logout" element={<Logout />} />
+            <Route path="/reset" element={<ForgotPassword/>} />
 
   
             {/* <Route path="/quizresult1" element={<QuizResult1 /> } />
