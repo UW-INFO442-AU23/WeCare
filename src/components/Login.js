@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { auth, logInWithEmailAndPassword, signInWithGoogle } from "./f-config";
 import { useAuthState } from "react-firebase-hooks/auth";
-import "../styles.css";
+import "../style/styles.css";
 
 
 function Login() {
@@ -57,6 +57,5 @@ function Login() {
         </div>
       );
     }
-    
+
     export default Login;
-    

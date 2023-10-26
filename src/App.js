@@ -14,33 +14,29 @@ import ForgotPassword from './components/ForgotPassword';
 // import QuizResult1 from './components/Quiz/QuizResult1'
 // import QuizResult2 from './components/Quiz/QuizResult2'
 
-import './styles.css';
-
+import './style/styles.css';
+import './style/AnimatedIconStyles.css'
 
 function App(props) {
   return (
-    <div className="app-container">
-      <Router>
-        <Navbar />
-        <div className="content-container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/resources" element={<Resources res={props.res}/>} />
-            <Route path="/profile" element={<Profile />} /> 
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />}/>
-            <Route path="/logout" element={<Logout />} />
-            <Route path="/reset" element={<ForgotPassword/>} />
-
-  
-            {/* <Route path="/quizresult1" element={<QuizResult1 /> } />
-            <Route path="/quizresult2" element={<QuizResult2 /> } /> */}
-          </Routes>
-        </div>
-      </Router>
+    <Router>
+      <Navbar />
+      <div className="content-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/resources" element={<Resources res={props.res}/>} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />}/>
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/reset" element={<ForgotPassword/>} />
+          {/* <Route path="/quizresult1" element={<QuizResult1 /> } />
+          <Route path="/quizresult2" element={<QuizResult2 /> } /> */}
+        </Routes>
+      </div>
       <Footer />
-    </div>
+    </Router>
   );
 }
 

@@ -1,29 +1,40 @@
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 function Navbar() {
-  return (
-    <nav className="navbar navbar-default">
-      <div className="container-fluid">
-        <div className="navbar-header">
-          <a className="navbar-brand" href="/">WeCare</a>
-        </div>
-        <ul className="nav navbar-nav navbar-right">
-          <li><Link to="/login">Login</Link></li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/quiz">Quiz</Link></li>
-          <li><Link to="/resources">Resources</Link></li>
-          <li><Link to="/profile">Profile</Link></li>
-          {/*<li><Link to="/logout">Logout</Link></li>*/}
-          
+  const [isOpen, setIsOpen] = useState(false);
 
-          {/* <li><Link to ="/quizresult1">QuizResult1</Link></li>
-          <li><Link to ="/quizresult2">QuizResult2</Link></li> */}
-        </ul>
+  const toggleIcon = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <nav class="navbar navbar-expand-sm bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">WeCare</a>
+        <button class="navbar-toggler collapsed" type="button" onClick={toggleIcon} data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          {/* <span class="navbar-toggler-icon"></span> */}
+          {/* <i class="fas fa-hamburger"></i> */}
+          <div className={`animated-icon2 ${isOpen ? 'open' : ''}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/quiz">Quiz</a>
+            <a class="nav-link" href="/resources">Resources</a>
+            <a class="nav-link" href="/profile">Profile</a>
+          </div>
+        </div>
       </div>
     </nav>
   );
 }
-
-
 
 export default Navbar;
