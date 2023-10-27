@@ -1,7 +1,4 @@
-// Quiz.js
-
 import React, { useState } from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import QuizContent from './QuizContent';
 
 function Quiz() {
@@ -41,7 +38,7 @@ function Quiz() {
               'I prefer charities that tackle the root causes of hunger, like poverty and inequality.'
           ]
       }
-  ];  
+  ];
 
     const [started, setStarted] = useState(false);
     const [answers, setAnswers] = useState([]);
@@ -57,6 +54,20 @@ function Quiz() {
 
     return (
         <div className="container mt-4">
+            {!started && (
+                <div className="mb-4">
+                    <h4>Hunger Insight Quiz</h4>
+                    <p className="lead">
+                        In just 5 questions, we aim to understand your preferences and values when it comes to combating global hunger.
+                        Each of us has a unique approach to giving, and our passions guide how we make a difference. This quiz is tailored to align
+                        your personal inclinations with charities that resonate with your beliefs, ensuring your contributions make the most meaningful impact.
+                        Whether you prioritize immediate relief, sustainability, cultural respect, or a mix of these factors, we'll help connect you with the right charity.
+                    </p>
+                    <p className="lead fw-bold">
+                        Ready to find your match and contribute to the Zero Hunger goal? Let's get started!
+                    </p>
+                </div>
+            )}
             {started ? (
                 <QuizContent questions={questions} onAnswer={handleAnswer} />
             ) : (

@@ -9,7 +9,7 @@ function Navbar() {
   };
 
   return (
-    <nav class="navbar navbar-expand-sm bg-body-tertiary">
+    <nav class="navbar navbar-expand-sm bg-body-secondary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">WeCare</a>
         <button class="navbar-toggler collapsed" type="button" onClick={toggleIcon} data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
