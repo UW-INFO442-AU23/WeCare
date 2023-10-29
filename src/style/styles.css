@@ -54,13 +54,26 @@ p.mission {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #f1f1f1;
-  border-radius: 5%;
+  border-radius: 15px;
+  border-width : 0;
+}
+
+.cardback{
+  margin-top:10%;
+  border-radius: 15px;
 }
 
 .learnmore {
   padding-left: 10px;
 }
 
+/* Header */
+header {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  color: #3A3B4D;
+  text-align: left;
+}
 
 /* Style for the login page */
 .login {
