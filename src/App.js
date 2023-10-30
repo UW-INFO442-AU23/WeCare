@@ -10,9 +10,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Logout from './components/Logout'
 import ForgotPassword from './components/ForgotPassword';
-
-// import QuizResult1 from './components/Quiz/QuizResult1'
-// import QuizResult2 from './components/Quiz/QuizResult2'
+import QuizResultCards from './components/Quiz/QuizResultCards'
 
 import './style/styles.css';
 import './style/AnimatedIconStyles.css'
@@ -31,8 +29,7 @@ function App(props) {
           <Route path="/register" element={<Register />}/>
           <Route path="/logout" element={<Logout />} />
           <Route path="/reset" element={<ForgotPassword/>} />
-          {/* <Route path="/quizresult1" element={<QuizResult1 /> } />
-          <Route path="/quizresult2" element={<QuizResult2 /> } /> */}
+          <Route path="/quizresult1" element={<QuizResultCards /> } />
         </Routes>
       </div>
       <Footer />

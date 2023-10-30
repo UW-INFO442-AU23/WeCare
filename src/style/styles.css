@@ -171,6 +171,11 @@ header {
   margin: 10px;
 }
 
+.card-charities, a {
+  text-decoration: none;
+  color: black;
+}
+
 .charityhead {
   margin: 50px;
 }
