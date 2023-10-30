@@ -140,15 +140,16 @@ function QuizResult() {
                 <CardMedia
                   component="img"
                   height="140"
-                  image="img/hungerinter.png"
-                  alt="Hunger Intervention Program logo"
+                  image="img/harvest.png"
+                  alt="Harvest Against Hunger logo"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h4" component="div">
                     Hunger Against Hunger
                   </Typography>
                   <Typography variant="body" color="text.secondary">
-                    Donate to Harvest Against Hunger!
+                    Donate to Harvest Against Hunger! This organization connects farmers, truckers, volunteers, and 
+                    communities to reduce hunger and food waste.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -163,15 +164,16 @@ function QuizResult() {
                 <CardMedia
                   component="img"
                   height="140"
-                  image="img/hungerinter.png"
-                  alt="Hunger Intervention Program logo"
+                  image="img/nwharv.png"
+                  alt="Northwest Harvest logo"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h4" component="div">
                     Northwest Harvest 
                   </Typography>
                   <Typography variant="body" color="text.secondary">
-                    Give to Northwest Harvest!
+                    Northwest Harvest is Washington State's leading hunger relief agency! 
+                    They distribute food across the state and advocate for equity being fundamental to ending hunger. 
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -186,15 +188,16 @@ function QuizResult() {
                 <CardMedia
                   component="img"
                   height="140"
-                  image="img/hungerinter.png"
-                  alt="Hunger Intervention Program logo"
+                  image="img/foodbank.jpg"
+                  alt="Food Bank logo"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h4" component="div">
                     Food Bank
                   </Typography>
                   <Typography variant="body" color="text.secondary">
-                    Donate to a Food Bank near you!
+                    Donate to a Food Bank near you, whether it be funds or packaged food! 
+                    Seattle Food Banks advocate for food equity and justice, providing food and services that support self-sufficiency.  
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -209,15 +212,16 @@ function QuizResult() {
                 <CardMedia
                   component="img"
                   height="140"
-                  image="img/hungerinter.png"
-                  alt="Hunger Intervention Program logo"
+                  image="img/foodlifeline.png"
+                  alt="Food Lifeline logo"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h4" component="div">
                     Feeding America, Food Lifeline
                   </Typography>
                   <Typography variant="body" color="text.secondary">
-                    Donate to Feeding America, the largest food aid program in the country!
+                    Food Lifeline is a member of Feeding America, the largest charity working to end hunger in the United States! Food Lifeline 
+                    specifically mobilizes to solve hunger in Washington through various programs and food banks. Give now!
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -232,15 +236,16 @@ function QuizResult() {
                 <CardMedia
                   component="img"
                   height="140"
-                  image="img/hungerinter.png"
-                  alt="Hunger Intervention Program logo"
+                  image="img/unitedway.png"
+                  alt="United Way of King County logo"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h4" component="div">
                     United Way of King County
                   </Typography>
                   <Typography variant="body" color="text.secondary">
-                   Donate to United Way of King County!
+                   Donate to United Way of King County! Give to this organization that believes everyone
+                   deserves access to resources, quality education, enough to eat, and a safe place to call home
                   </Typography>
                 </CardContent>
               </CardActionArea>
