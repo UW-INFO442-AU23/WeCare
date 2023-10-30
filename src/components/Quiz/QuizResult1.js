@@ -25,7 +25,8 @@ function QuizResult1 () {
             West Seattle Food Bank
           </Typography>
           <Typography variant="body" color="text.secondary">
-            Volunteer at West Seattle Food Bank, one of the top charities in that has made an outstanding impact on the community. 
+            Volunteer at West Seattle Food Bank, one of the top charities in that has made an outstanding impact on the community.
+            Attend a volunteering orientation and you are good to go!
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -48,7 +49,8 @@ function QuizResult1 () {
         Washington Farmland Trust
       </Typography>
       <Typography variant="body" color="text.secondary">
-        Get involved with Washington Farmland Trust, an organization that helps protect threatened land for farmers. Local farm provide healthy food for our community and are essential to our daily lives. 
+        Get involved with Washington Farmland Trust, an organization that helps protect threatened land for farmers. 
+        Local farm provide healthy food for our community and are essential to our daily lives. 
       </Typography>
     </CardContent>
   </CardActionArea>
@@ -70,7 +72,8 @@ function QuizResult1 () {
             PIke Place Market Foundation
           </Typography>
           <Typography variant="body" color="text.secondary">
-            Pike Place Market Foundation provides access to fresh, affordable produce and foods from various cultures for the community members. It remains an essential part to the health and stability of the Market community.
+            Pike Place Market Foundation provides access to fresh, affordable produce and foods from various cultures for the community members. 
+            It remains an essential part to the health and stability of the Market community.
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -102,22 +105,22 @@ function QuizResult1 () {
         </a>
         </div>
             <div>
-            <a href="https://en.wikipedia.org/wiki/Lizard" target="_blank" rel="noopener noreferrer">
+            <a href="https://hungerintervention.org/donate/" target="_blank" rel="noopener noreferrer">
             <Card sx={{ maxWidth: 345 }}>
               <CardActionArea>
                 <CardMedia
                   component="img"
                   height="140"
-                  image="/static/images/cards/contemplative-reptile.jpg"
-                  alt="green iguana"
+                  image="img/hungerinter.jpg"
+                  alt="Hunger Intervention Program logo"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Lizard
+                    Hunger Intervention Program 
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                  This program aims to increase food security for underserved populations in North King Country through nutritious meals, 
+                  educational programs, and advocacy. They ensure that every donation goes towards decreasing food insecurity within the community. 
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -130,57 +133,4 @@ function QuizResult1 () {
 }
 export default QuizResult1;
 
-
-// function QuizResult1 () {
-    
-//     return (
-//         <div>
-//           <div class="row, charities">
-//     <div class="column">
-//       <div class="card">
-//         <div class="card-body">
-//           <h4 class="card-title">Charity 1</h4>
-//           <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
-//         </div>
-//       </div>
-//     </div>
-//     <div class="column">
-//       <div class="card">
-//         <div class="card-body">
-//           <h4 class="card-title">Charity 2</h4>
-//           <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
-//         </div>
-//       </div>
-//     </div>
-//     <div class="column">
-//       <div class="card">
-//         {/* <div class="card-body"> */}
-//           <h4 class="card-title">Charity 3</h4>
-//           <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
-//         </div>
-//       </div>
-//     </div>
-//     <div class="column">
-//       <div class="card">
-//         <div class="card-body">
-//           <h4 class="card-title">Charity 4</h4>
-//           <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-//   <div class="column">
-//       <div class="card">
-//         <div class="card-body">
-//           <h4 class="card-title">Charity 5 </h4>
-//           <p class="card-text">See if your top charities are highly rated with Charity Navigator!</p>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-
-//       )
-// }
-
-// export default QuizResult1;
 
