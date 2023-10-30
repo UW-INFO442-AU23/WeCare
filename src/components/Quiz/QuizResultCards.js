@@ -11,7 +11,7 @@ function QuizResult() {
   return (
     <div> <h1 class="charityhead"> Your Top Charities </h1>
       <div className="card-charities">
-        {/* card 1 */}
+        {/* card 1, Q1A*/}
         <div>
           <a href="https://westseattlefoodbank.org/volunteer/" target="_blank" rel="noopener noreferrer">
             <Card sx={{ maxWidth: 345 }}>
@@ -35,7 +35,7 @@ function QuizResult() {
             </Card>
           </a>
         </div>
-        {/* card 2 */}
+        {/* card 2, Q2A */}
         <div>
           <a href="https://wafarmlandtrust.org/" target="_blank" rel="noopener noreferrer">
             <Card sx={{ maxWidth: 345 }}>
@@ -59,7 +59,7 @@ function QuizResult() {
             </Card>
           </a>
         </div>
-        {/* card 3 */}
+        {/* card 3, Q3A */}
         <div>
           <a href="https://pikeplacemarketfoundation.org/get-involved/give/donate-today/" target="_blank" rel="noopener noreferrer">
             <Card sx={{ maxWidth: 345 }}>
@@ -83,7 +83,7 @@ function QuizResult() {
             </Card>
           </a>
         </div>
-        {/* card 4 */}
+        {/* card 4, Q4A */}
         <div>
           <a href="https://www.elcentrodelaraza.org/el-centro-food-bank/" target="_blank" rel="noopener noreferrer">
             <Card sx={{ maxWidth: 345 }}>
@@ -108,7 +108,7 @@ function QuizResult() {
             </Card>
           </a>
         </div>
-        {/* card 5 */}
+        {/* card 5, Q5A */}
         <div>
           <a href="https://hungerintervention.org/donate/" target="_blank" rel="noopener noreferrer">
             <Card sx={{ maxWidth: 345 }}>
@@ -132,7 +132,7 @@ function QuizResult() {
             </Card>
           </a>
         </div>
-        {/* card 6 */}
+        {/* card 6, Q1B */}
         <div>
           <a href="https://www.harvestagainsthunger.org/donate/" target="_blank" rel="noopener noreferrer">
             <Card sx={{ maxWidth: 345 }}>
@@ -156,7 +156,7 @@ function QuizResult() {
             </Card>
           </a>
         </div>
-        {/* card 7 */}
+        {/* card 7, Q2B */}
         <div>
           <a href="https://www.northwestharvest.org/ways-to-give/" target="_blank" rel="noopener noreferrer">
             <Card sx={{ maxWidth: 345 }}>
@@ -180,7 +180,7 @@ function QuizResult() {
             </Card>
           </a>
         </div>
-        {/* card 8 */}
+        {/* card 8, Q3B */}
         <div>
           <a href="https://www.seattlefoodcommittee.org/donate/" target="_blank" rel="noopener noreferrer">
             <Card sx={{ maxWidth: 345 }}>
@@ -204,7 +204,7 @@ function QuizResult() {
             </Card>
           </a>
         </div>
-        {/* card 9 */}
+        {/* card 9, Q4B */}
         <div>
           <a href="hhttps://www.feedingamerica.org/find-your-local-foodbank/food-lifeline" target="_blank" rel="noopener noreferrer">
             <Card sx={{ maxWidth: 345 }}>
@@ -228,7 +228,7 @@ function QuizResult() {
             </Card>
           </a>
         </div>
-        {/* card 10 */}
+        {/* card 10, Q5B */}
         <div>
           <a href="https://www.uwkc.org/donate/" target="_blank" rel="noopener noreferrer">
             <Card sx={{ maxWidth: 345 }}>
