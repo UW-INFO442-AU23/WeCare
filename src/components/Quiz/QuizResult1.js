@@ -1,5 +1,5 @@
-// make cards + content here (5 cards)
 import * as React from 'react';
+// used mui library for quiz result cards
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
