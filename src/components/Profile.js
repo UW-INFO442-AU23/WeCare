@@ -1,25 +1,69 @@
-import { signOut } from "firebase/auth";
-import React from "react";
-import { auth } from "./f-config";
-import { useNavigate } from "react-router-dom";
+// Profile.js
+import React, { useEffect, useState } from 'react';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { auth } from './f-config';
 
-function ProfileScreen(){
-    const history = useNavigate()
+const Profile = () => {
+  const [user, setUser] = useState(null);
 
-    const handleClick = () =>{
-        signOut(auth).then(val=>{
-            console.log(val,"val")
-            history('/')
-        })
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (authUser) => {
+      if (authUser) {
+        // User is signed in
+        setUser(authUser);
+      } else {
+        // User is signed out
+        setUser(null);
+      }
+    });
+
+    return () => {
+      // Unsubscribe from the listener when component unmounts
+      unsubscribe();
+    };
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      // You can navigate to a different page after logout if needed
+      console.log('Logout successful!');
+    } catch (error) {
+      console.error('Logout error:', error.message);
     }
-    return(
-        <div>
-            <h1>Profile</h1>
-            <button onClick={handleClick}>SignOut</button>
-        </div>
-    )
-}
-export default ProfileScreen;
+  };
+
+  return (
+    <>
+      <main>
+        <section>
+          <div>
+            <h2>Profile</h2>
+            {user ? (
+              <div>
+                <p>Welcome, {user.email}!</p>
+                <p>User ID: {user.uid}</p>
+                {/* Add more user information as needed */}
+                <button onClick={handleLogout}>Logout</button>
+              </div>
+            ) : (
+              <p>You are not logged in. Please log in to view your profile.</p>
+            )}
+          </div>
+        </section>
+      </main>
+    </>
+  );
+};
+
+export default Profile;
+
+
+
+
+
+
+
 
 // import React from "react";
 // import { useState } from "react";

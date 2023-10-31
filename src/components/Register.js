@@ -1,73 +1,83 @@
-import React, { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
-import {
-  auth,
-  registerWithEmailAndPassword,
-  signInWithGoogle,
-} from "./f-config";
+// Register.js
+import React, { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from './f-config';
+import './style.css'; 
 
-
-function Register() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [user, loading, error] = useAuthState(auth);
+const Register = () => {
   const navigate = useNavigate();
 
-  const register = () => {
-    if (!name) alert("Please enter name");
-    registerWithEmailAndPassword(name, email, password);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    await createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+        navigate('/login');
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        // ..
+      });
   };
 
-  useEffect(() => {
-    if (loading) return;
-    if (user) navigate("/register");
-  }, [user, loading]);
-
-
-
-  
   return (
-    <div className="register">
-      <div className="register__container">
-        <input
-          type="text"
-          className="register__textBox"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Full Name"
-        />
-        <input
-          type="text"
-          className="register__textBox"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="E-mail Address"
-        />
-        <input
-          type="password"
-          className="register__textBox"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-        />
-        <button className="register__btn" onClick={register}>
-        <Link to="/profile">Register</Link>
-        </button>
-        <button
-          className="register__btn register__google"
-          onClick={signInWithGoogle}
-        >
-          Register with Google
-        </button>
-
-        <div>
-          Already have an account? <Link to="/login">Login</Link> now.
+    <main className="main-container">
+      <section className="register-section">
+        <div className="register-content">
+          <h1 className="register-logo">WeCare</h1>
+          <form className="register-form">
+            <div className="form-group">
+              <label htmlFor="email-address">Email address:</label>
+              <input
+                type="email"
+                label="Email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                placeholder="Email address"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password:</label>
+              <input
+                type="password"
+                label="Create password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                placeholder="Password"
+              />
+            </div>
+            <div className="form-group">
+              <button
+                type="submit"
+                className="register-button"
+                onClick={onSubmit}
+              >
+                Sign up
+              </button>
+            </div>
+          </form>
+          <p className="register-login-link">
+            Already have an account?{' '}
+            <NavLink to="/login" className="login-link">
+              Sign in
+            </NavLink>
+          </p>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
-}
+};
 
 export default Register;
