@@ -10,7 +10,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Logout from './components/Logout'
 import ForgotPassword from './components/ForgotPassword';
-import QuizResultCards from './components/Quiz/QuizResultCards'
+import QuizResultCards from './components/Quiz/QuizResult'
 
 import './style/styles.css';
 import './style/AnimatedIconStyles.css'
