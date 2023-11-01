@@ -75,87 +75,9 @@ header {
   text-align: left;
 }
 
-/* Style for the login page */
-/* Login.css */
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.login-section {
-  background-color: #ffc0cb; /* Light pink background */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.login-content {
-  text-align: center;
-}
-
-.login-logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333; /* Dark gray color */
-  margin-bottom: 20px;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  font-weight: bold;
-  color: #333;
-}
-
-input {
-  padding: 10px;
-  width: 100%;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.login-button {
-  background-color: #4caf50; /* Green color */
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.login-button:hover {
-  background-color: #45a049;
-}
-
-.login-signup-link {
-  margin-top: 15px;
-  color: #333;
-}
-
-.login-link {
-  color: #4caf50;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.login-link:hover {
-  text-decoration: underline;
-}
 
 
-/* Style for the register page */
+/* Style for the register page
 .register {
   height: 100vh;
   width: 100vw;
@@ -193,7 +115,7 @@ input {
 
 .register div {
   margin-top: 7px;
-}
+} */
 
 /* Style for the quiz results page */
 .card-charities {

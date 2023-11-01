@@ -5,24 +5,29 @@ import { auth } from './f-config';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './style.css'; 
 
-
+// Define the Login component
 const Login = () => {
+  // Initialize state variables using the useState hook
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
 
+  // Function to handle the login process
   const onLogin = (e) => {
     e.preventDefault();
+    // Attempt to sign in with provided email and password
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in
+        // Signed in and navigate to the profile page
         const user = userCredential.user;
         navigate('/profile');
         console.log(user);
       })
       .catch((error) => {
-        const errorCode = error.code;
+        const errorCode = error.code; //error message if user does not have an account with us
         const errorMessage = error.message;
+        setError(errorMessage);
         console.log(errorCode, errorMessage);
       });
   };
@@ -61,6 +66,7 @@ const Login = () => {
               </button>
             </div>
           </form>
+          {error && <p className="error-message">{error}</p>}
           <p className="login-signup-link">
             No account yet?{' '}
             <NavLink to="/register" className="login-link">
@@ -74,4 +80,3 @@ const Login = () => {
 };
 
 export default Login;
-

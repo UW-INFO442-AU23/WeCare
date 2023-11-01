@@ -1,33 +1,35 @@
+
 // Register.js
+
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './f-config';
-import './style.css'; 
+import { auth, db } from './f-config';
+import './style.css';  // Import your CSS file for styling
 
 const Register = () => {
   const navigate = useNavigate();
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
 
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    await createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log(user);
-        navigate('/login');
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        // ..
-      });
+    try {
+      // Attempt to create a new user with provided email and password
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // Save additional user information to Firestore if needed
+
+      console.log(user);
+      navigate('/login');
+    } catch (error) {
+      // Error during registration: update the error state with the error message
+      setError(error.message);
+      console.error('Registration error:', error.message);
+    }
   };
 
   return (
@@ -35,6 +37,7 @@ const Register = () => {
       <section className="register-section">
         <div className="register-content">
           <h1 className="register-logo">WeCare</h1>
+
           <form className="register-form">
             <div className="form-group">
               <label htmlFor="email-address">Email address:</label>
@@ -68,6 +71,9 @@ const Register = () => {
               </button>
             </div>
           </form>
+
+          {error && <p className="error-message">{error}</p>}
+
           <p className="register-login-link">
             Already have an account?{' '}
             <NavLink to="/login" className="login-link">
@@ -81,3 +87,6 @@ const Register = () => {
 };
 
 export default Register;
+
+
+  
