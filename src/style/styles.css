@@ -125,11 +125,13 @@ header {
   justify-content: center;
   align-items: center;
   margin: 50px;
-  background-color: #dcdcdc; /*can add image for background as well */
+  background-color: #dcdcdc46; /*can add image for background as well */
+  border-radius: 20px;
   }
 
 .card-charities > div {
   margin: 10px;
+  border-radius: 65px;
 }
 
 .card-charities, a {
@@ -139,4 +141,8 @@ header {
 
 .charityhead {
   margin: 50px;
+  font-weight: bold;
 }
+
+
+
