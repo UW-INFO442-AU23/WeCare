@@ -1,24 +1,23 @@
-// QuizContent.js
 import React, { useState } from 'react';
+import QuizResult from './QuizResult';
 
-function QuizContent({ questions, onAnswer }) {
+function QuizContent({ questions, onAnswer, answers}) {
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
-    const handleAnswerClick = (answer) => {
-        onAnswer(answer);
+    const handleAnswerClick = (index) => {
+        onAnswer(index);
+        // console.log("Answer Selected for Question", currentQuestion + 1, ":", questions[currentQuestion].options[index]);
         setCurrentQuestion(prevQuestion => prevQuestion + 1);
     };
 
     const handleBackClick = () => {
-        // Remove the last answer given before going back
         onAnswer(null);
         setCurrentQuestion(prevQuestion => prevQuestion - 1);
     };
 
     // Check if we've reached the end of the questions array
-    // Change this to return the quiz results page that aligns with user chosen questions
     if (currentQuestion >= questions.length) {
-        return <div className="text-center mt-4">Thank you for taking the quiz!</div>;
+        return <QuizResult answers={answers} />;
     }
 
     return (
@@ -26,7 +25,7 @@ function QuizContent({ questions, onAnswer }) {
             <h2>{questions[currentQuestion].question}</h2>
             {questions[currentQuestion].options.map((option, index) => (
                 <div key={index} className="mb-2">
-                    <button className="btn btn-primary btn-block" onClick={() => handleAnswerClick(option)}>
+                    <button className="btn btn-primary btn-block" onClick={() => handleAnswerClick(index)}>
                         {option}
                     </button>
                 </div>

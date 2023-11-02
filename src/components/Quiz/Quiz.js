@@ -49,7 +49,13 @@ function Quiz() {
     };
 
     const handleAnswer = (answer) => {
-        setAnswers(prevAnswers => [...prevAnswers, answer]);
+        if (answer === null) {
+            setAnswers(prevAnswers => prevAnswers.slice(0, -1)); // Remove the last answer
+        } else {
+            setAnswers(prevAnswers => [...prevAnswers, answer]);
+        }
+        // console.log("New Answer Added:", answer);
+        // console.log("Updated Answers Array:", answers);
     };
 
     return (
@@ -69,7 +75,7 @@ function Quiz() {
                 </div>
             )}
             {started ? (
-                <QuizContent questions={questions} onAnswer={handleAnswer} />
+                <QuizContent questions={questions} onAnswer={handleAnswer} answers={answers} />
             ) : (
                 <div className="text-center">
                     <button className="btn btn-success" onClick={handleStartQuiz}>Start Quiz</button>
