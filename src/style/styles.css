@@ -75,6 +75,8 @@ header {
   text-align: left;
 }
 
+/* Modal stuff */
+
 /* Style for the login page */
 .login {
   height: 100vh;
@@ -179,3 +181,5 @@ header {
 .charityhead {
   margin: 50px;
 }
+
+
