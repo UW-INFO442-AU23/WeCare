@@ -30,7 +30,6 @@ function Navbar() {
             <a class="nav-link" href="/quiz">Quiz</a>
             <a class="nav-link" href="/resources">Resources</a>
             <a class="nav-link" href="/profile">Profile</a>
-          {/*   <a class="nav-link" href="/quizresult1">QZ1</a> */}
           </div>
         </div>
       </div>
