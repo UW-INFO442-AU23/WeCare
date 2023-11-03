@@ -284,9 +284,10 @@ import { storage, auth } from './f-config';  // Adjust this path based on your p
 
 const Edit = () => {
   const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
   const [image, setImage] = useState(null);
   const [user, setUser] = useState(null);
+  const [pronouns, setPronouns] = useState('');
+  const [address, setAddress] = useState('');
 
   useEffect(() => {
     // Fetch the current user when the component mounts
@@ -294,12 +295,28 @@ const Edit = () => {
     if (currentUser) {
       setUser(currentUser);
       setFirstName(currentUser.displayName || '');
+
+
+      
     }
   }, []);
 
   const handleFirstLastNameChange = (e) => {
     setFirstName(e.target.value);
   };
+
+  function handlePronouns(event) {
+    event.preventDefault();
+    let pronouns = event.target.value;
+    localStorage.setItem('pronouns', pronouns);
+  }
+
+
+  function handleAddress(event) {
+    event.preventDefault();
+    let address = event.target.value;
+    localStorage.setItem('address', address);
+  }
 
 
   const handleImageChange = (e) => {
@@ -314,6 +331,9 @@ const Edit = () => {
       // Update first and last name
       await updateProfile(user, {
         displayName: firstName,
+        pronouns: pronouns,
+        address: address,
+
       });
 
       // Update profile picture if selected
@@ -324,6 +344,9 @@ const Edit = () => {
 
         await updateProfile(user, {
           photoURL: imageUrl,
+          displayName: firstName,
+        pronouns: pronouns,
+        address: address,
         });
       }
 
@@ -347,9 +370,18 @@ const Edit = () => {
           <input type="text" value={firstName} onChange={handleFirstLastNameChange} />
         </div>
         <div>
+          <label>Pronounce:</label>
+          <input type="text" value={pronouns} onChange={handlePronouns} />
+        </div>
+        <div>
+          <label>Address:</label>
+          <input type="text" value={address} onChange={handleAddress} />
+        </div>
+        <div>
           <label>Profile Picture:</label>
           <input type="file" onChange={handleImageChange} />
         </div>
+
         <button type="submit">Save Changes</button>
       </form>
     </div>

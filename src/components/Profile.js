@@ -153,9 +153,14 @@ const Profile = () => {
                         <p>{user.displayName || 'Not provided'}</p>
                       </div>
                       <div>
-                        <label>Address:</label>
-                        <p>{user.address || 'Not provided'}</p>
-                      </div>
+                    <label>Pronouns:</label>
+                    <p>{user.pronouns || 'Not provided'}</p>
+                  </div>
+                  <div>
+                    <label>Address:</label>
+                    <p>{user.address || 'Not provided'}</p>
+                  </div>
+                      
                     </div>
                   </div>
                 </div>
