@@ -27,7 +27,14 @@ function QuizResult({ answers }) {
     }
   };
   return (
-    <div> <h1 class="charityhead"> Your Top Charities </h1>
+
+<div
+// style={{
+// backgroundImage: 'url(/img/quizresultbackground.png)',
+//backgroundSize: 'cover'
+// }}
+>
+    <h1 class="charityhead"> Your Top Charities </h1>
       <div className="card-charities">
         {/* {console.log("Final Answers Array:", answers)} */}
         {answers.map((answer, index) => renderCard(index, answer))}
@@ -38,14 +45,14 @@ function QuizResult({ answers }) {
 
 function Card1A() {
   return (
-    <div>
+    <div className="charitycards">
       <a href="https://westseattlefoodbank.org/volunteer/" target="_blank" rel="noopener noreferrer">
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, borderRadius: 4}}>
           <CardActionArea>
             <CardMedia
               component="img"
               height="140"
-              image="/img/foodbank.jpg"
+              image="/img/westseattle.jpeg"
               alt="food bank holding hands animated"
             />
             <CardContent>
@@ -68,7 +75,7 @@ function Card2A() {
   return (
     <div>
       <a href="https://wafarmlandtrust.org/" target="_blank" rel="noopener noreferrer">
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, borderRadius: 4 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -96,7 +103,7 @@ function Card3A() {
   return (
     <div>
       <a href="https://pikeplacemarketfoundation.org/get-involved/give/donate-today/" target="_blank" rel="noopener noreferrer">
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, borderRadius: 4 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -124,7 +131,7 @@ function Card4A() {
   return (
     <div>
       <a href="https://www.elcentrodelaraza.org/el-centro-food-bank/" target="_blank" rel="noopener noreferrer">
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, borderRadius: 4 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -153,7 +160,7 @@ function Card5A() {
   return (
     <div>
       <a href="https://hungerintervention.org/donate/" target="_blank" rel="noopener noreferrer">
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, borderRadius: 4 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -181,7 +188,7 @@ function Card1B() {
   return (
     <div>
       <a href="https://www.harvestagainsthunger.org/donate/" target="_blank" rel="noopener noreferrer">
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, borderRadius: 4 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -209,7 +216,7 @@ function Card2B() {
   return (
     <div>
       <a href="https://www.northwestharvest.org/ways-to-give/" target="_blank" rel="noopener noreferrer">
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, borderRadius: 4 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -237,7 +244,7 @@ function Card3B() {
   return (
     <div>
       <a href="https://www.seattlefoodcommittee.org/donate/" target="_blank" rel="noopener noreferrer">
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, borderRadius: 4 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -265,7 +272,7 @@ function Card4B() {
   return (
     <div>
       <a href="hhttps://www.feedingamerica.org/find-your-local-foodbank/food-lifeline" target="_blank" rel="noopener noreferrer">
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, borderRadius: 4 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -293,7 +300,7 @@ function Card5B() {
   return (
     <div>
       <a href="https://www.uwkc.org/donate/" target="_blank" rel="noopener noreferrer">
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, borderRadius: 4 }}>
           <CardActionArea>
             <CardMedia
               component="img"

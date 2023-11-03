@@ -1,7 +1,7 @@
 [
-    {"title":"", "descr":"See if your top charities are highly rated with Charity Navigator!", "img":"../img/Charity_Navigator_logo.jpg"},
-    {"title":"Charity Navigator2", "descr":"See if your top charities are highly rated with Charity Navigator2!", "img":""},
-    {"title":"Charity Navigator3", "descr":"See if your top charities are highly rated with Charity Navigator3!", "img":""},
-    {"title":"Charity Navigator4", "descr":"See if your top charities are highly rated with Charity Navigator4!", "img":""}
+    {"title":"", "descr":"See if your top charities are highly rated with Charity Navigator!", "img":"../img/Charity_Navigator_logo.jpg", "bs":"#modalOne", "modid":"modalOne", "ariamodlabel":"modalOneLabel", "modtitleid":"modalOneLabel", "modtitle":"charity navigator", "modbody":"testing testing"},
+    {"title":"Charity Navigator2", "descr":"See if your top charities are highly rated with Charity Navigator2!", "img":"", "bs":"#modalTwo", "modid":"modalTwo", "ariamodlabel":"modalTwoLabel", "modtitleid":"modalTwoLabel", "modtitle":"what woo", "modbody":"testing whaat"},
+    {"title":"Charity Navigator3", "descr":"See if your top charities are highly rated with Charity Navigator3!", "img":"", "bs":"#modalThree", "modid":"modalThree", "ariamodlabel":"modalThreeLabel", "modtitleid":"modalThreeLabel", "modtitle":"what's up guys", "modbody":"third card yas"},
+    {"title":"Charity Navigator4", "descr":"See if your top charities are highly rated with Charity Navigator4!", "img":"", "bs":"#modalFour", "modid":"modalFour", "ariamodlabel":"modalFourLabel", "modtitleid":"modalFourLabel", "modtitle":"hey guys", "modbody":"testing again"}
 
   ]
