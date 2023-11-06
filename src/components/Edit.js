@@ -370,7 +370,7 @@ const Edit = () => {
           <input type="text" value={firstName} onChange={handleFirstLastNameChange} />
         </div>
         <div>
-          <label>Pronounce:</label>
+          <label>Pronouns:</label>
           <input type="text" value={pronouns} onChange={handlePronouns} />
         </div>
         <div>
