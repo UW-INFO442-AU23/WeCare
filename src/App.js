@@ -12,6 +12,7 @@ import Logout from './components/Logout'
 import ForgotPassword from './components/ForgotPassword';
 import QuizResultCards from './components/Quiz/QuizResult';
 import Edit from './components/Edit';
+import Home2 from './components/Home2';
 
 import './style/styles.css';
 import './style/AnimatedIconStyles.css'
@@ -32,6 +33,7 @@ function App(props) {
           <Route path="/reset" element={<ForgotPassword/>} />
           <Route path="/quizresult1" element={<QuizResultCards /> } />
           <Route path='/edit' element={<Edit/>}/>
+          <Route path='/Home2' element={<Home2/>}/>
         </Routes>
       </div>
       <Footer />

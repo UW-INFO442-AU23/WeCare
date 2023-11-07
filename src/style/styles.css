@@ -246,4 +246,22 @@ p.lead {
 } */
 
 
+/* homepage carousel slideshow */
+.custom-img {
+  height: 30em;
+  object-fit: cover;
+}
+
+/* .custom-carousel-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+} */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+  width: 3em; /* Adjust the size of the icon */
+  height: 3em;
+}
+
 

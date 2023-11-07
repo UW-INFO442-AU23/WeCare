@@ -27,6 +27,7 @@ function Navbar() {
           <div class="navbar-nav">
             <a class="nav-link" href="/login">Login</a>
             <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/home2">Home2</a>
             <a class="nav-link" href="/quiz">Quiz</a>
             <a class="nav-link" href="/resources">Resources</a>
             <a class="nav-link" href="/profile">Profile</a>
