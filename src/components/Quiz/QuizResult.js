@@ -27,13 +27,7 @@ function QuizResult({ answers }) {
     }
   };
   return (
-
-<div
-// style={{
-// backgroundImage: 'url(/img/quizresultbackground.png)',
-//backgroundSize: 'cover'
-// }}
->
+    <div>
     <h1 class="charityhead"> Your Top Charities </h1>
       <div className="card-charities">
         {/* {console.log("Final Answers Array:", answers)} */}

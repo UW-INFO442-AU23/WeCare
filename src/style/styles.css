@@ -47,7 +47,7 @@ p.mission {
 .child {
   padding: 1rem;
   flex: 1; /* Distribute available space equally among children */
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 /* Embedded media element styling */
@@ -56,7 +56,7 @@ p.mission {
   margin-right: 2rem;
   width: 560px;
   height: 315px;
-  max-width: 560px; 
+  max-width: 560px;
 }
 
 /* Video description styling */
@@ -81,11 +81,11 @@ p.descr {
 /* Media query for responsive layout */
 @media (max-width: 768px) {
   .parent {
-    flex-direction: column; 
+    flex-direction: column;
   }
   .child {
-    flex: 0; 
-    width: 100%; 
+    flex: 0;
+    width: 100%;
   }
 }
 
@@ -206,6 +206,27 @@ header {
   margin: 50px;
   font-weight: bold;
 }
+
+/* background image */
+.content-container {
+  background: url(/public/img/quizresultbackground.png) center center no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  position: relative;
+  min-height: 100vh; /* Full height */
+}
+
+/* .content-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  opacity: 0.5;
+  z-index: -1;
+} */
 
 
 
