@@ -62,7 +62,7 @@ function Quiz() {
         <div className="container mt-4">
             {!started && (
                 <div className="mb-4">
-                    <h4>Hunger Insight Quiz</h4>
+                    <h4 className="leadtitle">Hunger Insight Quiz</h4>
                     <p className="lead">
                         In just 5 questions, we aim to understand your preferences and values when it comes to combating global hunger.
                         Each of us has a unique approach to giving, and our passions guide how we make a difference. This quiz is tailored to align
