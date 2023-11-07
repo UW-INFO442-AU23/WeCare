@@ -1,5 +1,6 @@
 import React from "react";
 import {useState, useEffect, onclick} from "react";
+import BasicTable from "./Catalog";
 
 export function Header(props){
   return(
@@ -70,6 +71,7 @@ function Resources(props) {
       <div className="row mx-0">
         {newCardArray}
       </div>
+      <BasicTable />
     </div>
   );
 }
