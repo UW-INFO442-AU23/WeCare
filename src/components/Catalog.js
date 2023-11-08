@@ -58,7 +58,8 @@ export default function BasicTable() {
   };
 
   return (
-    <Paper style={{ width: '80%', margin: '0 auto', textAlign: 'center' }}> 
+    <Paper style={{ width: '80%', margin: '0 auto', textAlign: 'center', marginBottom: '20px', marginTop: '20px'}}> 
+    <h1 style={{ fontSize: '30px',textAlign: 'center', fontStyle: 'bold', textDecoration: 'underline' }}> Charities Catalog</h1> 
       <TableContainer>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
