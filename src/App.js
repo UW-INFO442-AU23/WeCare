@@ -5,13 +5,12 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Quiz from './components/Quiz/Quiz';
 import Resources from './components/Resources';
-import Profile from './components/Profile';
-import Login from './components/Login';
-import Register from './components/Register';
-import Logout from './components/Logout'
+import Profile from './components/Profile/Profile';
+import Login from './components/Profile/Login';
+import Register from './components/Profile/Register';
 import ForgotPassword from './components/ForgotPassword';
 import QuizResultCards from './components/Quiz/QuizResult';
-import Edit from './components/Edit';
+import Edit from './components/Profile/Edit';
 import Home2 from './components/Home2';
 
 import './style/styles.css';
@@ -29,7 +28,7 @@ function App(props) {
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />}/>
-          <Route path="/logout" element={<Logout />} />
+
           <Route path="/reset" element={<ForgotPassword/>} />
           <Route path="/quizresult1" element={<QuizResultCards /> } />
           <Route path='/edit' element={<Edit/>}/>
