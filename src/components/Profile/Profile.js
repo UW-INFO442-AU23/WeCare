@@ -39,43 +39,35 @@ const Profile = () => {
 
   return (
     <>
-      <main className="profile-container" id="container-bg">
+      <main className="profile-container">
         <section className="profile-section">
           <div className="profile-content">
             {user ? (
               <>
                 <div className="profile-header">
                   <div className="profile-photo">
-                    {/* Add logic to display user profile picture */}
                     <img
+                      className="rounded"
                       src={user.photoURL || 'default-profile-picture.jpg'}
                       alt="User Profile"
                     />
                   </div>
                   <div className="profile-details">
                     <h2>Profile</h2>
-                    <p>Welcome, {user.email}!</p>
+                    <p className="welcome-text">Welcome, {user.email}!</p>
                     <div className="profile-fields">
-                      {/* <div>
-                        <label>First and Last Name:</label>
-                        <p>{user.displayName || 'Not provided'}</p>
-                      </div>
-                      <div>
-                    <label>Pronouns:</label>
-                    <p>{user.pronouns || 'Not provided'}</p>
-                  </div>
-                  <div>
-                    <label>Address:</label>
-                    <p>{user.address || 'Not provided'}</p>
-                  </div> */}
-                  <UserInfo name={user.displayName} pronouns={localStorage.getItem('pronouns')}
-                            address={localStorage.getItem('address')} />
-                      
+                      <UserInfo
+                        name={user.displayName}
+                        pronouns={localStorage.getItem('pronouns')}
+                        address={localStorage.getItem('address')}
+                      />
                     </div>
                   </div>
                 </div>
-                <button onClick={handleLogout}>Logout</button>
-       
+                <button className="logout-button" onClick={handleLogout}>
+                  Logout
+                </button>
+
                 <NavLink to="/edit" className="edit-button">
                   Edit
                 </NavLink>
