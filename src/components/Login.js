@@ -33,7 +33,7 @@ const Login = () => {
   };
 
   return (
-    <main className="login-container">
+    <main className="login-container" id="container-bg">
       <section className="login-section">
         <div className="login-content">
           <p className="login-logo">WeCare</p>

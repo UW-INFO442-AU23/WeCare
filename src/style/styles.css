@@ -3,7 +3,12 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    /* font-family: "Arial"; */
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(https://fonts.google.com/specimen/Poppins);
 }
 
 #root {
@@ -32,8 +37,9 @@ p.mission {
     padding: 25px;
     font-size: 16px;
     border-radius: 20px;
-    box-shadow: rgba(0,0,0,0.9) 0 0 10px;
-    background-color:cornsilk;
+    /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
+    /* background-color:cornsilk; */
+    background-color:#E1E5CF;
 }
 
 /* Media + Description styling below */
@@ -65,8 +71,9 @@ p.descr {
   padding: 25px;
   min-width: 500px;
   border-radius: 20px;
-  box-shadow: rgba(0,0,0,0.9) 0 0 10px;
-  background-color: #966F33;
+  /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
+  /* background-color: #966F33; */
+  background-color: #A0A992;
   color: white;
 }
 
@@ -92,7 +99,7 @@ p.descr {
 /* resources page */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: #f1f1f1;
+  background-color: #E1E5CF;
   border-radius: 15px;
   border-width : 0;
 }
@@ -209,6 +216,16 @@ header {
 
 /* background image */
 .content-container {
+  /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/public/img/quizresultbackground.png) center center no-repeat; */
+  background-color: #FFFFFF;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  position: relative;
+  min-height: 100vh; /* Full height */
+}
+
+/* background image */
+#container-bg {
   background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/public/img/quizresultbackground.png) center center no-repeat;
   background-size: cover;
   /* background-attachment: fixed; */
@@ -222,8 +239,9 @@ p.lead {
   min-width: 500px;
   border-radius: 20px;
   margin: 20px;
-  box-shadow: rgba(0,0,0,0.9) 0 0 10px;
-  background-color: rgb(186, 198, 186);
+  /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
+  /* background-color: rgb(186, 198, 186); */
+  background-color: #A0A992;
   color: black;
 }
 

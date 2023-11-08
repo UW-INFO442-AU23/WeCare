@@ -131,7 +131,7 @@ const Profile = () => {
 
   return (
     <>
-      <main className="profile-container">
+      <main className="profile-container" id="container-bg">
         <section className="profile-section">
           <div className="profile-content">
             {user ? (

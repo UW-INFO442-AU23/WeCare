@@ -19,7 +19,7 @@ function Home() {
           </div>
           <div class="text-center">
             <a href="/quiz">
-              <button type="button" class="btn btn-warning">Take Quiz</button>
+              <button type="button" class="btn btn-light">Take Quiz</button>
             </a>
           </div>
         </div>
