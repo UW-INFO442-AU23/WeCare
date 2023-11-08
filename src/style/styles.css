@@ -283,4 +283,7 @@ p.lead {
   height: 3em;
 }
 
-
+/* Profile section */
+.profile-section{
+  background-color: white;
+}

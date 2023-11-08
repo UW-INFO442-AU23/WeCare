@@ -11,6 +11,7 @@ export function Header(props){
 }
 
 
+
 export function ResCards(props) {
   const resData = props.resData;
 
@@ -40,7 +41,21 @@ export function ResCards(props) {
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
-                        {resData.modbody}
+                      {resData.modbody}
+                       <br></br>
+                        <br></br>
+                      {/* <script>
+                      if({resData.modbody2} != ""){
+                        <div>
+                          <br></br>
+                        <br></br>
+                        </div>
+                        }
+                      </script> */}
+                       {resData.modbody2}
+                        <br></br>
+                        <br></br>
+                        {resData.modbody3}
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
