@@ -47,6 +47,7 @@ p.mission {
   margin-top: 3rem;
   padding: 1rem;
   display: flex; /* Display children side by side */
+  justify-content: center;
   flex-wrap: wrap; /* Allow children to wrap to the next line if the screen is too narrow */
 }
 
@@ -59,7 +60,7 @@ p.mission {
 /* Embedded media element styling */
 .float-video {
   margin-left: 15px;
-  margin-right: 2rem;
+  margin-right: 2rem; /* maybe change this to also be 15px?*/
   width: 560px;
   height: 315px;
   max-width: 560px;
