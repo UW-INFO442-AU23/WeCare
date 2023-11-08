@@ -295,6 +295,7 @@ const Edit = () => {
     if (currentUser) {
       setUser(currentUser);
       setFirstName(currentUser.displayName || '');
+      setPronouns(currentUser.pronouns || '');
 
 
       
@@ -305,18 +306,28 @@ const Edit = () => {
     setFirstName(e.target.value);
   };
 
-  function handlePronouns(event) {
-    event.preventDefault();
-    let pronouns = event.target.value;
+  // function handlePronouns(event) {
+  //   event.preventDefault();
+  //   let pronouns = event.target.value;
+  //   localStorage.setItem('pronouns', pronouns);
+  // }
+
+  const handlePronounsChange = (e) => {
+    setPronouns(e.target.value);
     localStorage.setItem('pronouns', pronouns);
-  }
+  };
 
 
-  function handleAddress(event) {
-    event.preventDefault();
-    let address = event.target.value;
+  // function handleAddress(event) {
+  //   event.preventDefault();
+  //   let address = event.target.value;
+  //   localStorage.setItem('address', address);
+  // }
+  const handleAddressChange = (e) => {
+    e.preventDefault();
+    setAddress(e.target.value);
     localStorage.setItem('address', address);
-  }
+  };
 
 
   const handleImageChange = (e) => {
@@ -332,7 +343,7 @@ const Edit = () => {
       await updateProfile(user, {
         displayName: firstName,
         pronouns: pronouns,
-        address: address,
+        address: address
 
       });
 
@@ -345,8 +356,8 @@ const Edit = () => {
         await updateProfile(user, {
           photoURL: imageUrl,
           displayName: firstName,
-        pronouns: pronouns,
-        address: address,
+          pronouns: pronouns,
+        address: address
         });
       }
 
@@ -371,11 +382,11 @@ const Edit = () => {
         </div>
         <div>
           <label>Pronouns:</label>
-          <input type="text" value={pronouns} onChange={handlePronouns} />
+          <input type="text" value={pronouns} onChange={handlePronounsChange} />
         </div>
         <div>
           <label>Address:</label>
-          <input type="text" value={address} onChange={handleAddress} />
+          <input type="text" value={address} onChange={handleAddressChange} />
         </div>
         <div>
           <label>Profile Picture:</label>
