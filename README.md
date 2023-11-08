@@ -32,6 +32,10 @@ The aim of our project is to bridge this gap of awareness, believing that enligh
 - Favorite charities
 - Log in and customize profile
 
+## User Personas
+
+You can find the 3 user personas we have made [here](deliverables/user-personas)
+
 ## Installation & Setup
 
 1. Clone the repository to your local machine.
