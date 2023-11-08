@@ -32,6 +32,17 @@ const rows = [
   createData('10. United Way of King County', 'Providing access to resources, education, and meals.', '98/100', 'https://www.uwkc.org/donate/'),
   createData('11. Food Lifeline', 'A member of Feeding America, providing food, meal programs, and shelters across Western Washington.', '91/100', 'https://foodlifeline.org/'),
   createData('12. Emergency Food Network', 'Providing Pierce County with a consistent, diverse and nutritious food supply.', '99/100', 'https://www.efoodnet.org/'),
+  createData('13. Packs for Kids ', 'Providing healthy packs of food and backpacks for kids, focused in Mukilteo County.', 'Not yet rated', 'https://www.udistrictfoodbank.org/services/packs-for-kids/'),
+  createData('14. Weekend Food for Kids', 'Providing students with nutritious and easy-to-prepare meals for the weekends', '100/100', 'https://www.ballardfoodbank.org/weekend-food-for-kids'),
+  createData('15. Farestart Seattle', 'Providing healthy meals for schools, healthcare centers, shelters, and more.', '100/100', 'https://www.farestart.org/feeding-our-community'),
+  createData('16. City Fruit', 'Harvesting fruit across Seattle and distributing to the community.', '77/100', 'https://www.cityfruit.org/'),
+  createData('17. Sustainable Seattle', 'Equitable access to health, food, shelter, and economic wealth for all.', '82/100', 'https://sustainableseattle.org/'),
+  createData('18. Spokane Valley Partners', 'Providing emergencies and temporary food needs through various services.', '100/100', 'https://www.volunteerspokane.org/agency/detail/?agency_id=120877'),
+  createData('19. Second Harvest Inland Northwest', 'Provide food through mobile markets, education, hunger relief network, and feeding kids programs.', '99/100', 'https://2-harvest.org/'),
+  createData('20. FamilyWorks', 'Providing food services and family centers for the community.', '98/100', 'https://familyworksseattle.org/'),
+  createData('21. Healthy Food America', 'Make food healthier: expose the community less to unhealthy junk foods.', '97/100', 'https://www.healthyfoodamerica.org/'),
+  createData('22. Backpack Brigade', 'Providing weekend meal packs to school kids in need.', 'Not yet rated', 'https://www.backpackbrigade.org/'),
+  createData('23. North Helpline', 'Partnering with various food banks and services to provide services like bi-weekly meal home deliveries.', '100/100', 'https://northhelpline.org/')
 ];
 
 export default function BasicTable() {
