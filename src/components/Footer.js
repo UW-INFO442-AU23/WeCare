@@ -8,7 +8,7 @@ function Footer() {
                 <i class="fas fa-gem me-3"></i>WeCare
               </h6>
               <p>
-              How might we educate young professionals on global food insecurity to help direct their donations to communities in need?
+              How might we educate young professionals in Washington on global food insecurity to help direct their donations to local or global communities in need?
               </p>
           </div>
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">

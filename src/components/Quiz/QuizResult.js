@@ -167,7 +167,7 @@ function Card5A() {
                 Hunger Intervention Program
               </Typography>
               <Typography variant="body" color="text.secondary">
-                This program aims to increase food security for underserved populations in North King Country through nutritious meals,
+                This program aims to increase food security for underserved populations in North King County through nutritious meals,
                 educational programs, and advocacy. They ensure that every donation goes towards decreasing food insecurity within the community.
               </Typography>
             </CardContent>
@@ -192,7 +192,7 @@ function Card1B() {
             />
             <CardContent>
               <Typography gutterBottom variant="h4" component="div">
-                Hunger Against Hunger
+                Harvest Against Hunger
               </Typography>
               <Typography variant="body" color="text.secondary">
                 Donate to Harvest Against Hunger! This organization connects farmers, truckers, volunteers, and
@@ -307,8 +307,8 @@ function Card5B() {
                 United Way of King County
               </Typography>
               <Typography variant="body" color="text.secondary">
-                Donate to United Way of King County! Give to this organization that believes everyone
-                deserves access to resources, quality education, enough to eat, and a safe place to call home
+                Donate to United Way of King County, the organization that believes everyone
+                deserves access to resources, quality education, enough to eat, and a safe place to call home.
               </Typography>
             </CardContent>
           </CardActionArea>
