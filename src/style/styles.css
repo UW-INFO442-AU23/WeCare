@@ -66,16 +66,29 @@ p.mission {
   max-width: 560px;
 }
 
+
 /* Video description styling */
 p.descr {
   font-size: 15px;
   padding: 25px;
-  min-width: 500px;
+  /* min-width: 500px; */
   border-radius: 20px;
   /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
   /* background-color: #966F33; */
   background-color: #A0A992;
   color: white;
+}
+
+/* Centering the video */
+.v-center{
+  align-items: center;
+}
+
+/* Homepage take quiz button */
+.t-quiz{
+  background-color: #B6C0A5;
+  padding: 20px;
+  width: 25%;
 }
 
 /* Take Quiz Button styling */
@@ -84,6 +97,14 @@ p.descr {
   margin: 20px;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+/* Quiz questions */
+#q-button {
+  background-color: #E1E5CF;
+  padding: 40px;
+  width:100%;
+  border-radius: 20px;
 }
 
 /* Media query for responsive layout */
@@ -242,7 +263,7 @@ p.lead {
   margin: 20px;
   /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
   /* background-color: rgb(186, 198, 186); */
-  background-color: #A0A992;
+  background-color: #B6C0A5;
   color: black;
 }
 
@@ -287,3 +308,4 @@ p.lead {
 .profile-section{
   background-color: white;
 }
+

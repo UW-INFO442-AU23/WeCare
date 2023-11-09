@@ -25,9 +25,13 @@ function QuizContent({ questions, onAnswer, answers}) {
             <h2>{questions[currentQuestion].question}</h2>
             {questions[currentQuestion].options.map((option, index) => (
                 <div key={index} className="mb-2">
-                    <button className="btn btn-primary btn-block" onClick={() => handleAnswerClick(index)}>
+                    {/* <button className="btn btn-primary btn-block" */}
+                    <div class="text-center">
+                    <button className="btn btn-block" id="q-button" onClick={() => handleAnswerClick(index)}>
                         {option}
                     </button>
+                    </div>
+                    
                 </div>
             ))}
             <div className="progress mt-3">
