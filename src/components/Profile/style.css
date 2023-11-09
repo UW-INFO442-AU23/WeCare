@@ -208,6 +208,11 @@
   display: inline-block;
 }
 
+.edit-con{
+  background-color: #E1E5CF;
+  width: 50%;
+}
+
 .user-info-container {
   margin-top: 20px;
 }

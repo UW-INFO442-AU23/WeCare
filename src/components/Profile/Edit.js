@@ -112,7 +112,7 @@ function handlePronouns(event) {
           <input type="file" onChange={handleImageChange} />
         </div>
 
-        <button type="submit">Save Changes</button>
+        <button className="btn btn-light" type="submit">Save Changes</button>
       </form>
     </div>
   );
