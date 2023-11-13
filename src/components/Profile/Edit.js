@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { updateProfile } from 'firebase/auth';
-import { storage, auth } from './f-config';  // Adjust this path based on your project structure
+import { storage, auth } from '../../f-config';  // Adjust this path based on your project structure
 
 const Edit = () => {
   const [firstName, setFirstName] = useState('');

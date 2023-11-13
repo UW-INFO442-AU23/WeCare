@@ -4,7 +4,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { UserInfo } from '../UserInfo';
 
-import { auth, db } from './f-config';
+import { auth, db } from '../../f-config';
 import './style.css'; // Import your CSS file for styling
 
 const Profile = () => {
