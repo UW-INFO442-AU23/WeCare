@@ -6,7 +6,7 @@ import { UserInfo } from '../UserInfo';
 import { useCharityContext } from '../CharityCat';
 
 
-import { auth, db } from './f-config';
+import { auth, db } from '../../f-config';
 import './style.css'; // Import your CSS file for styling
 
 const Profile = () => {

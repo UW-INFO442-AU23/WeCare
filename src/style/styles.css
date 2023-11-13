@@ -28,14 +28,16 @@ body, html {
 
 /* Mission Title styling */
 h1.mission-title {
-    margin-left: 25px;
+  margin-top: 30px;
+    text-align: center;
 }
 
 /* Mission Statement styling */
 p.mission {
-    margin: 20px;
-    padding: 25px;
-    font-size: 16px;
+    /* margin: 3rem; */
+    padding: 1.5rem;
+    
+    font-size: 25px;
     border-radius: 20px;
     /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
     /* background-color:cornsilk; */
@@ -49,6 +51,8 @@ p.mission {
   display: flex; /* Display children side by side */
   justify-content: center;
   flex-wrap: wrap; /* Allow children to wrap to the next line if the screen is too narrow */
+  /* background-color:#E1E5CF; */
+  border-radius: 20px;
 }
 
 .child {
@@ -75,8 +79,8 @@ p.descr {
   border-radius: 20px;
   /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
   /* background-color: #966F33; */
-  background-color: #A0A992;
-  color: white;
+  /* background-color: #A0A992; */
+  color: black;
 }
 
 /* Centering the video */
@@ -89,6 +93,16 @@ p.descr {
   background-color: #B6C0A5;
   padding: 20px;
   width: 25%;
+  border-radius: 35px;
+}
+
+/* Homepage learn more button */
+.t-resources{
+  border-color: #B6C0A5;
+  border-width: 3px;
+  padding: 20px;
+  width: 25%;
+  border-radius: 35px;
 }
 
 /* Take Quiz Button styling */
@@ -105,6 +119,8 @@ p.descr {
   padding: 40px;
   width:100%;
   border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* Media query for responsive layout */

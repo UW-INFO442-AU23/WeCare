@@ -1,7 +1,7 @@
 // Login.js
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './f-config';
+import { auth } from '../../f-config';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './style.css'; 
 
