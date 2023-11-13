@@ -45,7 +45,7 @@ The aim of our project is to bridge this gap of awareness, believing that enligh
 | Unexpected Results  | <ul><li>User takes the quiz multiple times with different answers, but every time, they get the same suggested charities, irrespective of their choices.</li><li> User begins the quiz, but some questions appear cut off. The progress bar doesn't move after answering questions, and at the end, the user is not taken to a results page. </li><li>User clicks back button, but the user’s previous selection is not visible or has been reset.</li></ul>  | Content Cell | Content Cell  | Content Cell | Content Cell |
 
 **Known Bugs**
-<ul><li>Fill in as bugs are known</li></ul>
+<ul><li>Users are unable to unsave charities while on Resources Page. A workaround for this is to provide users a way to unsave through their profile page. Users will see a list of saved charities and can choose to unsave from there.</li></ul>
 
 ## User Personas
 

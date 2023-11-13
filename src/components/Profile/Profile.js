@@ -1,33 +1,50 @@
-// Profile.js
 import React, { useEffect, useState } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { UserInfo } from '../UserInfo';
+import { ref as databaseRef, onValue } from 'firebase/database';
+import { NavLink } from 'react-router-dom';
 import { useCharityContext } from '../CharityCat';
 
 
-import { auth, db } from '../../f-config';
-import './style.css'; // Import your CSS file for styling
+import { auth, realtimedb } from '../../f-config';
+import './style.css'; 
 
 const Profile = () => {
   console.log('Profile component rendering...');
   const [user, setUser] = useState(null);
-  const { savedCharities, addSavedCharity, setSavedCharities } = useCharityContext();
+  const [profileData, setProfileData] = useState({
+    photoURL: 'default-profile-picture.jpg',
+    displayName: '',
+    pronouns: '',
+    address: '',
+  });
+
+  const { savedCharities, addSavedCharity, setSavedCharities} = useCharityContext();
   console.log('Saved Charities:', savedCharities);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (authUser) => {
       if (authUser) {
-        // User is signed in
         setUser(authUser);
+
+        // Fetch user details from Realtime Database
+        const userRef = databaseRef(realtimedb, `users/${authUser.uid}`);
+        onValue(userRef, (snapshot) => {
+          const data = snapshot.val();
+          if (data) {
+            setProfileData({
+              photoURL: data.photoURL || 'default-profile-picture.jpg',
+              displayName: data.displayName || '',
+              pronouns: data.pronouns || '',
+              address: data.address || '',
+            });
+          }
+        });
       } else {
-        // User is signed out
         setUser(null);
       }
     });
 
     return () => {
-      // Unsubscribe from the listener when the component unmounts
       unsubscribe();
     };
   }, []);
@@ -35,7 +52,6 @@ const Profile = () => {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      // You can navigate to a different page after logout if needed
       console.log('Logout successful!');
     } catch (error) {
       console.error('Logout error:', error.message);
@@ -65,19 +81,17 @@ const Profile = () => {
                   <div className="profile-photo">
                     <img
                       className="rounded"
-                      src={user.photoURL || 'default-profile-picture.jpg'}
+                      src={profileData.photoURL}
                       alt="User Profile"
                     />
                   </div>
                   <div className="profile-details">
                     <h2>Profile</h2>
-                    <p className="welcome-text">Welcome, {user.email}!</p>
+                    <p className="welcome-text">Welcome, {profileData.displayName || user.email}!</p>
                     <div className="profile-fields">
-                      <UserInfo
-                        name={user.displayName}
-                        pronouns={localStorage.getItem('pronouns')}
-                        address={localStorage.getItem('address')}
-                      />
+                      <p>Name: {profileData.displayName}</p>
+                      <p>Pronouns: {profileData.pronouns}</p>
+                      <p>Address: {profileData.address}</p>
                     </div>
                     <div className="saved-charities">
                       <h3>Saved Charities</h3>
@@ -100,7 +114,6 @@ const Profile = () => {
                 <button className="logout-button" onClick={handleLogout}>
                   Logout
                 </button>
-
                 <NavLink to="/edit" className="edit-button">
                   Edit
                 </NavLink>
