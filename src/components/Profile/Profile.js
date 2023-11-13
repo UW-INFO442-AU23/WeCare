@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { ref as databaseRef, onValue } from 'firebase/database';
 import { NavLink } from 'react-router-dom';
+import { useCharityContext } from '../CharityCat';
+
 
 import { auth, realtimedb } from '../../f-config';
 import './style.css'; 
 
 const Profile = () => {
+  console.log('Profile component rendering...');
   const [user, setUser] = useState(null);
   const [profileData, setProfileData] = useState({
     photoURL: 'default-profile-picture.jpg',
@@ -15,6 +18,9 @@ const Profile = () => {
     address: '',
   });
 
+  const { savedCharities } = useCharityContext();
+  console.log('Saved Charities:', savedCharities);
+  
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (authUser) => {
       if (authUser) {
@@ -51,6 +57,9 @@ const Profile = () => {
       console.error('Logout error:', error.message);
     }
   };
+
+ 
+ 
 
   return (
     <>
