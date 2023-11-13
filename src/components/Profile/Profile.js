@@ -87,15 +87,6 @@ const Profile = () => {
                   </div>
                   <div className="profile-details" >
                     <h2>Profile</h2>
-<<<<<<< HEAD
-                    <p className="welcome-text">Welcome, {user.email}!</p>
-                    <div className="profile-fields" >
-                      <UserInfo
-                        name={user.displayName}
-                        pronouns={localStorage.getItem('pronouns')}
-                        address={localStorage.getItem('address')}
-                      />
-=======
                     <p className="welcome-text">Welcome, {profileData.displayName || user.email}!</p>
                     <div className="profile-fields">
                       <p>Name: {profileData.displayName}</p>
@@ -117,7 +108,6 @@ const Profile = () => {
                           </li>
                         ))}
                       </ul>
->>>>>>> refs/remotes/origin/main
                     </div>
                   </div>
                 </div>
