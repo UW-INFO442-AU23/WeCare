@@ -35,11 +35,11 @@ h1.mission-title {
 p.mission {
     margin: 20px;
     padding: 25px;
-    font-size: 16px;
+    font-size: 30px;
     border-radius: 20px;
     /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
     /* background-color:cornsilk; */
-    background-color:#E1E5CF;
+    /* background-color:#E1E5CF; */
 }
 
 /* Media + Description styling below */
@@ -49,6 +49,12 @@ p.mission {
   display: flex; /* Display children side by side */
   justify-content: center;
   flex-wrap: wrap; /* Allow children to wrap to the next line if the screen is too narrow */
+}
+
+.parent{
+  background-color:#E1E5CF;
+  border-radius: 20px;
+  
 }
 
 .child {
@@ -75,8 +81,8 @@ p.descr {
   border-radius: 20px;
   /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
   /* background-color: #966F33; */
-  background-color: #A0A992;
-  color: white;
+  /* background-color: #A0A992; */
+  color: black;
 }
 
 /* Centering the video */
@@ -105,6 +111,8 @@ p.descr {
   padding: 40px;
   width:100%;
   border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* Media query for responsive layout */
