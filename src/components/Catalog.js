@@ -48,6 +48,7 @@ const rows = [
 export default function BasicTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [savedCharities, setSavedCharities] = React.useState([]);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -57,6 +58,15 @@ export default function BasicTable() {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
+
+  
+
+const handleSave = (charity) => {
+  if (!savedCharities.some((savedCharity) => savedCharity.charity === charity.charity)) {
+    setSavedCharities([...savedCharities, charity]);
+  }
+};
+
 
   const cellStyle = {
     padding: '8px',
@@ -106,6 +116,9 @@ export default function BasicTable() {
                   <TableCell align="center" style={cellStyle}>
                     {row.rating}
                   </TableCell>
+                  <TableCell align="center" style={cellStyle}>
+        <button onClick={() => handleSave(row)}>Save</button>
+      </TableCell>
                 </TableRow>
               ))}
           </TableBody>
