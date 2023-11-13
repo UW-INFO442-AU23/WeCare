@@ -38,24 +38,24 @@ const Profile = () => {
   };
 
   return (
-    <>
-      <main className="profile-container">
-        <section className="profile-section">
-          <div className="profile-content">
+    <div id="container-bg">
+      <main className="profile-container" >
+        <section className="profile-section" class="text-center">
+          <div className="profile-content" class="text-center">
             {user ? (
               <>
-                <div className="profile-header">
-                  <div className="profile-photo">
+                <div className="profile-header" >
+                  <div className="profile-photo" >
                     <img
                       className="rounded"
                       src={user.photoURL || 'default-profile-picture.jpg'}
                       alt="User Profile"
                     />
                   </div>
-                  <div className="profile-details">
+                  <div className="profile-details" >
                     <h2>Profile</h2>
                     <p className="welcome-text">Welcome, {user.email}!</p>
-                    <div className="profile-fields">
+                    <div className="profile-fields" >
                       <UserInfo
                         name={user.displayName}
                         pronouns={localStorage.getItem('pronouns')}
@@ -78,7 +78,7 @@ const Profile = () => {
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 };
 

@@ -92,7 +92,7 @@ function handlePronouns(event) {
   }
 
   return (
-    <div>
+    <div id="container-bg">
       <h1>Edit Profile</h1>
       <form onSubmit={handleSubmit}>
         <div>

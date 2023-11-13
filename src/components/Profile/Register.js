@@ -33,7 +33,7 @@ const Register = () => {
   };
 
   return (
-    <main className="main-container">
+    <main className="main-container" id="container-bg">
       <section className="register-section">
         <div className="register-content">
           <h1 className="register-logo">WeCare</h1>

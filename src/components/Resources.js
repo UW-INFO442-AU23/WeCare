@@ -27,7 +27,7 @@ export function ResCards(props) {
             <p className="card-text">{resData.descr}</p>
             <div class="text-center">
               
-              <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target={resData.bs}>Learn More</button>
+              <button type="button" class="btn res-btn" data-bs-toggle="modal" data-bs-target={resData.bs}>Learn more</button>
               {/* <!-- Vertically centered modal --> */}
               <div class="modal-dialog modal-dialog-centered">
                 {/* <!-- Modal --> */}
@@ -39,7 +39,7 @@ export function ResCards(props) {
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
-                      {resData.modbody}
+                      {resData.modbody} 
                        {/* <br></br>
                         <br></br> */}
                       {/* <script>
