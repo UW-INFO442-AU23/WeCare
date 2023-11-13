@@ -12,6 +12,7 @@ import ForgotPassword from './components/ForgotPassword';
 import QuizResultCards from './components/Quiz/QuizResult';
 import Edit from './components/Profile/Edit';
 import Home2 from './components/Home2';
+import { CharityProvider } from './components/CharityCat';
 
 import './style/styles.css';
 import './style/AnimatedIconStyles.css'
@@ -21,14 +22,15 @@ function App(props) {
     <Router>
       <Navbar />
       <div className="content-container">
+ 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/resources" element={<Resources res={props.res}/>} />
-          <Route path="/profile" element={<Profile />} />
+          {/* <Route path="/profile" element={<Profile />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />}/>
-
+          <Route path="/profile" element={<CharityProvider><Profile /></CharityProvider>} />
           <Route path="/reset" element={<ForgotPassword/>} />
           <Route path="/quizresult1" element={<QuizResultCards /> } />
           <Route path='/edit' element={<Edit/>}/>

@@ -3,13 +3,18 @@ import React, { useEffect, useState } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { UserInfo } from '../UserInfo';
+import { useCharityContext } from '../CharityCat';
+
 
 import { auth, db } from './f-config';
 import './style.css'; // Import your CSS file for styling
 
 const Profile = () => {
+  console.log('Profile component rendering...');
   const [user, setUser] = useState(null);
-
+  const { savedCharities } = useCharityContext();
+  console.log('Saved Charities:', savedCharities);
+  
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (authUser) => {
       if (authUser) {
@@ -37,6 +42,9 @@ const Profile = () => {
     }
   };
 
+ 
+ 
+
   return (
     <>
       <main className="profile-container">
@@ -62,6 +70,16 @@ const Profile = () => {
                         address={localStorage.getItem('address')}
                       />
                     </div>
+                    <div className="saved-charities">
+                  <h3>Saved Charities</h3>
+                  <ul>
+                    {savedCharities.map((charity) => (
+                      <li key={charity.charity}>
+                        <a href={charity.link}>{charity.charity}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                   </div>
                 </div>
                 <button className="logout-button" onClick={handleLogout}>
