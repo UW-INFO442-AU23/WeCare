@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { ref as databaseRef, set as databaseSet, onValue } from 'firebase/database';
 import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { updateProfile } from 'firebase/auth';
-import { storage, auth } from '../../f-config';  // Adjust this path based on your project structure
+import { auth, realtimedb, storage } from '../../f-config'; 
 
 const Edit = () => {
   const [firstName, setFirstName] = useState('');
@@ -15,11 +16,17 @@ const Edit = () => {
     const currentUser = auth.currentUser;
     if (currentUser) {
       setUser(currentUser);
-      setFirstName(currentUser.displayName || '');
-      setPronouns(currentUser.pronouns || '');
-      setAddress(currentUser.address || '');
 
-      
+      // Fetch user data from Realtime Database
+      const userRef = databaseRef(realtimedb, `users/${currentUser.uid}`);
+      onValue(userRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          setFirstName(data.displayName || '');
+          setPronouns(data.pronouns || '');
+          setAddress(data.address || '');
+        }
+      });
     }
   }, []);
 
@@ -27,60 +34,43 @@ const Edit = () => {
     setFirstName(e.target.value);
   };
 
-//   function handlePronouns(event) {
-//     //event.preventDefault();
-//     setPronouns(event.target.value);
-//   }
-function handlePronouns(event) {
+  const handlePronouns = (event) => {
     event.preventDefault();
-    let pronounsValue = event.target.value;
-    console.log('Setting pronouns:', pronounsValue);
-    setPronouns(pronounsValue);
-    localStorage.setItem('pronouns', pronounsValue);
-  }
-  
+    setPronouns(event.target.value);
+  };
 
-  function handleAddress(event) {
+  const handleAddress = (event) => {
     event.preventDefault();
-    let addressValue = event.target.value;
-    console.log('Setting address:', addressValue);
-    setAddress(addressValue);
-    localStorage.setItem('address', addressValue);
-  }
-
+    setAddress(event.target.value);
+  };
 
   const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    setImage(file);
+    if (e.target.files[0]) {
+      setImage(e.target.files[0]);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Update first and last name
-      await updateProfile(user, {
+      // Update user data in Realtime Database
+      const userRef = databaseRef(realtimedb, `users/${user.uid}`);
+      databaseSet(userRef, {
         displayName: firstName,
         pronouns: pronouns,
         address: address,
-
       });
 
-      // Update profile picture if selected
+      // Handle image upload
       if (image) {
         const imageRef = storageRef(storage, `profile-images/${user.uid}`);
-        await uploadBytes(imageRef, image);
-        const imageUrl = await getDownloadURL(imageRef);
-
-        await updateProfile(user, {
-          photoURL: imageUrl,
-          displayName: firstName,
-        pronounsName: pronouns,
-        addressName: address,
+        await uploadBytes(imageRef, image).then(async () => {
+          const imageUrl = await getDownloadURL(imageRef);
+          databaseSet(databaseRef(realtimedb, `users/${user.uid}/photoURL`), imageUrl);
         });
       }
 
-      // Additional logic or redirection if needed
       console.log('Profile updated successfully!');
     } catch (error) {
       console.error('Error updating profile:', error.message);
@@ -100,7 +90,7 @@ function handlePronouns(event) {
           <input type="text" value={firstName} onChange={handleFirstLastNameChange} />
         </div>
         <div>
-          <label>Pronounce:</label>
+          <label>Pronouns:</label>
           <input type="text" value={pronouns} onChange={handlePronouns} />
         </div>
         <div>
@@ -111,11 +101,10 @@ function handlePronouns(event) {
           <label>Profile Picture:</label>
           <input type="file" onChange={handleImageChange} />
         </div>
-
         <button className="btn btn-light" type="submit">Save Changes</button>
       </form>
     </div>
   );
 };
-export default Edit;
 
+export default Edit;

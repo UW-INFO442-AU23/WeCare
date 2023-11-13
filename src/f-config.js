@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from 'firebase/firestore';
+import { getDatabase } from 'firebase/database';
 import { getStorage } from 'firebase/storage'; 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -23,4 +24,5 @@ export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
+export const realtimedb = getDatabase(app);
 export default app;
