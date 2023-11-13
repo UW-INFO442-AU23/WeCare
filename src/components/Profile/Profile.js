@@ -12,9 +12,9 @@ import './style.css'; // Import your CSS file for styling
 const Profile = () => {
   console.log('Profile component rendering...');
   const [user, setUser] = useState(null);
-  const { savedCharities } = useCharityContext();
+  const { savedCharities, addSavedCharity, setSavedCharities } = useCharityContext();
   console.log('Saved Charities:', savedCharities);
-  
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (authUser) => {
       if (authUser) {
@@ -42,8 +42,17 @@ const Profile = () => {
     }
   };
 
- 
- 
+  const handleUnsave = (charity) => {
+    console.log('Attempting to unsave:', charity);
+    const updatedCharities = savedCharities.filter((savedCharity) => savedCharity.charity !== charity.charity);
+    console.log('Updated savedCharities:', updatedCharities);
+    setSavedCharities(updatedCharities);
+    // Optionally, update the localStorage if you're using it
+    localStorage.setItem('savedCharities', JSON.stringify(updatedCharities));
+  };
+
+
+
 
   return (
     <>
@@ -71,15 +80,21 @@ const Profile = () => {
                       />
                     </div>
                     <div className="saved-charities">
-                  <h3>Saved Charities</h3>
-                  <ul>
-                    {savedCharities.map((charity) => (
+                      <h3>Saved Charities</h3>
+                      <ul>
+                        {/* {savedCharities.map((charity) => (
                       <li key={charity.charity}>
                         <a href={charity.link}>{charity.charity}</a>
                       </li>
-                    ))}
-                  </ul>
-                </div>
+                    ))} */}
+                        {savedCharities.map((charity) => (
+                          <li key={charity.charity}>
+                            <a href={charity.link}>{charity.charity}</a>
+                            <button onClick={() => handleUnsave(charity)}>Unsave</button>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
                 <button className="logout-button" onClick={handleLogout}>
