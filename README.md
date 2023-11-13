@@ -28,9 +28,24 @@ The aim of our project is to bridge this gap of awareness, believing that enligh
 
 ## Features
 - Quiz
-- Resources
+- Resources cards
+- Charity catalog
 - Favorite charities
-- Log in and customize profile
+- Log in/Sign Up/Log out
+- Customize profile
+
+## Testing Protocol
+
+
+|   | Feature 1: Quiz | Feature 2: Resources Cards | Feature 3: Charity Catalog | Feature 4: Log In/Log Out | Feature 5: Customize Profile |
+| ------------- | ------------- | ------------ | ------------- | ------------ | ------------ |
+| Requirement Specifications  | The quiz provides five question to match individuals with specific charities based on their preferences. The question will display immediately when user presses start quiz and after the user answers a question, the next question will come in sequential order. The progress bar will show the user progress in both a bar form and numerical form depending on which question they are on. The user may also go back to change their answer. Once the user completes all five questions they will be matched with five charities. | On the Resources page, we will have fours cards where users can click to learn more about various topics or other resoruces. | On the Resources page, we will include a charity catalog where users can look through multiple charities in a table format. Users can also save these charities to their profile. | The user may log in using an appropriate email and password. If a user does not have an account they may sign up using an email and password. Once a user is signed in they can go to the profile tab and customize their information. A user may log out by navigating to the profile tab and clicking log out. | Once a user is logged in or has signed up, they can edit their profile. Options to edit include a profile photo, name, city, and pronouns. | 
+| Testing Cases  | <ul><li>User clicks start quiz button.</li><li>User answers a couple questions then presses back button.</li><li>User takes quiz multiple times, answering with different options.</li></ul>  | <ul><li>User clicks start quiz button.</li><li>User answers a couple questions then presses back button.</li><li>User takes quiz multiple times, answering with different options.</li></ul> | <ul><li>User clicks start quiz button.</li><li>User answers a couple questions then presses back button.</li><li>User takes quiz multiple times, answering with different options.</li></ul>  | <ul><li>User clicks start quiz button.</li><li>User answers a couple questions then presses back button.</li><li>User takes quiz multiple times, answering with different options.</li></ul> | <ul><li>User clicks start quiz button.</li><li>User answers a couple questions then presses back button.</li><li>User takes quiz multiple times, answering with different options.</li></ul> |
+| Expected Results  | <ul><li>The quiz starts when the start button is pressed.</li><li>All questions and answer choices are displayed clearly without any formatting issues or typos.</li><li>For each question answered, the progress bar should advance proportionally.</li> If user presses the back button on a question they should be taken back to the previous question. </li><li>On the last question, the progress bar should be fully filled.</li><li>After answering all questions and submitting, the user should be taken to the results page where the charities are filtered correctly based on the user's answers to the questions.</li></ul> |Content Cell | Content Cell | Content Cell  | Content Cell | Content Cell |
+| Unexpected Results  | <ul><li>User takes the quiz multiple times with different answers, but every time, they get the same suggested charities, irrespective of their choices.</li><li> User begins the quiz, but some questions appear cut off. The progress bar doesn't move after answering questions, and at the end, the user is not taken to a results page. </li><li>User clicks back button, but the user’s previous selection is not visible or has been reset.</li></ul>  | Content Cell | Content Cell  | Content Cell | Content Cell |
+
+**Known Bugs**
+<ul><li>Fill in as bugs are known</li></ul>
 
 ## User Personas
 
