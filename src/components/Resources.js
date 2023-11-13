@@ -10,8 +10,6 @@ export function Header(props){
   )
 }
 
-
-
 export function ResCards(props) {
   const resData = props.resData;
 
