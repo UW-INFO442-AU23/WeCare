@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import TablePagination from '@mui/material/TablePagination';
+import { useCharityContext } from './CharityCat';
 
 // used mui library column grouping table to form catalog: https://mui.com/material-ui/react-table/
 
@@ -28,7 +29,7 @@ const rows = [
   createData('6. Harvest Against Hunger', 'Connects farmers, truckers, volunteers, and communities to reduce hunger and food waste.', '100/100', 'https://www.harvestagainsthunger.org/donate/'),
   createData('7. Northwest Harvest', 'Washingtons leading hunger relief agency, distributing food across the state.', '99/100', 'https://www.northwestharvest.org/ways-to-give/'),
   createData('8. Seattle Food Banks', 'Advocates for food equity and justice, providing food and services that support self-sufficiency.', '100/100', 'https://www.seattlefoodcommittee.org/donate/'),
-  createData('9. Feeding America', 'The largest charity working to end hunger in the U.S. through programs and food banks.', '97/100', 'hhttps://www.feedingamerica.org/'),
+  createData('9. Feeding America', 'The largest charity working to end hunger in the U.S. through programs and food banks.', '97/100', 'https://www.feedingamerica.org/'),
   createData('10. United Way of King County', 'Providing access to resources, education, and meals.', '98/100', 'https://www.uwkc.org/donate/'),
   createData('11. Food Lifeline', 'A member of Feeding America, providing food, meal programs, and shelters across Western Washington.', '91/100', 'https://foodlifeline.org/'),
   createData('12. Emergency Food Network', 'Providing Pierce County with a consistent, diverse and nutritious food supply.', '99/100', 'https://www.efoodnet.org/'),
@@ -48,7 +49,9 @@ const rows = [
 export default function BasicTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
-  const [savedCharities, setSavedCharities] = React.useState([]);
+  //const [savedCharities, setSavedCharities] = React.useState([]);
+  const { savedCharities, addSavedCharity } = useCharityContext();
+
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -61,12 +64,20 @@ export default function BasicTable() {
 
   
 
-const handleSave = (charity) => {
-  if (!savedCharities.some((savedCharity) => savedCharity.charity === charity.charity)) {
-    setSavedCharities([...savedCharities, charity]);
-  }
-};
-
+  // const handleSave = (charity) => {
+  //   if (!savedCharities.some((savedCharity) => savedCharity.charity === charity.charity)) {
+  //     addSavedCharity(charity);
+  //   }
+  // };
+  const handleSave = (charity) => {
+    console.log('Attempting to save:', charity);
+    if (!savedCharities.some((savedCharity) => savedCharity.charity === charity.charity)) {
+      console.log('Saving:', charity);
+      addSavedCharity(charity);
+    } else {
+      console.log('Charity already saved:', charity);
+    }
+  };
 
   const cellStyle = {
     padding: '8px',
