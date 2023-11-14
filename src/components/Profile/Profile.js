@@ -12,7 +12,7 @@ const sanitizeCharityNameForFirebaseKey = (name) => {
 const Profile = () => {
   const [user, setUser] = useState(null);
   const [profileData, setProfileData] = useState({
-    photoURL: 'default-profile-picture.jpg',
+    photoURL: 'defaultprofile.jpg',
     displayName: '',
     pronouns: '',
     address: '',
@@ -30,7 +30,7 @@ const Profile = () => {
           const data = snapshot.val();
           if (data) {
             setProfileData({
-              photoURL: data.photoURL || 'default-profile-picture.jpg',
+              photoURL: data.photoURL || 'defaultprofile.jpg',
               displayName: data.displayName || '',
               pronouns: data.pronouns || '',
               address: data.address || '',
