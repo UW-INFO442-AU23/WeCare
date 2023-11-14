@@ -29,18 +29,15 @@ body, html {
 /* Mission Title styling */
 h1.mission-title {
   margin-top: 30px;
-    text-align: center;
+  text-align: center;
 }
 
 /* Mission Statement styling */
 p.mission {
     margin: 3rem;
     padding: 1.5rem;
-    
     font-size: 20px;
     border-radius: 20px;
-    /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
-    /* background-color:cornsilk; */
     background-color:#E1E5CF;
 }
 
@@ -48,10 +45,9 @@ p.mission {
 .parent {
   margin-top: 3rem;
   padding: 1rem;
-  display: flex; /* Display children side by side */
+  display: flex; 
   justify-content: center;
-  flex-wrap: wrap; /* Allow children to wrap to the next line if the screen is too narrow */
-  /* background-color:#E1E5CF; */
+  flex-wrap: wrap; 
   border-radius: 20px;
 }
 
@@ -64,7 +60,7 @@ p.mission {
 /* Embedded media element styling */
 .float-video {
   margin-left: 15px;
-  margin-right: 2rem; /* maybe change this to also be 15px?*/
+  margin-right: 15px;
   width: 560px;
   height: 315px;
   max-width: 560px;
@@ -74,12 +70,9 @@ p.mission {
 /* Video description styling */
 p.descr {
   font-size: 15px;
-  padding: 25px;
-  /* min-width: 500px; */
+  padding: 20px;
   border-radius: 20px;
-  /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
-  /* background-color: #966F33; */
-  /* background-color: #A0A992; */
+  background-color:#FBF7E7;
   color: black;
 }
 
