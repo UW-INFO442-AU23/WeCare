@@ -28,7 +28,7 @@ body, html {
 
 /* Mission Title styling */
 h1.mission-title {
-  margin-top: 30px;
+  margin-top: 35px;
   text-align: center;
 }
 
@@ -301,7 +301,7 @@ p.lead {
 
 /* homepage carousel slideshow */
 .custom-img {
-  height: 30em;
+  height: 35em;
   object-fit: cover;
 }
 
@@ -315,6 +315,14 @@ p.lead {
   filter: invert(100%);
   width: 3em; /* Adjust the size of the icon */
   height: 3em;
+}
+
+.carousel-caption {
+  background-color: rgba(225, 229, 207, 0.7);
+  padding: 5px;
+  border-radius: 10px; 
+  max-width: 300px;
+  margin: auto;
 }
 
 /* Profile section */
