@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { ref as databaseRef, onValue } from 'firebase/database';
+import { ref as databaseRef, onValue, get, remove } from 'firebase/database';
 import { NavLink } from 'react-router-dom';
-import { useCharityContext } from '../CharityCat';
-
-
 import { auth, realtimedb } from '../../f-config';
-import './style.css'; 
+import './style.css';
+
+const sanitizeCharityNameForFirebaseKey = (name) => {
+  return name.replace(/^\d+\.\s+/, '').replace(/[.#$[\]]/g, '');
+};
 
 const Profile = () => {
-  console.log('Profile component rendering...');
   const [user, setUser] = useState(null);
   const [profileData, setProfileData] = useState({
     photoURL: 'default-profile-picture.jpg',
@@ -17,16 +17,14 @@ const Profile = () => {
     pronouns: '',
     address: '',
   });
-
-  const { savedCharities, addSavedCharity, setSavedCharities} = useCharityContext();
-  console.log('Saved Charities:', savedCharities);
+  const [savedCharities, setSavedCharities] = useState([]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (authUser) => {
       if (authUser) {
         setUser(authUser);
 
-        // Fetch user details from Realtime Database
+        // Fetch user details
         const userRef = databaseRef(realtimedb, `users/${authUser.uid}`);
         onValue(userRef, (snapshot) => {
           const data = snapshot.val();
@@ -37,6 +35,9 @@ const Profile = () => {
               pronouns: data.pronouns || '',
               address: data.address || '',
             });
+            if (data.savedCharities) {
+              setSavedCharities(Object.values(data.savedCharities));
+            }
           }
         });
       } else {
@@ -58,17 +59,22 @@ const Profile = () => {
     }
   };
 
-  const handleUnsave = (charity) => {
-    console.log('Attempting to unsave:', charity);
-    const updatedCharities = savedCharities.filter((savedCharity) => savedCharity.charity !== charity.charity);
-    console.log('Updated savedCharities:', updatedCharities);
-    setSavedCharities(updatedCharities);
-    // Optionally, update the localStorage if you're using it
-    localStorage.setItem('savedCharities', JSON.stringify(updatedCharities));
+  const displayCharityName = (name) => {
+    return sanitizeCharityNameForFirebaseKey(name);
   };
 
+  const handleUnsaveCharity = (charityName) => {
+    const userId = auth.currentUser.uid;
+    const sanitizedCharityName = sanitizeCharityNameForFirebaseKey(charityName);
+    const charityRef = databaseRef(realtimedb, `users/${userId}/savedCharities/${sanitizedCharityName}`);
 
-
+    remove(charityRef)
+      .then(() => {
+        console.log(`${charityName} unsaved successfully`);
+        setSavedCharities(prevCharities => prevCharities.filter(charity => charity.charity !== charityName));
+      })
+      .catch(error => console.error('Error unsaving charity:', error));
+  };
 
   return (
     <div id="container-bg">
@@ -87,15 +93,6 @@ const Profile = () => {
                   </div>
                   <div className="profile-details" >
                     <h2>Profile</h2>
-<<<<<<< HEAD
-                    <p className="welcome-text">Welcome, {user.email}!</p>
-                    <div className="profile-fields" >
-                      <UserInfo
-                        name={user.displayName}
-                        pronouns={localStorage.getItem('pronouns')}
-                        address={localStorage.getItem('address')}
-                      />
-=======
                     <p className="welcome-text">Welcome, {profileData.displayName || user.email}!</p>
                     <div className="profile-fields">
                       <p>Name: {profileData.displayName}</p>
@@ -104,20 +101,19 @@ const Profile = () => {
                     </div>
                     <div className="saved-charities">
                       <h3>Saved Charities</h3>
-                      <ul>
-                        {/* {savedCharities.map((charity) => (
-                      <li key={charity.charity}>
-                        <a href={charity.link}>{charity.charity}</a>
-                      </li>
-                    ))} */}
-                        {savedCharities.map((charity) => (
-                          <li key={charity.charity}>
-                            <a href={charity.link}>{charity.charity}</a>
-                            <button onClick={() => handleUnsave(charity)}>Unsave</button>
-                          </li>
-                        ))}
-                      </ul>
->>>>>>> refs/remotes/origin/main
+                        <ul>
+                          {savedCharities.map((charity, index) => (
+                            // probably needs to put into css file
+                            <li key={index} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                              <a href={charity.link} target="_blank" rel="noopener noreferrer">
+                                {displayCharityName(charity.charity)}
+                              </a>
+                              <button onClick={() => handleUnsaveCharity(charity.charity)} style={{ marginLeft: '10px' }}>
+                                Unsave
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
                     </div>
                   </div>
                 </div>
