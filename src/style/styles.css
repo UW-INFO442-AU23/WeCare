@@ -96,24 +96,52 @@ p.descr {
   align-items: center;
 }
 
+
+/* Take quiz button */
+.t-quiz {
+  padding: 20px;
+  width: 25%;
+  border: 3px solid #B6C0A5; 
+  border-radius: 35px;
+  background-color: transparent; 
+}
+
+.t-quiz:hover {
+  background-color: #B6C0A5; 
+}
+
+/* Learn more button */
+.t-resources {
+  padding: 20px;
+  width: 25%;
+  border: 3px solid #B6C0A5; 
+  border-radius: 35px;
+  background-color: transparent; 
+}
+
+.t-resources:hover {
+  background-color: #B6C0A5; 
+}
+
 /* Homepage take quiz button */
-.t-quiz{
+/* .t-quiz{
   background-color: #B6C0A5;
   padding: 20px;
   width: 25%;
   border-radius: 35px;
-}
+} */
 
 /* Homepage learn more button */
-.t-resources{
+/* .t-resources{
   border-color: #B6C0A5;
   border-width: 3px;
   padding: 20px;
   width: 25%;
   border-radius: 35px;
-}
+} */
 
-/* Take Quiz Button styling */
+
+/* General Button styling */
 .btn {
   font-size: 18px;
   margin: 20px;

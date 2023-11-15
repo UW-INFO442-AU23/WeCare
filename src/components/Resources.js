@@ -1,6 +1,8 @@
 import React from "react";
 import BasicTable from "./Catalog";
 
+// To enable rendering of HTML content from the JSON file on our website, some parts of code was implemented with the help of ChatGPT
+
 export function Header(props){
   return(
       <header>
@@ -12,6 +14,10 @@ export function Header(props){
 export function ResCards(props) {
   const resData = props.resData;
 
+  const renderHTML = (htmlContent) => {
+    return { __html: htmlContent };
+  };
+
   return (
     <div className="d-flex col-md-6 col-lg-3 py-3">
       <div className="card w-100">
@@ -22,7 +28,7 @@ export function ResCards(props) {
           <div className="col-sm">
             <h2 className="card-title text-center">{resData.title}</h2>
             <p className="card-text">{resData.descr}</p>
-            <div class="text-center">
+            <div class="text-left">
 
               <button type="button" class="btn res-btn" data-bs-toggle="modal" data-bs-target={resData.bs}>Learn more</button>
               {/* <!-- Vertically centered modal --> */}
@@ -36,9 +42,18 @@ export function ResCards(props) {
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
-                      {resData.modbody}
+                        {/* Render modbody content as HTML */}
+                        <div dangerouslySetInnerHTML={renderHTML(resData.modbody)} />
+                        <br />
+                        {/* Render modbody2 content as HTML */}
+                        <div dangerouslySetInnerHTML={renderHTML(resData.modbody2 || '')} />
+                        <br />
+                        {/* Render modbody3 content as HTML */}
+                        <div dangerouslySetInnerHTML={renderHTML(resData.modbody3 || '')} />
+                      </div>
+                      {/* {resData.modbody}
                        <br></br>
-                        <br></br>
+                        <br></br> */}
                       {/* <script>
                       if({resData.modbody2} != ""){
                         '\n'
@@ -48,12 +63,12 @@ export function ResCards(props) {
                           </div>
                         }
                       </script> */}
-                       {resData.modbody2}
+                       {/* {resData.modbody2} */}
                        {/* {resData.modbody2br} */}
-                        <br></br>
+                        {/* <br></br>
                         <br></br>
                         {resData.modbody3}
-                      </div>
+                      </div> */}
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                       </div>
