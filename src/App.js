@@ -12,7 +12,6 @@ import ForgotPassword from './components/ForgotPassword';
 import QuizResultCards from './components/Quiz/QuizResult';
 import Edit from './components/Profile/Edit';
 import Home2 from './components/Home2';
-import { CharityProvider } from './components/CharityCat';
 import { auth, db } from './f-config';
 import { onAuthStateChanged } from 'firebase/auth';
 

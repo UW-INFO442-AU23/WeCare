@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth, db } from '../../f-config';
+import { auth} from '../../f-config';
 import './style.css';  // Import your CSS file for styling
 
 const Register = () => {
@@ -30,7 +30,6 @@ const Register = () => {
     }
   };
   
-
   return (
     <main className="main-container" id="container-bg">
       <section className="register-section">
