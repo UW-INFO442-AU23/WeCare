@@ -118,12 +118,14 @@ const Profile = () => {
                     </div>
                   </div>
                 </div>
+                <div class="text-center edlogbtn">
                 <button className="logout-button" onClick={handleLogout}>
                   Logout
                 </button>
                 <NavLink to="/edit" className="edit-button">
                   Edit
                 </NavLink>
+                </div>
               </>
             ) : (
               <p>You are not logged in. Please log in to view your profile.</p>
