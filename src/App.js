@@ -34,7 +34,7 @@ function App(props) {
           <Route path="/reset" element={<ForgotPassword/>} />
           <Route path="/quizresult1" element={<QuizResultCards /> } />
           <Route path='/edit' element={<Edit/>}/>
-          <Route path='/Home2' element={<Home2/>}/>
+          {/* <Route path='/Home2' element={<Home2/>}/> */}
         </Routes>
       </div>
       <Footer />
