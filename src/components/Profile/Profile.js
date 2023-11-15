@@ -78,12 +78,13 @@ const Profile = () => {
 
   return (
     <div id="container-bg">
-      <main className="profile-container" >
-        <section className="profile-section" class="text-center">
-          <div className="profile-content" class="text-center">
+      <div class="overallprofile">
+      <div className="profile-container">
+        <section className="profile-section">
+          <div className="profile-content">
             {user ? (
               <>
-                <div className="profile-header" >
+                <div className="profile-header">
                   <div className="profile-photo" >
                     <img
                       className="rounded"
@@ -129,7 +130,8 @@ const Profile = () => {
             )}
           </div>
         </section>
-      </main>
+      </div>
+    </div>
     </div>
   );
 };

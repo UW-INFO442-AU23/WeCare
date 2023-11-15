@@ -157,13 +157,17 @@
 
 
   
+  .overallprofile{
+    padding-top: 40px;
+  }
+  
   .profile-container {
     padding: 20px;
     background-color: #fff; /* White background color for the container */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 400px; /* Adjust the width as needed */
-    text-align: center;
+    margin: auto;
   }
 .profile-header {
   display: flex;
