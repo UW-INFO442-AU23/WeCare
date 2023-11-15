@@ -37,8 +37,8 @@ export function ResCards(props) {
                       </div>
                       <div class="modal-body">
                       {resData.modbody}
-                       {/* <br></br>
-                        <br></br> */}
+                       <br></br>
+                        <br></br>
                       {/* <script>
                       if({resData.modbody2} != ""){
                         '\n'
@@ -50,8 +50,8 @@ export function ResCards(props) {
                       </script> */}
                        {resData.modbody2}
                        {/* {resData.modbody2br} */}
-                        {/* <br></br>
-                        <br></br> */}
+                        <br></br>
+                        <br></br>
                         {resData.modbody3}
                       </div>
                       <div class="modal-footer">
