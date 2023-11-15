@@ -54,6 +54,7 @@ const initialRows = [
   createData('23. North Helpline', 'Partnering with various food banks and services to provide services like bi-weekly meal home deliveries.', '100/100', 'https://northhelpline.org/', false)
 ];
 
+
 export default function BasicTable() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -171,7 +172,7 @@ export default function BasicTable() {
                   .map((row, index) => (
                     <TableRow key={index} hover role="checkbox" tabIndex={-1}>
                       <TableCell component="th" scope="row">
-                        <a href={row.link} style={{ fontWeight: 'bold', color: '#191970', textDecoration: 'underline' }}>
+                        <a href={row.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#191970', textDecoration: 'underline' }}>
                           {row.charity}
                         </a>
                       </TableCell>
