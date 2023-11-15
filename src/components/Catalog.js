@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -28,7 +29,7 @@ const columns = [
 ];
 
 const initialRows = [
-  createData('1. West Seattle Food Bank', 'Distributing food and other needs to the community.', '100/100', 'https://westseattlefoodbank.org, , false'),
+  createData('1. West Seattle Food Bank', 'Distributing food and other needs to the community.', '100/100', 'https://westseattlefoodbank.org', false),
   createData('2. Washington Farmland Trust', 'Helping protect threatened land for farmers.', '91/100', 'https://wafarmlandtrust.org/'),
   createData('3. Pike Place Market Foundation', 'Providing healthy produce and foods of various cultures for the community.', '100/100', 'https://pikeplacemarketfoundation.org/get-involved/give/donate-today/', false),
   createData('4. El Centro de la Raza', 'A food bank for low-income individuals to connect with their culture through nutricious culture-rich foods.', '100/100', 'https://www.elcentrodelaraza.org/el-centro-food-bank/', false),
@@ -58,6 +59,8 @@ export default function BasicTable() {
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [rows, setRows] = useState(initialRows);
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
@@ -98,9 +101,11 @@ export default function BasicTable() {
     setPage(0);
   };
 
-
-
   const handleSave = (charity) => {
+    if (!auth.currentUser) {
+      setShowModal(true);
+      return;
+    }
     console.log('Attempting to save:', charity);
     const userId = auth.currentUser.uid;
     const sanitizedCharityName = sanitizeCharityNameForFirebaseKey(charity.charity);
@@ -125,6 +130,8 @@ export default function BasicTable() {
     setRows(updatedRows);
   };
 
+  const handleCloseModal = () => setShowModal(false);
+
   const cellStyle = {
     padding: '8px',
   };
@@ -136,6 +143,7 @@ export default function BasicTable() {
   };
 
   return (
+    <>
     <Paper style={{ width: '80%', margin: '0 auto', textAlign: 'center', marginBottom: '20px', marginTop: '20px' }}>
       <h1 style={{ fontSize: '30px', textAlign: 'center', fontStyle: 'bold', textDecoration: 'underline' }}>Charities Catalog</h1>
       {isLoading ? (
@@ -193,5 +201,28 @@ export default function BasicTable() {
         </>
       )}
     </Paper>
+    <div className={`modal fade ${showModal ? 'show' : ''}`}
+           id="loginModal"
+           tabIndex="-1"
+           aria-labelledby="loginModalLabel"
+           aria-hidden="true"
+           style={{ display: showModal ? 'block' : 'none', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="loginModalLabel">Login Required</h5>
+              <button type="button" className="btn-close" onClick={handleCloseModal} aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              You need to log in to save charities.
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>Close</button>
+              <button type="button" className="btn btn-primary" onClick={() => navigate('/login')}>Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
