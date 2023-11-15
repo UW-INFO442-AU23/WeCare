@@ -38,7 +38,18 @@ p.mission {
     padding: 1.5rem;
     font-size: 20px;
     border-radius: 20px;
-    background-color:#E1E5CF;
+    /* background-color:#E1E5CF; */
+}
+
+.homebody{
+  margin:10rem;
+}
+
+.carousel{
+
+  /* margin:auto; */
+  padding: 1.5rem;
+
 }
 
 /* Media + Description styling below */
@@ -50,6 +61,10 @@ p.mission {
   flex-wrap: wrap; 
   border-radius: 20px;
 }
+
+/* #parent-box{
+  width:100%;
+} */
 
 .child {
   padding: 1rem;

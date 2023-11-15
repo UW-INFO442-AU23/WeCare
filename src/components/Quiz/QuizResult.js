@@ -48,7 +48,7 @@ function Card1A() {
               height="140"
               image="/img/westseattle.jpeg"
               alt="food bank holding hands animated"
-            />
+            /> 
             <CardContent>
               <Typography gutterBottom variant="h4" component="div">
                 West Seattle Food Bank
