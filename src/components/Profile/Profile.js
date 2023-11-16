@@ -98,7 +98,7 @@ const Profile = () => {
                     <div className="profile-fields">
                       <p>Name: {profileData.displayName}</p>
                       <p>Pronouns: {profileData.pronouns}</p>
-                      <p>Address: {profileData.address}</p>
+                      <p>City: {profileData.address}</p>
                     </div>
                     <div className="saved-charities">
                       <h3>Saved Charities</h3>

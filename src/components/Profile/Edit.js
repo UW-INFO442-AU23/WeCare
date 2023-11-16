@@ -95,7 +95,7 @@ const Edit = () => {
           <input type="text" value={pronouns} onChange={handlePronouns} />
         </div>
         <div>
-          <label>Address:</label>
+          <label>City:</label>
           <input type="text" value={address} onChange={handleAddress} />
         </div>
         <div>
