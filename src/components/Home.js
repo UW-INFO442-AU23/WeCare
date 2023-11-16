@@ -10,45 +10,45 @@ function Home() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src="../img/Home-1.png" className="d-block w-100 custom-img" alt="..."></img>
-            <div class="carousel-caption d-none d-md-block text-primary-emphasis">
+            {/* <div class="carousel-caption d-none d-md-block text-primary-emphasis">
               <h5>1st slide label</h5>
               <p>Placeholder Text</p>
-            </div>
+            </div> */}
           </div>
           <div className="carousel-item">
             <img src="../img/Home-3.png" className="d-block w-100 custom-img" alt="..."></img>
-            <div class="carousel-caption d-none d-md-block text-primary-emphasis">
+            {/* <div class="carousel-caption d-none d-md-block text-primary-emphasis">
               <h5>2nd slide label</h5>
               <p>Placeholder Text</p>
-            </div>
+            </div> */}
           </div>
           <div className="carousel-item">
             <img src="../img/Home-2.png" className="d-block w-100 custom-img" alt="..."></img>
-            <div class="carousel-caption d-none d-md-block text-primary-emphasis">
+            {/* <div class="carousel-caption d-none d-md-block text-primary-emphasis">
               <h5>3rd slide label</h5>
               <p>Placeholder Text</p>
-            </div>
+            </div> */}
           </div>
           <div className="carousel-item">
             <img src="../img/Home-4.png" className="d-block w-100 custom-img" alt="..."></img>
-            <div class="carousel-caption d-none d-md-block text-primary-emphasis">
+            {/* <div class="carousel-caption d-none d-md-block text-primary-emphasis">
               <h5>4th slide label</h5>
               <p>Placeholder Text</p>
-            </div>
+            </div> */}
           </div>
           <div className="carousel-item">
             <img src="../img/Home-5.png" className="d-block w-100 custom-img" alt="..."></img>
-            <div class="carousel-caption d-none d-md-block text-primary-emphasis">
+            {/* <div class="carousel-caption d-none d-md-block text-primary-emphasis">
               <h5>5th slide label</h5>
               <p>Placeholder Text</p>
-            </div>
+            </div> */}
           </div>
           <div className="carousel-item">
             <img src="../img/Home-6.png" className="d-block w-100 custom-img" alt="..."></img>
-            <div class="carousel-caption d-none d-md-block text-primary-emphasis">
+            {/* <div class="carousel-caption d-none d-md-block text-primary-emphasis">
               <h5>6th slide label</h5>
               <p>Placeholder Text</p>
-            </div>
+            </div> */}
           </div>
         </div>
         <button className="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -75,7 +75,7 @@ function Home() {
               <li>Volunteering time, donating resources, and producing essential goods are impactful steps toward addressing hunger</li>
             </ul>
             <br></br>
-            <strong>After all, achieving zero hunger is not just a possibility; it's an imperative we can realize together.</strong></p>
+            <strong class="bold-descr">After all, achieving zero hunger is not just a possibility; it's an imperative we can realize together.</strong></p>
         </div>
       </div>
       <div class="text-center">
