@@ -18,6 +18,7 @@ const Profile = () => {
     address: '',
   });
   const [savedCharities, setSavedCharities] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (authUser) => {
@@ -39,9 +40,11 @@ const Profile = () => {
               setSavedCharities(Object.values(data.savedCharities));
             }
           }
+          setIsLoading(false); // Data fetched, loading is done
         });
       } else {
         setUser(null);
+        setIsLoading(false); // No user, loading is done
       }
     });
 
@@ -75,6 +78,10 @@ const Profile = () => {
       })
       .catch(error => console.error('Error unsaving charity:', error));
   };
+
+  if (isLoading) {
+    return <div>Loading profile...</div>;
+  }
 
   return (
     <div id="container-bg">

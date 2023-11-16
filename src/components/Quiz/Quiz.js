@@ -43,10 +43,14 @@ function Quiz() {
 
     const [started, setStarted] = useState(false);
     const [answers, setAnswers] = useState([]);
-    //user answers are stored here.
 
     const handleStartQuiz = () => {
         setStarted(true);
+    };
+
+    const handleResetQuiz = () => {
+        setStarted(false);
+        setAnswers([]);
     };
 
     const handleAnswer = (answer) => {
@@ -64,7 +68,6 @@ function Quiz() {
             {!started && (
                 <div className="mb-4">
                     {Header("Hunger Insight Quiz")}
-                    {/* <h4 className="leadtitle">Hunger Insight Quiz</h4> */}
                     <p className="lead">
                         In just 5 questions, we aim to understand your preferences and values when it comes to combating global hunger.
                         Each of us has a unique approach to giving, and our passions guide how we make a difference. This quiz is tailored to align
@@ -77,7 +80,7 @@ function Quiz() {
                 </div>
             )}
             {started ? (
-                <QuizContent questions={questions} onAnswer={handleAnswer} answers={answers} />
+                <QuizContent questions={questions} onAnswer={handleAnswer} answers={answers} onReset={handleResetQuiz} />
             ) : (
                 <div className="text-center">
                     <button className="btn btn-success" onClick={handleStartQuiz}>Start Quiz</button>
