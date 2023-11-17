@@ -40,11 +40,31 @@ const Edit = () => {
   };
 
   const handleImageChange = (e) => {
-    if (e.target.files[0]) {
-      setImage(e.target.files[0]);
-      const fileReader = new FileReader();
-      fileReader.onload = (e) => setDisplayedImage(e.target.result);
-      fileReader.readAsDataURL(e.target.files[0]);
+    const file = e.target.files[0];
+
+    if (file) {
+      // Validate file type
+      const validTypes = ['image/jpeg', 'image/png'];
+      if (!validTypes.includes(file.type)) {
+        alert('Invalid file type. Only JPG and PNG files are allowed.');
+        e.target.value = '';
+        return;
+      }
+
+    const maxSize = 5 * 1024 * 1024; // 5mb max
+    if (file.size > maxSize) {
+      alert('File size exceeds the limit.');
+      return;
+    }
+
+    setImage(file);
+
+    const fileReader = new FileReader();
+    fileReader.onload = (e) => setDisplayedImage(e.target.result);
+    fileReader.readAsDataURL(file);
+
+    } else {
+      setDisplayedImage(null);
     }
   };
 
@@ -105,6 +125,7 @@ const Edit = () => {
         <div>
           <label>Profile Picture:</label>
           <input type="file" onChange={handleImageChange} />
+          <p>Please upload a JPG or PNG file.</p>
           {displayedImage && <img src={displayedImage} alt="Profile" style={{ width: '100px', height: '100px', marginTop: '10px' }} />}
         </div>
         <button className="btn btn-light" type="submit">Save Changes</button>

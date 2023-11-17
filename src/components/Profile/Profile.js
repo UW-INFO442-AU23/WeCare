@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { ref as databaseRef, onValue, get, remove } from 'firebase/database';
+import { ref as databaseRef, onValue, remove } from 'firebase/database';
 import { NavLink } from 'react-router-dom';
 import { auth, realtimedb } from '../../f-config';
 import './style.css';

@@ -36,7 +36,6 @@ function Navbar() {
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            {/* <a class="nav-link" href="/login">Login</a> */}
             <a class="nav-link" href="/">Home</a>
             {/* <a class="nav-link" href="/home2">Home2</a> */}
             <a class="nav-link" href="/quiz">Quiz</a>
