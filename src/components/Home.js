@@ -5,7 +5,7 @@ function Home() {
     <div class="homebody">
       <h1 class="mission-title">Our Mission</h1>
       <p class="mission">In a world where hunger is on the rise, WeCare aims to raise awareness on the growing challenges of food insecurity within the state of Washington. As of 2023, a staggering 688,170 individuals grapple with hunger in Washington, and among them, 197,550 are innocent children - equating to an alarming <b>1 in 8 children</b> facing food insecurity.  Through our interactive quizzes and informative resources, we are committed to empowering individuals with knowledge and actionable avenues to combat this pervasive issue of hunger.</p>
-      
+
       <div id="carouselExampleAutoplaying" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -61,12 +61,12 @@ function Home() {
         </button>
       </div>
 
-      <div class="parent container" id="parent-box">
-        <div class="child d-flex col-md-6 col-lg-3 py-3 v-center">
-          <iframe title="informational video: Zero Hunger film" class="float-video" src="https://www.youtube.com/embed/iteCytv0RqY?si=lh4MNn3F2OvbNeMu"></iframe>
+      <div className="parent container" id="parent-box">
+        <div className="child d-flex col-md-6 col-lg-3 py-3 v-center">
+          <iframe title="informational video: Zero Hunger film" className="float-video" src="https://www.youtube.com/embed/iteCytv0RqY?si=lh4MNn3F2OvbNeMu"></iframe>
         </div>
-        <div class="child d-flex col-md-6 col-lg-3 py-3">
-          <p class="descr">
+        <div className="child d-flex col-md-6 col-lg-3 py-3">
+          <p className="descr">
             <ul>
               <li>UN’s Zero Hunger Goal is to achieve global food security and end hunger by 2030 through sustainable measures</li>
               <li>Over 2 billion people around the world are currently vulnerable to food insecurity</li>
@@ -75,15 +75,15 @@ function Home() {
               <li>Volunteering time, donating resources, and producing essential goods are impactful steps toward addressing hunger</li>
             </ul>
             <br></br>
-            <strong class="bold-descr">After all, achieving zero hunger is not just a possibility; it's an imperative we can realize together.</strong></p>
+            <strong className="bold-descr">After all, achieving zero hunger is not just a possibility; it's an imperative we can realize together.</strong></p>
         </div>
       </div>
-      <div class="text-center">
+      <div className="text-center">
         <a href="/quiz">
-          <button type="button" class="btn t-quiz">Take quiz</button>
+          <button type="button" className="btn t-quiz">Take quiz</button>
         </a>
         <a href="/resources">
-          <button type="button" class="btn t-resources">Learn more</button>
+          <button type="button" className="btn t-resources">Learn more</button>
         </a>
       </div>
 

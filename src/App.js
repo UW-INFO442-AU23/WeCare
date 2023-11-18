@@ -8,11 +8,10 @@ import Resources from './components/Resources';
 import Profile from './components/Profile/Profile';
 import Login from './components/Profile/Login';
 import Register from './components/Profile/Register';
-import ForgotPassword from './components/ForgotPassword';
-import QuizResultCards from './components/Quiz/QuizResult';
+import ForgotPassword from './components/Profile/ForgotPassword';
 import Edit from './components/Profile/Edit';
 import Home2 from './components/Home2';
-import { auth, db } from './f-config';
+import { auth } from './f-config';
 import { onAuthStateChanged } from 'firebase/auth';
 
 import './style/styles.css';
@@ -41,7 +40,7 @@ function App(props) {
           <Route path="/profile" element={isAuthenticated ? <Profile /> : <Login/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />}/>
-          <Route path="/reset" element={<ForgotPassword/>} />
+          {/* <Route path="/reset" element={<ForgotPassword/>} /> */}
           <Route path='/edit' element={<Edit/>}/>
           {/* <Route path='/Home2' element={<Home2/>}/> */}
         </Routes>
