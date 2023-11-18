@@ -64,10 +64,12 @@ function Quiz() {
     };
 
     return (
-        <div className="container mt-4">
+        <div className="container mt-4" class="quizbody">
             {!started && (
                 <div className="mb-4">
-                    {Header("Hunger Insight Quiz")}
+                    <div className="text-center">
+                        {Header("Hunger Insight Quiz")}
+                    </div>
                     <p className="lead">
                         In just 5 questions, we aim to understand your preferences and values when it comes to combating global hunger.
                         Each of us has a unique approach to giving, and our passions guide how we make a difference. This quiz is tailored to align

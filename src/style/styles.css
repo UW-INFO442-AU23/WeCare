@@ -102,6 +102,16 @@ p.descr {
   align-items: center;
 }
 
+/* Quiz page */
+.quizbody{
+  margin-left:12rem;
+  margin-right:12rem;
+  margin-top: 5rem;
+}
+
+.quiz-header{
+  align-items: center;
+}
 
 /* Take quiz button */
 .t-quiz {
