@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { ref as databaseRef, onValue, get, remove } from 'firebase/database';
+import { ref as databaseRef, onValue, remove } from 'firebase/database';
 import { NavLink } from 'react-router-dom';
 import { auth, realtimedb } from '../../f-config';
 import './style.css';
@@ -18,6 +18,7 @@ const Profile = () => {
     address: '',
   });
   const [savedCharities, setSavedCharities] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (authUser) => {
@@ -39,9 +40,11 @@ const Profile = () => {
               setSavedCharities(Object.values(data.savedCharities));
             }
           }
+          setIsLoading(false); // Data fetched, loading is done
         });
       } else {
         setUser(null);
+        setIsLoading(false); // No user, loading is done
       }
     });
 
@@ -76,6 +79,10 @@ const Profile = () => {
       .catch(error => console.error('Error unsaving charity:', error));
   };
 
+  if (isLoading) {
+    return <div>Loading profile...</div>;
+  }
+
   return (
     <div id="container-bg">
       <div class="overallprofile">
@@ -98,7 +105,7 @@ const Profile = () => {
                     <div className="profile-fields">
                       <p>Name: {profileData.displayName}</p>
                       <p>Pronouns: {profileData.pronouns}</p>
-                      <p>Address: {profileData.address}</p>
+                      <p>City: {profileData.address}</p>
                     </div>
                     <div className="saved-charities">
                       <h3>Saved Charities</h3>

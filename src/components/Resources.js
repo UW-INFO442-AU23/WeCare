@@ -6,7 +6,12 @@ import BasicTable from "./Catalog";
 export function Header(props){
   return(
       <header>
-          <h1>{props}</h1>
+        <h1>
+          <div class="text-center my-5">
+            {props}
+            </div>
+            </h1>
+            
       </header>
   )
 }
@@ -28,7 +33,7 @@ export function ResCards(props) {
           <div className="col-sm">
             <h2 className="card-title text-center">{resData.title}</h2>
             <p className="card-text">{resData.descr}</p>
-            <div class="text-left">
+            <div class="text-center">
 
               <button type="button" class="btn res-btn" data-bs-toggle="modal" data-bs-target={resData.bs}>Learn more</button>
               {/* <!-- Vertically centered modal --> */}
@@ -93,12 +98,14 @@ function Resources(props) {
 
   return (
     <div className="container">
+      <div class="resbody">
       {/* Container div for the Bootstrap grid */}
       {Header("Learn More")}
-      <div className="row mx-0">
+      <div className="row mx-0 my-5">
         {newCardArray}
       </div>
       <BasicTable />
+    </div>
     </div>
   );
 }

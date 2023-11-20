@@ -1,85 +1,110 @@
 import React, { useState, useEffect } from 'react';
-import { ref as databaseRef, set as databaseSet, onValue } from 'firebase/database';
+import { ref as databaseRef, get, set as databaseSet, onValue } from 'firebase/database';
 import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { updateProfile } from 'firebase/auth';
-import { auth, realtimedb, storage } from '../../f-config'; 
-import { NavLink } from 'react-router-dom';
+import { auth, realtimedb, storage } from '../../f-config';
+import { useNavigate } from 'react-router-dom';
 
 const Edit = () => {
-  const [firstName, setFirstName] = useState('');
   const [image, setImage] = useState(null);
   const [user, setUser] = useState(null);
-  const [pronouns, setPronouns] = useState('');
-  const [address, setAddress] = useState('');
+  const [formData, setFormData] = useState({ firstName: '', pronouns: '', address: '' });
+  const [currentPhotoURL, setCurrentPhotoURL] = useState(null);
+  const [displayedImage, setDisplayedImage] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch the current user when the component mounts
-    const currentUser = auth.currentUser;
-    if (currentUser) {
-      setUser(currentUser);
-
-      // Fetch user data from Realtime Database
-      const userRef = databaseRef(realtimedb, `users/${currentUser.uid}`);
-      onValue(userRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data) {
-          setFirstName(data.displayName || '');
-          setPronouns(data.pronouns || '');
-          setAddress(data.address || '');
-        }
-      });
-    }
+    const fetchUserData = async () => {
+      const currentUser = auth.currentUser;
+      if (currentUser) {
+        setUser(currentUser);
+        const userRef = databaseRef(realtimedb, `users/${currentUser.uid}`);
+        onValue(userRef, (snapshot) => {
+          const data = snapshot.val();
+          if (data) {
+            setFormData({
+              firstName: data.displayName || '',
+              pronouns: data.pronouns || '',
+              address: data.address || '',
+            });
+            setCurrentPhotoURL(data.photoURL || null);
+            setDisplayedImage(data.photoURL || null);
+          }
+        });
+      }
+    };
+    fetchUserData();
   }, []);
 
-  const handleFirstLastNameChange = (e) => {
-    setFirstName(e.target.value);
-  };
-
-  const handlePronouns = (event) => {
-    event.preventDefault();
-    setPronouns(event.target.value);
-  };
-
-  const handleAddress = (event) => {
-    event.preventDefault();
-    setAddress(event.target.value);
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleImageChange = (e) => {
-    if (e.target.files[0]) {
-      setImage(e.target.files[0]);
+    const file = e.target.files[0];
+
+    if (file) {
+      // Validate file type
+      const validTypes = ['image/jpeg', 'image/png'];
+      if (!validTypes.includes(file.type)) {
+        alert('Invalid file type. Only JPG and PNG files are allowed.');
+        e.target.value = '';
+        return;
+      }
+
+    const maxSize = 5 * 1024 * 1024; // 5mb max
+    if (file.size > maxSize) {
+      alert('File size exceeds the limit.');
+      return;
+    }
+
+    setImage(file);
+
+    const fileReader = new FileReader();
+    fileReader.onload = (e) => setDisplayedImage(e.target.result);
+    fileReader.readAsDataURL(file);
+
+    } else {
+      setDisplayedImage(null);
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      // Update user data in Realtime Database
       const userRef = databaseRef(realtimedb, `users/${user.uid}`);
-      databaseSet(userRef, {
-        displayName: firstName,
-        pronouns: pronouns,
-        address: address,
-      });
 
-      // Handle image upload
+      // Fetch current user data
+      const snapshot = await get(userRef);
+      const currentUserData = snapshot.val() || {};
+
+      const updates = {
+        ...currentUserData, // Include all existing data
+        displayName: formData.firstName,
+        pronouns: formData.pronouns,
+        address: formData.address,
+      };
+
       if (image) {
         const imageRef = storageRef(storage, `profile-images/${user.uid}`);
-        await uploadBytes(imageRef, image).then(async () => {
-          const imageUrl = await getDownloadURL(imageRef);
-          databaseSet(databaseRef(realtimedb, `users/${user.uid}/photoURL`), imageUrl);
-        });
+        const uploadResult = await uploadBytes(imageRef, image);
+        const imageUrl = await getDownloadURL(uploadResult.ref);
+        updates.photoURL = imageUrl;
+      } else {
+        updates.photoURL = currentPhotoURL;
       }
 
+      // Update user data in Firebase
+      await databaseSet(userRef, updates);
       console.log('Profile updated successfully!');
+      navigate('/profile');
     } catch (error) {
       console.error('Error updating profile:', error.message);
+      alert('Failed to update profile. Please try again later.');
     }
   };
 
   if (!user) {
-    return <div>Loading...</div>; // or any other fallback UI
+    return <div>Loading...</div>;
   }
 
   return (
@@ -88,19 +113,21 @@ const Edit = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <label>First and Last Name:</label>
-          <input type="text" value={firstName} onChange={handleFirstLastNameChange} />
+          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
         </div>
         <div>
           <label>Pronouns:</label>
-          <input type="text" value={pronouns} onChange={handlePronouns} />
+          <input type="text" name="pronouns" value={formData.pronouns} onChange={handleChange} />
         </div>
         <div>
-          <label>Address:</label>
-          <input type="text" value={address} onChange={handleAddress} />
+          <label>City:</label>
+          <input type="text" name="address" value={formData.address} onChange={handleChange} />
         </div>
         <div>
           <label>Profile Picture:</label>
           <input type="file" onChange={handleImageChange} />
+          <p>Please upload a JPG or PNG file.</p>
+          {displayedImage && <img src={displayedImage} alt="Profile" style={{ width: '100px', height: '100px', marginTop: '10px' }} />}
         </div>
         <button className="btn btn-light" type="submit">Save Changes</button>
       </form>
@@ -109,7 +136,3 @@ const Edit = () => {
 };
 
 export default Edit;
-
-{/* <NavLink to="/login" className="login-link">
-              Sign in
-            </NavLink> */}
