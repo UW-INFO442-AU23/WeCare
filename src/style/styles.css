@@ -17,6 +17,9 @@ body, html {
   flex-direction: column;
 }
 
+/* navbar */
+/* hmmm */
+
 /* Styling for home page banner */
 .home-img {
     width: 100%;
@@ -187,6 +190,12 @@ p.descr {
 }
 
 /* resources page */
+
+.resbody{
+  margin-top: 5rem;
+  /* margin: 3rem, 12rem, 0, 12rem; */
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #E1E5CF;
@@ -205,10 +214,10 @@ p.descr {
 
 /* Header */
 header {
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  /* padding-top: 2rem;
+  padding-bottom: 1rem; */
   color: #3A3B4D;
-  text-align: left;
+  /* text-align: left; */
 }
 
 /* Modal stuff */
@@ -335,7 +344,7 @@ p.lead {
   margin: 20px;
   /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
   /* background-color: rgb(186, 198, 186); */
-  background-color: #B6C0A5;
+  background-color: #E1E5CF;
   color: black;
 }
 

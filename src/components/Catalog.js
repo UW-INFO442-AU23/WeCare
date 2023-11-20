@@ -26,6 +26,7 @@ const columns = [
   { id: 'charity', label: 'Charities', minWidth: 200, align: 'left' },
   { id: 'focus', label: 'Focus Area', minWidth: 200, align: 'center' },
   { id: 'rating', label: 'Charity Navigator Rating', minWidth: 150, align: 'center'},
+  { id: 'rating', label: 'Save/Unsave', minWidth: 150, align: 'center'}
 ];
 
 const initialRows = [
@@ -146,7 +147,8 @@ export default function BasicTable() {
   return (
     <>
     <Paper style={{ width: '80%', margin: '0 auto', textAlign: 'center', marginBottom: '20px', marginTop: '20px' }}>
-      <h1 style={{ fontSize: '30px', textAlign: 'center', fontStyle: 'bold', textDecoration: 'underline' }}>Charities Catalog</h1>
+    <h1 style={{ fontSize: '30px', textAlign: 'center', fontStyle: 'bold'}}>Charities Catalog</h1>
+      {/* <h1 style={{ fontSize: '30px', textAlign: 'center', fontStyle: 'bold', textDecoration: 'underline' }}>Charities Catalog</h1> */}
       {isLoading ? (
         <div style={{ textAlign: 'center', margin: '20px' }}>Loading...</div>  // Loading indicator
       ) : (
@@ -180,9 +182,9 @@ export default function BasicTable() {
                       <TableCell align="center">{row.rating}</TableCell>
                       <TableCell align="center">
                         {row.isSaved ? (
-                          <button onClick={() => handleUnsave(row)}>Unsave</button>
+                          <button className="btn btn-outline-secondary" onClick={() => handleUnsave(row)}>Unsave</button>
                         ) : (
-                          <button onClick={() => handleSave(row)}>Save</button>
+                          <button className="btn btn-outline-primary" onClick={() => handleSave(row)}>Save</button>
                         )}
                       </TableCell>
                     </TableRow>
@@ -215,7 +217,7 @@ export default function BasicTable() {
               <button type="button" className="btn-close" onClick={handleCloseModal} aria-label="Close"></button>
             </div>
             <div className="modal-body">
-              You need to log in to save charities.
+              Log in to save charities.
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>Close</button>
