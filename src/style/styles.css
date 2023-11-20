@@ -44,10 +44,15 @@ p.mission {
   /* background-color:#E1E5CF; */
 }
 
-.homebody{
-margin: 5em 12em 0 12em ;
-}
 
+@media (min-width:992px) {
+
+  .homebody{
+    margin: 5em 12em 0 12em ;
+    }
+    
+
+}
 .carousel{
 
 /* margin:auto; */

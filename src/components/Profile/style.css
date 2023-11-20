@@ -162,10 +162,10 @@
   
   .profile-container {
     padding: 20px;
-    background-color: #fff; /* White background color for the container */
+    background-color: #fff; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px; /* Adjust the width as needed */
+    width: 400px; 
     margin: auto;
   }
 .profile-header {
@@ -193,13 +193,13 @@
   margin: auto;
 }
 .profile-header {
-display: flex;
+display:flex;
 align-items: center;
 }
 
 .profile-photo img {
-width: 100%;
-aspect-ratio: 1;
+  width: 100px;
+  height: 100px;
 object-fit: cover;
 border-radius: 50%;
 }

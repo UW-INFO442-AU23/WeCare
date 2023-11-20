@@ -2,7 +2,7 @@ import { Header } from "./Resources";
 
 function Home() {
   return (
-    <div class="homebody">
+    <div class="homebody mx-6 px-6">
       {Header("Our mission")}
       <p class="mission">In a world where hunger is on the rise, WeCare aims to raise awareness on the growing challenges of food insecurity within the state of Washington. Through our interactive quizzes and informative resources, we are committed to empowering individuals with knowledge and actionable avenues to combat this pervasive issue of hunger.</p>
 
