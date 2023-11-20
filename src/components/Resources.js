@@ -7,7 +7,7 @@ export function Header(props){
   return(
       <header>
         <h1>
-          <div class="text-center">
+          <div class="text-center my-5">
             {props}
             </div>
             </h1>
@@ -101,7 +101,7 @@ function Resources(props) {
       <div class="resbody">
       {/* Container div for the Bootstrap grid */}
       {Header("Learn More")}
-      <div className="row mx-0">
+      <div className="row mx-0 my-5">
         {newCardArray}
       </div>
       <BasicTable />

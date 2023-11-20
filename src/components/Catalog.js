@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import TablePagination from '@mui/material/TablePagination';
 import { auth, realtimedb } from '../f-config';
 import { ref as databaseRef, set, get, remove } from 'firebase/database';
+import { Header } from './Resources';
 
 
 // used mui library column grouping table to form catalog: https://mui.com/material-ui/react-table/
@@ -146,8 +147,8 @@ export default function BasicTable() {
 
   return (
     <>
+    {Header('Charities Catalog')}
     <Paper style={{ width: '80%', margin: '0 auto', textAlign: 'center', marginBottom: '20px', marginTop: '20px' }}>
-    <h1 style={{ fontSize: '30px', textAlign: 'center', fontStyle: 'bold'}}>Charities Catalog</h1>
       {/* <h1 style={{ fontSize: '30px', textAlign: 'center', fontStyle: 'bold', textDecoration: 'underline' }}>Charities Catalog</h1> */}
       {isLoading ? (
         <div style={{ textAlign: 'center', margin: '20px' }}>Loading...</div>  // Loading indicator

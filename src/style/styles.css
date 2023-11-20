@@ -1,20 +1,20 @@
 /* Ensure the body takes the full height and reset some default styles */
 body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    /* font-family: "Arial"; */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* font-family: "Arial"; */
 }
 
 @font-face {
-  font-family: Poppins;
-  src: url(https://fonts.google.com/specimen/Poppins);
+font-family: Poppins;
+src: url(https://fonts.google.com/specimen/Poppins);
 }
 
 #root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
 }
 
 /* navbar */
@@ -22,380 +22,383 @@ body, html {
 
 /* Styling for home page banner */
 .home-img {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* Mission Title styling */
-h1.mission-title {
-  /* margin-top: 35px; */
-  text-align: center;
-}
+/* h1.mission-title { */
+/* margin-top: 35px; */
+/* text-align: center;
+} */
 
 /* Mission Statement styling */
 p.mission {
-    /* margin: 3rem; */
-    padding: 1.5rem;
-    font-size: 20px;
-    border-radius: 20px;
-    /* background-color:#E1E5CF; */
+  /* margin: 3rem; */
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  font-size: 20px;
+  /* border-radius: 20px; */
+  /* background-color:#E1E5CF; */
 }
 
 .homebody{
-  margin-left:12rem;
-  margin-right:12rem;
-  margin-top: 5rem;
+margin: 5em 12em 0 12em ;
 }
 
 .carousel{
 
-  /* margin:auto; */
-  padding: 1.5rem;
+/* margin:auto; */
+padding: 1.5rem;
 
 }
 
 /* Media + Description styling below */
 .parent {
-  margin-top: 3rem;
-  /* padding: 1rem 0rem 1rem 0rem; */
-  display: flex; 
-  justify-content: center;
-  flex-wrap: wrap; 
-  border-radius: 20px;
+margin-top: 3rem;
+/* padding: 1rem 0rem 1rem 0rem; */
+display: flex; 
+justify-content: center;
+flex-wrap: wrap; 
+border-radius: 20px;
+margin-bottom: 3rem;
 }
 
-/* #parent-box{
-  width:100%;
-} */
-
 .child {
-  padding: 1rem 0rem 1rem 0rem;
-  flex: 1; /* Distribute available space equally among children */
-  box-sizing: border-box;
+padding: 1rem 0rem 1rem 0rem;
+flex: 1; /* Distribute available space equally among children */
+box-sizing: border-box;
 }
 
 /* Embedded media element styling */
 .float-video {
-  margin-left: 15px;
-  margin-right: 15px;
-  width: 560px;
-  height: 315px;
-  max-width: 560px;
+margin-left: 15px;
+margin-right: 15px;
+width: 560px;
+height: 315px;
+max-width: 560px;
 }
 
 
 /* Video description styling */
 p.descr {
-  font-size: 15px;
-  padding: 20px;
-  border-radius: 20px;
-  /* background-color:#FBF7E7; */
-  color: black;
+font-size: 15px;
+padding: 20px;
+border-radius: 20px;
+/* background-color:#FBF7E7; */
+color: black;
 }
-
-/* .bold-descr{
-  padding: 20px;
-} */
 
 /* Centering the video */
 .v-center{
-  align-items: center;
+align-items: center;
+}
+
+/* Home paragraphs */
+.home-paragraphs{
+padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
 /* Quiz page */
 .quizbody{
-  margin-left:12rem;
-  margin-right:12rem;
-  margin-top: 5rem;
+  margin: 5em 12em 0 12em ;
 }
 
-.quiz-header{
-  align-items: center;
+/* .quiz-header{
+align-items: center;
+} */
+
+.q-btn {
+padding: 20px;
+width: 25%;
+background-color:#B6C0A5; 
+border-radius: 35px;
+border: none;
 }
 
-/* Take quiz button */
-.t-quiz {
-  padding: 20px;
-  width: 25%;
-  border: 3px solid #B6C0A5; 
-  border-radius: 35px;
-  background-color: transparent; 
+/* Take quiz and learn more buttons */
+.t-quiz, .t-resources {
+padding: 20px;
+width: 25%;
+border: 3px solid #B6C0A5; 
+border-radius: 35px;
+background-color: transparent; 
 }
 
-.t-quiz:hover {
-  background-color: #B6C0A5; 
+/* Take quiz and learn more buttons */
+.t-quiz:hover, .t-resources:hover{
+background-color: #B6C0A5; 
 }
 
 /* Learn more button */
-.t-resources {
-  padding: 20px;
-  width: 25%;
-  border: 3px solid #B6C0A5; 
-  border-radius: 35px;
-  background-color: transparent; 
-}
+/* .t-resources {
+padding: 20px;
+width: 25%;
+border: 3px solid #B6C0A5; 
+border-radius: 35px;
+background-color: transparent; 
+} */
 
-.t-resources:hover {
-  background-color: #B6C0A5; 
-}
+/* .t-resources:hover {
+background-color: #B6C0A5; 
+} */
 
 /* Homepage take quiz button */
 /* .t-quiz{
-  background-color: #B6C0A5;
-  padding: 20px;
-  width: 25%;
-  border-radius: 35px;
+background-color: #B6C0A5;
+padding: 20px;
+width: 25%;
+border-radius: 35px;
 } */
 
 /* Homepage learn more button */
 /* .t-resources{
-  border-color: #B6C0A5;
-  border-width: 3px;
-  padding: 20px;
-  width: 25%;
-  border-radius: 35px;
+border-color: #B6C0A5;
+border-width: 3px;
+padding: 20px;
+width: 25%;
+border-radius: 35px;
 } */
 
 
 /* General Button styling */
 .btn {
-  font-size: 18px;
-  margin: 20px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+font-size: 18px;
+margin: 20px;
+margin-top: 30px;
+margin-bottom: 30px;
 }
 
 /* Quiz questions */
 #q-button {
-  background-color: #E1E5CF;
-  padding: 40px;
-  width:100%;
-  border-radius: 20px;
-  font-size: 20px;
-  font-weight: bold;
+background-color: #E1E5CF;
+padding: 40px;
+width:100%;
+
+font-size: 20px;
+font-weight: bold;
 }
 
 /* Media query for responsive layout */
 @media (max-width: 768px) {
-  .parent {
-    flex-direction: column;
-  }
-  .child {
-    flex: 0;
-    width: 100%;
-  }
+.parent {
+  flex-direction: column;
+}
+.child {
+  flex: 0;
+  width: 100%;
+}
 }
 
 /* resources page */
 
 .resbody{
-  margin-top: 5rem;
-  /* margin: 3rem, 12rem, 0, 12rem; */
+margin-top: 5rem;
+/* margin: 3rem, 12rem, 0, 12rem; */
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: #E1E5CF;
-  border-radius: 15px;
-  border-width : 0;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+background-color: #E1E5CF;
+border-radius: 15px;
+border-width : 0;
 }
 
 .cardback{
-  margin-top:10%;
-  border-radius: 15px;
+margin-top:10%;
+border-radius: 15px;
 }
 
 .learnmore {
-  padding-left: 10px;
+padding-left: 10px;
 }
 
 /* Header */
-header {
-  /* padding-top: 2rem;
-  padding-bottom: 1rem; */
-  color: #3A3B4D;
-  /* text-align: left; */
-}
+/* header {
+/* padding-top: 2rem;
+padding-bottom: 1rem; */
+/* color: #3A3B4D; */
+/* text-align: left; */
+/* } */
 
 /* Modal stuff */
 
 /* Style for the login page */
 .login {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+height: 100vh;
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .login__container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: #dcdcdc;
-  padding: 30px;
+display: flex;
+flex-direction: column;
+text-align: center;
+background-color: #dcdcdc;
+padding: 30px;
 }
 
 .login__textBox {
-  padding: 10px;
-  font-size: 18px;
-  margin-bottom: 10px;
+padding: 10px;
+font-size: 18px;
+margin-bottom: 10px;
 }
 
 .res-btn{
-  color: #3971e0;
-  font-weight: bold;
+color: #3971e0;
+font-weight: bold;
 }
 
 /* Style for the register page
 .register {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+height: 100vh;
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .register__container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: #dcdcdc;
-  padding: 30px;
+display: flex;
+flex-direction: column;
+text-align: center;
+background-color: #dcdcdc;
+padding: 30px;
 }
 
 .register__textBox {
-  padding: 10px;
-  font-size: 18px;
-  margin-bottom: 10px;
+padding: 10px;
+font-size: 18px;
+margin-bottom: 10px;
 }
 
 .register__btn {
-  padding: 10px;
-  font-size: 18px;
-  margin-bottom: 10px;
-  border: none;
-  color: black;
-  background-color: #4285f4;
+padding: 10px;
+font-size: 18px;
+margin-bottom: 10px;
+border: none;
+color: black;
+background-color: #4285f4;
 }
 
 .register__google {
-  background-color: #4285f4;
+background-color: #4285f4;
 }
 
 .register div {
-  margin-top: 7px;
+margin-top: 7px;
 } */
 
 /* Style for the quiz results page */
 .card-charities {
-  flex-wrap: nowrap;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 50px;
-  background-color: #dcdcdc46; /*can add image for background as well */
-  border-radius: 20px;
-  }
+flex-wrap: nowrap;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+margin: 50px;
+background-color: #dcdcdc46; /*can add image for background as well */
+border-radius: 20px;
+}
 
 .card-charities > div {
-  margin: 10px;
-  border-radius: 65px;
+margin: 10px;
+border-radius: 65px;
 }
 
 .card-charities, a {
-  text-decoration: none;
-  color: black;
+text-decoration: none;
+color: black;
 }
 
 .charityhead {
-  margin: 50px;
-  font-weight: bold;
+margin: 50px;
+font-weight: bold;
 }
 
 /* background image */
 .content-container {
-  /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/public/img/quizresultbackground.png) center center no-repeat; */
-  background-color: #FFFFFF;
-  background-size: cover;
-  /* background-attachment: fixed; */
-  position: relative;
-  min-height: 100vh; /* Full height */
+/* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/public/img/quizresultbackground.png) center center no-repeat; */
+background-color: #FFFFFF;
+background-size: cover;
+/* background-attachment: fixed; */
+position: relative;
+min-height: 100vh; /* Full height */
 }
 
 /* background image */
 #container-bg {
-  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/public/img/quizresultbackground.png) center center no-repeat;
-  background-size: cover;
-  /* background-attachment: fixed; */
-  position: relative;
-  min-height: 100vh; /* Full height */
+background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/public/img/quizresultbackground.png) center center no-repeat;
+background-size: cover;
+/* background-attachment: fixed; */
+position: relative;
+min-height: 100vh; /* Full height */
 }
 
 p.lead {
-  font-size: 18px;
-  padding: 25px;
-  min-width: 500px;
-  border-radius: 20px;
-  margin: 20px;
-  /* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
-  /* background-color: rgb(186, 198, 186); */
-  background-color: #E1E5CF;
-  color: black;
+font-size: 18px;
+padding: 25px;
+min-width: 500px;
+border-radius: 20px;
+margin: 20px;
+/* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
+/* background-color: rgb(186, 198, 186); */
+background-color: #E1E5CF;
+color: black;
 }
 
 .leadtitle {
-  font-weight: bold;
-  font-size: 35px;
-  color: black;
+font-weight: bold;
+font-size: 35px;
+color: black;
 }
 
 /* .content-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: inherit;
-  opacity: 0.5;
-  z-index: -1;
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: inherit;
+opacity: 0.5;
+z-index: -1;
 } */
 
 
 /* homepage carousel slideshow */
 .custom-img {
-  height: 35em;
-  object-fit: cover;
+height: 35em;
+object-fit: cover;
 }
 
 /* .custom-carousel-control {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+background-color: rgba(0, 0, 0, 0.5);
+color: white;
 } */
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  filter: invert(100%);
-  width: 3em; /* Adjust the size of the icon */
-  height: 3em;
+filter: invert(100%);
+width: 3em; /* Adjust the size of the icon */
+height: 3em;
 }
 
 .carousel-caption {
-  background-color: rgba(225, 229, 207, 0.7);
-  padding: 5px;
-  border-radius: 10px; 
-  max-width: 300px;
-  margin: auto;
+background-color: rgba(225, 229, 207, 0.7);
+padding: 5px;
+border-radius: 10px; 
+max-width: 300px;
+margin: auto;
 }
 
 /* Profile section */
 .profile-section{
-  background-color: white;
+background-color: white;
 }
 
 

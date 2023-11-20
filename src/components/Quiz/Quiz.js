@@ -70,22 +70,38 @@ function Quiz() {
                     <div className="text-center">
                         {Header("Hunger Insight Quiz")}
                     </div>
-                    <p className="lead">
-                        In just 5 questions, we aim to understand your preferences and values when it comes to combating global hunger.
-                        Each of us has a unique approach to giving, and our passions guide how we make a difference. This quiz is tailored to align
-                        your personal inclinations with charities that resonate with your beliefs, ensuring your contributions make the most meaningful impact.
-                        Whether you prioritize immediate relief, sustainability, cultural respect, or a mix of these factors, we'll help connect you with the right charity.
+                    <p className="lead my-5">
+                    <ul>
+                        <li>
+                            Answer 5 questions about: 
+                            <ul>
+                                <li>Engagement</li>
+                                <li>Impact</li>
+                                <li>Culture</li>
+                                <li>Local vs global impact</li>
+                                <li>Health focus</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Click on the answer that better encompasses what you value and agree with.
+                        </li>
+                        <li>
+                            Press the back button if you need to move to the previous question or to the quiz home page.
+                        </li>
+                    </ul>
                     </p>
-                    <p className="lead fw-bold">
+                    <div class="text-center">
+                    <p className="fw-bold">
                         Ready to find your match and contribute to the Zero Hunger goal? Let's get started!
                     </p>
+                    </div>
                 </div>
             )}
             {started ? (
                 <QuizContent questions={questions} onAnswer={handleAnswer} answers={answers} onReset={handleResetQuiz} />
             ) : (
                 <div className="text-center">
-                    <button className="btn btn-success" onClick={handleStartQuiz}>Start Quiz</button>
+                    <button className="btn" class="q-btn" onClick={handleStartQuiz}>Start Quiz</button>
                 </div>
             )}
         </div>

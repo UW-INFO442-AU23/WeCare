@@ -3,8 +3,10 @@ import { Header } from "./Resources";
 function Home() {
   return (
     <div class="homebody">
-      <h1 class="mission-title">Our Mission</h1>
-      <p class="mission">In a world where hunger is on the rise, WeCare aims to raise awareness on the growing challenges of food insecurity within the state of Washington. As of 2023, a staggering 688,170 individuals grapple with hunger in Washington, and among them, 197,550 are innocent children - equating to an alarming <b>1 in 8 children</b> facing food insecurity.  Through our interactive quizzes and informative resources, we are committed to empowering individuals with knowledge and actionable avenues to combat this pervasive issue of hunger.</p>
+      {Header("Our mission")}
+      <p class="mission">In a world where hunger is on the rise, WeCare aims to raise awareness on the growing challenges of food insecurity within the state of Washington. Through our interactive quizzes and informative resources, we are committed to empowering individuals with knowledge and actionable avenues to combat this pervasive issue of hunger.</p>
+
+      {/* <p class="mission">In a world where hunger is on the rise, WeCare aims to raise awareness on the growing challenges of food insecurity within the state of Washington. As of 2023, a staggering 688,170 individuals grapple with hunger in Washington, and among them, 197,550 are innocent children - equating to an alarming <b>1 in 8 children</b> facing food insecurity.  Through our interactive quizzes and informative resources, we are committed to empowering individuals with knowledge and actionable avenues to combat this pervasive issue of hunger.</p> */}
 
       <div id="carouselExampleAutoplaying" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
         <div className="carousel-inner">
@@ -77,6 +79,15 @@ function Home() {
             <br></br>
             <strong className="bold-descr">After all, achieving zero hunger is not just a possibility; it's an imperative we can realize together.</strong></p>
         </div>
+      </div>
+      <div>
+          {Header("About our website")}
+          <div class="home-paragraphs">
+          <p> Our website is ideal for young professionals looking to learn more about how they can help to eliminate food insecurity in Washington state. Our quiz helps you understand your preferences and values when it comes to combating hunger in just five questions. This quiz is tailored to align your personal inclinations with charities that resonate with your beliefs, ensuring your contributions make the most meaningful impact. Whether you prioritize immediate relief, sustainability, cultural respect, or a mix of these factors, we'll help connect you with the right charity. </p>
+          <p>
+          Our resources page provides you with more information about the Charity Navigator, global resources that are fighting for zero hunger, more fast facts about hunger in Washington, and the link to our GitHub repository. It also features a catalog of 23 charities in Washington state. Users have the opportunity to learn more about the charities by clicking on the link and saving or unsaving the charities to save them to their profile, if logged in. 
+          </p>
+          </div>
       </div>
       <div className="text-center">
         <a href="/quiz">
