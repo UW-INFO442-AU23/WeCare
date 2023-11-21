@@ -3,7 +3,7 @@ import { ref as databaseRef, set as databaseSet, onValue } from 'firebase/databa
 import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { updateProfile } from 'firebase/auth';
 import { auth, realtimedb, storage } from '../../f-config'; 
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Edit = () => {
   const [firstName, setFirstName] = useState('');
@@ -102,7 +102,9 @@ const Edit = () => {
           <label>Profile Picture:</label>
           <input type="file" onChange={handleImageChange} />
         </div>
+        <Link to='/profile'>
         <button className="btn btn-light" type="submit">Save Changes</button>
+        </Link>
       </form>
     </div>
   );
