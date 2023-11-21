@@ -18,6 +18,8 @@ function Navbar() {
     return () => unsubscribe();
   }, []);
 
+// if current user is not null then you set the link
+
   return (
     <nav className="navbar navbar-expand-sm">
       {/* <nav className="navbar navbar-expand-sm bg-body-secondary"></nav> */}

@@ -89,13 +89,11 @@ function Home() {
           </p>
           </div>
       </div>
-      <div className="text-center">
-        <a href="/quiz">
-          <button type="button" className="btn t-quiz">Take quiz</button>
-        </a>
-        <a href="/resources">
-          <button type="button" className="btn t-resources">Learn more</button>
-        </a>
+      <div class="text-center" id="button-forquiz">
+        
+          <button type="button" className="btn t-quiz"><a href="/quiz">Take quiz</a></button>
+          <button type="button" className="btn t-resources"><a href="/resources">Learn more</a></button>
+        
       </div>
 
     </div>

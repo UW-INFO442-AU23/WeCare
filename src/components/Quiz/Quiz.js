@@ -64,7 +64,7 @@ function Quiz() {
     };
 
     return (
-        <div className="container mt-4" class="quizbody">
+        <div className="container mt-4" class="quizbody mx-6 px-6">
             {!started && (
                 <div className="mb-4">
                     <div className="text-center">
