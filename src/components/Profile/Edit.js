@@ -102,9 +102,7 @@ const Edit = () => {
           <label>Profile Picture:</label>
           <input type="file" onChange={handleImageChange} />
         </div>
-        <Link to='/profile'>
         <button className="btn btn-light" type="submit">Save Changes</button>
-        </Link>
       </form>
     </div>
   );
@@ -112,6 +110,3 @@ const Edit = () => {
 
 export default Edit;
 
-{/* <NavLink to="/login" className="login-link">
-              Sign in
-            </NavLink> */}

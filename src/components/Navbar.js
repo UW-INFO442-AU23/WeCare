@@ -18,14 +18,16 @@ function Navbar() {
     return () => unsubscribe();
   }, []);
 
+// if current user is not null then you set the link
+
   return (
-    <nav class="navbar navbar-expand-sm">
-      {/* <nav class="navbar navbar-expand-sm bg-body-secondary"></nav> */}
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">WeCare</a>
-        <button class="navbar-toggler collapsed" type="button" onClick={toggleIcon} data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          {/* <span class="navbar-toggler-icon"></span> */}
-          {/* <i class="fas fa-hamburger"></i> */}
+    <nav className="navbar navbar-expand-sm">
+      {/* <nav className="navbar navbar-expand-sm bg-body-secondary"></nav> */}
+      <div className="container-fluid">
+        <a className="navbar-brand" href="/">WeCare</a>
+        <button className="navbar-toggler collapsed" type="button" onClick={toggleIcon} data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          {/* <span className="navbar-toggler-icon"></span> */}
+          {/* <i className="fas fa-hamburger"></i> */}
           <div className={`animated-icon2 ${isOpen ? 'open' : ''}`}>
               <span></span>
               <span></span>
@@ -34,13 +36,12 @@ function Navbar() {
           </div>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            {/* <a class="nav-link" href="/login">Login</a> */}
-            <a class="nav-link" href="/">Home</a>
-            {/* <a class="nav-link" href="/home2">Home2</a> */}
-            <a class="nav-link" href="/quiz">Quiz</a>
-            <a class="nav-link" href="/resources">Resources</a>
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+            <a className="nav-link" href="/">Home</a>
+            {/* <a className="nav-link" href="/home2">Home2</a> */}
+            <a className="nav-link" href="/quiz">Quiz</a>
+            <a className="nav-link" href="/resources">Resources</a>
             {isAuthenticated ? (
             <a className="nav-link" href="/profile">Profile</a>
           ) : (

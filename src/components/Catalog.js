@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import TablePagination from '@mui/material/TablePagination';
 import { auth, realtimedb } from '../f-config';
 import { ref as databaseRef, set, get, remove } from 'firebase/database';
+import { Header } from './Resources';
 
 
 // used mui library column grouping table to form catalog: https://mui.com/material-ui/react-table/
@@ -26,6 +27,7 @@ const columns = [
   { id: 'charity', label: 'Charities', minWidth: 200, align: 'left' },
   { id: 'focus', label: 'Focus Area', minWidth: 200, align: 'center' },
   { id: 'rating', label: 'Charity Navigator Rating', minWidth: 150, align: 'center'},
+  { id: 'rating', label: 'Save/Unsave', minWidth: 150, align: 'center'}
 ];
 
 const initialRows = [
@@ -53,6 +55,7 @@ const initialRows = [
   createData('22. Backpack Brigade', 'Providing weekend meal packs to school kids in need.', 'Not yet rated', 'https://www.backpackbrigade.org/', false),
   createData('23. North Helpline', 'Partnering with various food banks and services to provide services like bi-weekly meal home deliveries.', '100/100', 'https://northhelpline.org/', false)
 ];
+
 
 export default function BasicTable() {
   const [page, setPage] = useState(0);
@@ -132,7 +135,7 @@ export default function BasicTable() {
 
   const handleCloseModal = () => setShowModal(false);
 
-  const cellStyle = {
+/*   const cellStyle = {
     padding: '8px',
   };
 
@@ -140,12 +143,13 @@ export default function BasicTable() {
     fontWeight: 'bold',
     color: '#191970',
     textDecoration: 'underline',
-  };
+  }; */
 
   return (
     <>
+    {Header('Charities Catalog')}
     <Paper style={{ width: '80%', margin: '0 auto', textAlign: 'center', marginBottom: '20px', marginTop: '20px' }}>
-      <h1 style={{ fontSize: '30px', textAlign: 'center', fontStyle: 'bold', textDecoration: 'underline' }}>Charities Catalog</h1>
+      {/* <h1 style={{ fontSize: '30px', textAlign: 'center', fontStyle: 'bold', textDecoration: 'underline' }}>Charities Catalog</h1> */}
       {isLoading ? (
         <div style={{ textAlign: 'center', margin: '20px' }}>Loading...</div>  // Loading indicator
       ) : (
@@ -171,7 +175,7 @@ export default function BasicTable() {
                   .map((row, index) => (
                     <TableRow key={index} hover role="checkbox" tabIndex={-1}>
                       <TableCell component="th" scope="row">
-                        <a href={row.link} style={{ fontWeight: 'bold', color: '#191970', textDecoration: 'underline' }}>
+                        <a href={row.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#191970', textDecoration: 'underline' }}>
                           {row.charity}
                         </a>
                       </TableCell>
@@ -179,9 +183,9 @@ export default function BasicTable() {
                       <TableCell align="center">{row.rating}</TableCell>
                       <TableCell align="center">
                         {row.isSaved ? (
-                          <button onClick={() => handleUnsave(row)}>Unsave</button>
+                          <button className="btn btn-outline-secondary" onClick={() => handleUnsave(row)}>Unsave</button>
                         ) : (
-                          <button onClick={() => handleSave(row)}>Save</button>
+                          <button className="btn btn-outline-primary" onClick={() => handleSave(row)}>Save</button>
                         )}
                       </TableCell>
                     </TableRow>
@@ -214,7 +218,7 @@ export default function BasicTable() {
               <button type="button" className="btn-close" onClick={handleCloseModal} aria-label="Close"></button>
             </div>
             <div className="modal-body">
-              You need to log in to save charities.
+              Log in to save charities.
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>Close</button>

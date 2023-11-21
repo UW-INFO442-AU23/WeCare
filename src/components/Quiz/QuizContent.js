@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import QuizResult from './QuizResult';
 
-function QuizContent({ questions, onAnswer, answers}) {
+function QuizContent({ questions, onAnswer, answers, onReset }) {
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
     const handleAnswerClick = (index) => {
@@ -11,8 +11,12 @@ function QuizContent({ questions, onAnswer, answers}) {
     };
 
     const handleBackClick = () => {
-        onAnswer(null);
-        setCurrentQuestion(prevQuestion => prevQuestion - 1);
+        if (currentQuestion === 0) {
+            onReset();
+        } else {
+            onAnswer(null);
+            setCurrentQuestion(prevQuestion => prevQuestion - 1);
+        }
     };
 
     // Check if we've reached the end of the questions array
@@ -31,7 +35,6 @@ function QuizContent({ questions, onAnswer, answers}) {
                         {option}
                     </button>
                     </div>
-                    
                 </div>
             ))}
             <div className="progress mt-3">
@@ -40,11 +43,9 @@ function QuizContent({ questions, onAnswer, answers}) {
             <div className="text-center mt-2 fs-4 text-secondary">
                 Progress: {currentQuestion + 1} / {questions.length}
             </div>
-            {currentQuestion > 0 && (
-                <div className="text-center mt-2">
-                    <button className="btn btn-secondary" onClick={handleBackClick}>Back</button>
-                </div>
-            )}
+            <div className="text-center mt-2">
+                <button className="btn btn-secondary" onClick={handleBackClick}>Back</button>
+            </div>
         </div>
     );
 }
