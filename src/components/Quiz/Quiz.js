@@ -71,6 +71,7 @@ function Quiz() {
                         {Header("Hunger Insight Quiz")}
                     </div>
                     <p className="lead my-5">
+                    <h1 style={{ textAlign: 'left', fontSize: '1.2em', fontWeight: 'bold'}}>Quiz Instructions</h1>
                     <ul>
                         <li>
                             Answer 5 questions about: 

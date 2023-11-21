@@ -1,7 +1,7 @@
 import React from "react";
 import BasicTable from "./Catalog";
 
-// To enable rendering of HTML content from the JSON file on our website, some parts of code was implemented with the help of ChatGPT
+// To enable rendering of HTML content from the JSON file on our website, a few parts of code were implemented with the help of ChatGPT
 
 export function Header(props){
   return(

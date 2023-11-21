@@ -135,7 +135,7 @@ export default function BasicTable() {
 
   const handleCloseModal = () => setShowModal(false);
 
-  const cellStyle = {
+/*   const cellStyle = {
     padding: '8px',
   };
 
@@ -143,7 +143,7 @@ export default function BasicTable() {
     fontWeight: 'bold',
     color: '#191970',
     textDecoration: 'underline',
-  };
+  }; */
 
   return (
     <>

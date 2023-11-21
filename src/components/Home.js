@@ -11,42 +11,42 @@ function Home() {
       <div id="carouselExampleAutoplaying" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="../img/Home-1.png" className="d-block w-100 custom-img" alt="..."></img>
+            <img src="../img/Home-1.png" className="d-block w-100 custom-img" alt="animated food"></img>
             {/* <div class="carousel-caption d-none d-md-block text-primary-emphasis">
               <h5>1st slide label</h5>
               <p>Placeholder Text</p>
             </div> */}
           </div>
           <div className="carousel-item">
-            <img src="../img/Home-3.png" className="d-block w-100 custom-img" alt="..."></img>
+            <img src="../img/Home-3.png" className="d-block w-100 custom-img" alt="animated donations"></img>
             {/* <div class="carousel-caption d-none d-md-block text-primary-emphasis">
               <h5>2nd slide label</h5>
               <p>Placeholder Text</p>
             </div> */}
           </div>
           <div className="carousel-item">
-            <img src="../img/Home-2.png" className="d-block w-100 custom-img" alt="..."></img>
+            <img src="../img/Home-2.png" className="d-block w-100 custom-img" alt="animated food"></img>
             {/* <div class="carousel-caption d-none d-md-block text-primary-emphasis">
               <h5>3rd slide label</h5>
               <p>Placeholder Text</p>
             </div> */}
           </div>
           <div className="carousel-item">
-            <img src="../img/Home-4.png" className="d-block w-100 custom-img" alt="..."></img>
+            <img src="../img/Home-4.png" className="d-block w-100 custom-img" alt="animated food"></img>
             {/* <div class="carousel-caption d-none d-md-block text-primary-emphasis">
               <h5>4th slide label</h5>
               <p>Placeholder Text</p>
             </div> */}
           </div>
           <div className="carousel-item">
-            <img src="../img/Home-5.png" className="d-block w-100 custom-img" alt="..."></img>
+            <img src="../img/Home-5.png" className="d-block w-100 custom-img" alt="animated food"></img>
             {/* <div class="carousel-caption d-none d-md-block text-primary-emphasis">
               <h5>5th slide label</h5>
               <p>Placeholder Text</p>
             </div> */}
           </div>
           <div className="carousel-item">
-            <img src="../img/Home-6.png" className="d-block w-100 custom-img" alt="..."></img>
+            <img src="../img/Home-6.png" className="d-block w-100 custom-img" alt="animated volunteer"></img>
             {/* <div class="carousel-caption d-none d-md-block text-primary-emphasis">
               <h5>6th slide label</h5>
               <p>Placeholder Text</p>
