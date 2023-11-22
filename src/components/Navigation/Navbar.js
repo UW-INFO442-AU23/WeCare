@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AuthContext } from '../../AuthContext';
+import { Link } from 'react-router-dom';
 
-const Navbar = React.memo(({ isAuthenticated, isLoading }) => {
+const Navbar = React.memo(() => {
+
+  const { isAuthenticated, isLoading } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleIcon = () => {
     setIsOpen(!isOpen);
   };
 
-  // If still loading, show a loading indicator or skeleton
   if (isLoading) {
     return <div>Loading...</div>; // Replace with a more sophisticated loader or skeleton if needed
   }
-
-// if current user is not null then you set the link
 
   return (
     <nav className="navbar navbar-expand-sm">
@@ -29,13 +30,13 @@ const Navbar = React.memo(({ isAuthenticated, isLoading }) => {
 
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-link" href="/">Home</a>
-            <a className="nav-link" href="/quiz">Quiz</a>
-            <a className="nav-link" href="/resources">Resources</a>
+            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/quiz">Quiz</Link>
+            <Link className="nav-link" to="/resources">Resources</Link>
             {isAuthenticated ? (
-              <a className="nav-link" href="/profile">Profile</a>
+              <Link className="nav-link" to="/profile">Profile</Link>
             ) : (
-              <a className="nav-link" href="/login">Login</a>
+              <Link className="nav-link" to="/login">Login</Link>
             )}
           </div>
         </div>

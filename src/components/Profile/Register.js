@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth} from '../../f-config';
+import { AuthContext } from '../../AuthContext';
 import './style.css';  // Import your CSS file for styling
 
 const Register = () => {
@@ -9,27 +10,19 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const { setUser } = useContext(AuthContext);
 
   const onSubmit = async (e) => {
     e.preventDefault();
-  
     try {
-      // Attempt to create a new user with provided email and password
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
-  
-      // Save additional user information to Firestore if needed
-      console.log(user);
-  
-      // Navigate to the profile page after successful signup
+      setUser(userCredential.user); // Update user state in context
       navigate('/profile');
     } catch (error) {
-      // Error during registration: update the error state with the error message
       setError(error.message);
-      console.error('Registration error:', error.message);
     }
   };
-  
+
   return (
     <main className="main-container" id="container-bg">
       <section className="register-section">
@@ -87,4 +80,3 @@ const Register = () => {
 export default Register;
 
 
-  

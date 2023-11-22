@@ -11,7 +11,7 @@ export function Header(props){
             {props}
             </div>
             </h1>
-            
+
       </header>
   )
 }

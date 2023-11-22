@@ -1,4 +1,4 @@
-import { Header } from "./Resources";
+import { Header } from "./Resources/Resources";
 
 function Home() {
   return (
@@ -85,15 +85,15 @@ function Home() {
           <div class="home-paragraphs">
           <p> Our website is ideal for young professionals looking to learn more about how they can help to eliminate food insecurity in Washington state. Our quiz helps you understand your preferences and values when it comes to combating hunger in just five questions. This quiz is tailored to align your personal inclinations with charities that resonate with your beliefs, ensuring your contributions make the most meaningful impact. Whether you prioritize immediate relief, sustainability, cultural respect, or a mix of these factors, we'll help connect you with the right charity. </p>
           <p>
-          Our resources page provides you with more information about the Charity Navigator, global resources that are fighting for zero hunger, more fast facts about hunger in Washington, and the link to our GitHub repository. It also features a catalog of 23 charities in Washington state. Users have the opportunity to learn more about the charities by clicking on the link and saving or unsaving the charities to save them to their profile, if logged in. 
+          Our resources page provides you with more information about the Charity Navigator, global resources that are fighting for zero hunger, more fast facts about hunger in Washington, and the link to our GitHub repository. It also features a catalog of 23 charities in Washington state. Users have the opportunity to learn more about the charities by clicking on the link and saving or unsaving the charities to save them to their profile, if logged in.
           </p>
           </div>
       </div>
       <div class="text-center" id="button-forquiz">
-        
+
           <button type="button" className="btn t-quiz"><a href="/quiz">Take quiz</a></button>
           <button type="button" className="btn t-resources"><a href="/resources">Learn more</a></button>
-        
+
       </div>
 
     </div>

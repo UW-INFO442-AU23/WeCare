@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { ref as databaseRef, onValue, remove } from 'firebase/database';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../../AuthContext';
 import { auth, realtimedb } from '../../f-config';
 import './style.css';
 
@@ -10,7 +11,7 @@ const sanitizeCharityNameForFirebaseKey = (name) => {
 };
 
 const Profile = () => {
-  const [user, setUser] = useState(null);
+  const { user, isLoading } = useContext(AuthContext);
   const [profileData, setProfileData] = useState({
     photoURL: '../../img/defaultprofile.jpg',
     displayName: '',
@@ -18,40 +19,27 @@ const Profile = () => {
     address: '',
   });
   const [savedCharities, setSavedCharities] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (authUser) => {
-      if (authUser) {
-        setUser(authUser);
-
-        // Fetch user details
-        const userRef = databaseRef(realtimedb, `users/${authUser.uid}`);
-        onValue(userRef, (snapshot) => {
-          const data = snapshot.val();
-          if (data) {
-            setProfileData({
-              photoURL: data.photoURL || '../../img/defaultprofile.jpg',
-              displayName: data.displayName || '',
-              pronouns: data.pronouns || '',
-              address: data.address || '',
-            });
-            if (data.savedCharities) {
-              setSavedCharities(Object.values(data.savedCharities));
-            }
+    if (user) {
+      // Fetch user details from realtimedb
+      const userRef = databaseRef(realtimedb, `users/${user.uid}`);
+      onValue(userRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          setProfileData({
+            photoURL: data.photoURL || '../../img/defaultprofile.jpg',
+            displayName: data.displayName || '',
+            pronouns: data.pronouns || '',
+            address: data.address || '',
+          });
+          if (data.savedCharities) {
+            setSavedCharities(Object.values(data.savedCharities));
           }
-          setIsLoading(false); // Data fetched, loading is done
-        });
-      } else {
-        setUser(null);
-        setIsLoading(false); // No user, loading is done
-      }
-    });
-
-    return () => {
-      unsubscribe();
-    };
-  }, []);
+        }
+      });
+    }
+  }, [user]);
 
   const handleLogout = async () => {
     try {

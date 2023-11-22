@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import QuizContent from './QuizContent';
-import { Header } from '../Resources';
+import { Header } from '../Resources/Resources';
 
 function Quiz() {
     const questions = [
@@ -74,7 +74,7 @@ function Quiz() {
                     <h1 style={{ textAlign: 'left', fontSize: '1.2em', fontWeight: 'bold'}}>Quiz Instructions</h1>
                     <ul>
                         <li>
-                            Answer 5 questions about: 
+                            Answer 5 questions about:
                             <ul>
                                 <li>Engagement</li>
                                 <li>Impact</li>
