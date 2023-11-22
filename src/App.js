@@ -20,10 +20,13 @@ import './style/AnimatedIconStyles.css'
 function App(props) {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true); // Start loading
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setIsAuthenticated(!!user);
+      setIsLoading(false);
     });
 
     return () => unsubscribe();
@@ -31,7 +34,7 @@ function App(props) {
 
   return (
     <Router>
-      <Navbar />
+      <Navbar isAuthenticated={isAuthenticated} isLoading={isLoading} />
       <div className="content-container">
         <Routes>
           <Route path="/" element={<Home />} />
