@@ -64,13 +64,14 @@ function Quiz() {
     };
 
     return (
-        <div className="container mt-4" class="quizbody">
+        <div className="container mt-4" class="quizbody mx-6 px-6">
             {!started && (
                 <div className="mb-4">
                     <div className="text-center">
                         {Header("Hunger Insight Quiz")}
                     </div>
                     <p className="lead my-5">
+                    <h1 style={{ textAlign: 'left', fontSize: '1.2em', fontWeight: 'bold'}}>Quiz Instructions</h1>
                     <ul>
                         <li>
                             Answer 5 questions about: 

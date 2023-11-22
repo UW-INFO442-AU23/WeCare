@@ -12,6 +12,8 @@ const Navbar = React.memo(({ isAuthenticated, isLoading }) => {
     return <div>Loading...</div>; // Replace with a more sophisticated loader or skeleton if needed
   }
 
+// if current user is not null then you set the link
+
   return (
     <nav className="navbar navbar-expand-sm">
       <div className="container-fluid">

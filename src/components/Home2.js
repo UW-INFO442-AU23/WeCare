@@ -1,7 +1,7 @@
 function Home2() {
   return (
       <div>
-        <img class="home-img" src="../img/home-page-collage.png" alt="hunger-image" width="250px" height="250px"></img>
+        <img class="home-img" src="../img/home-page-collage.png" alt="hunger banner" width="250px" height="250px"></img>
         {/* <div id="carouselExampleAutoplaying" className="carousel slide carousel-fade" data-bs-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">

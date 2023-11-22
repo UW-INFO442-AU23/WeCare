@@ -8,7 +8,6 @@ import Resources from './components/Resources';
 import Profile from './components/Profile/Profile';
 import Login from './components/Profile/Login';
 import Register from './components/Profile/Register';
-import ForgotPassword from './components/Profile/ForgotPassword';
 import Edit from './components/Profile/Edit';
 import Home2 from './components/Home2';
 import { auth } from './f-config';

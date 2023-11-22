@@ -17,8 +17,6 @@ display: flex;
 flex-direction: column;
 }
 
-/* navbar */
-/* hmmm */
 
 /* Styling for home page banner */
 .home-img {
@@ -28,12 +26,6 @@ flex-direction: column;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
-/* Mission Title styling */
-/* h1.mission-title { */
-/* margin-top: 35px; */
-/* text-align: center;
-} */
 
 /* Mission Statement styling */
 p.mission {
@@ -50,6 +42,20 @@ p.mission {
   .homebody{
     margin: 5em 12em 0 12em ;
     }
+
+  /* Quiz page */
+  .quizbody{
+    margin: 5em 12em 0 12em ;
+  }
+
+  #button-forquiz{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    display: inline-block;
+    /* flex: content;
+    display: inline-flex;
+    justify-content: center; */
+  }
     
 
 }
@@ -106,67 +112,33 @@ align-items: center;
 padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
-/* Quiz page */
-.quizbody{
-  margin: 5em 12em 0 12em ;
-}
 
 /* .quiz-header{
 align-items: center;
 } */
 
-.q-btn {
-padding: 20px;
-width: 25%;
-background-color:#B6C0A5; 
-border-radius: 35px;
-border: none;
+#button-forquiz{
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Take quiz and learn more buttons */
 .t-quiz, .t-resources {
 padding: 20px;
 width: 25%;
+flex:50%;
 border: 3px solid #B6C0A5; 
 border-radius: 35px;
-background-color: transparent; 
+background-color: transparent;
 }
 
 /* Take quiz and learn more buttons */
 .t-quiz:hover, .t-resources:hover{
 background-color: #B6C0A5; 
 }
-
-/* Learn more button */
-/* .t-resources {
-padding: 20px;
-width: 25%;
-border: 3px solid #B6C0A5; 
-border-radius: 35px;
-background-color: transparent; 
-} */
-
-/* .t-resources:hover {
-background-color: #B6C0A5; 
-} */
-
-/* Homepage take quiz button */
-/* .t-quiz{
-background-color: #B6C0A5;
-padding: 20px;
-width: 25%;
-border-radius: 35px;
-} */
-
-/* Homepage learn more button */
-/* .t-resources{
-border-color: #B6C0A5;
-border-width: 3px;
-padding: 20px;
-width: 25%;
-border-radius: 35px;
-} */
-
 
 /* General Button styling */
 .btn {
@@ -175,6 +147,15 @@ margin: 20px;
 margin-top: 30px;
 margin-bottom: 30px;
 }
+
+/* Take quiz button */
+.q-btn {
+  padding: 20px;
+  width: 25%;
+  background-color:#B6C0A5; 
+  border-radius: 35px;
+  border: none;
+  }
 
 /* Quiz questions */
 #q-button {
@@ -219,16 +200,6 @@ border-radius: 15px;
 .learnmore {
 padding-left: 10px;
 }
-
-/* Header */
-/* header {
-/* padding-top: 2rem;
-padding-bottom: 1rem; */
-/* color: #3A3B4D; */
-/* text-align: left; */
-/* } */
-
-/* Modal stuff */
 
 /* Style for the login page */
 .login {
