@@ -18,7 +18,7 @@ const Navbar = React.memo(() => {
   return (
     <nav className="navbar navbar-expand-sm">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">WeCare</a>
+        <a className="navbar-brand fw-bold fs-5" href="/">WeCare</a>
         <button className="navbar-toggler collapsed" type="button" onClick={toggleIcon} data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <div className={`animated-icon2 ${isOpen ? 'open' : ''}`}>
               <span></span>
@@ -29,7 +29,7 @@ const Navbar = React.memo(() => {
         </button>
 
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
+          <div className="navbar-nav fw-bold fs-5">
             <Link className="nav-link" to="/">Home</Link>
             <Link className="nav-link" to="/quiz">Quiz</Link>
             <Link className="nav-link" to="/resources">Resources</Link>

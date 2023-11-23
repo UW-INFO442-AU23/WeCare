@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { signOut } from 'firebase/auth';
 import { ref as databaseRef, onValue, remove } from 'firebase/database';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../AuthContext';

@@ -56,7 +56,7 @@ p.mission {
     display: inline-flex;
     justify-content: center; */
   }
-    
+
 
 }
 .carousel{
@@ -70,9 +70,9 @@ padding: 1.5rem;
 .parent {
 margin-top: 3rem;
 /* padding: 1rem 0rem 1rem 0rem; */
-display: flex; 
+display: flex;
 justify-content: center;
-flex-wrap: wrap; 
+flex-wrap: wrap;
 border-radius: 20px;
 margin-bottom: 3rem;
 }
@@ -130,14 +130,14 @@ align-items: center;
 padding: 20px;
 width: 25%;
 flex:50%;
-border: 3px solid #B6C0A5; 
+border: 3px solid #B6C0A5;
 border-radius: 35px;
 background-color: transparent;
 }
 
 /* Take quiz and learn more buttons */
 .t-quiz:hover, .t-resources:hover{
-background-color: #B6C0A5; 
+background-color: #B6C0A5;
 }
 
 /* General Button styling */
@@ -152,7 +152,7 @@ margin-bottom: 30px;
 .q-btn {
   padding: 20px;
   width: 25%;
-  background-color:#B6C0A5; 
+  background-color:#B6C0A5;
   border-radius: 35px;
   border: none;
   }
@@ -367,7 +367,7 @@ height: 3em;
 .carousel-caption {
 background-color: rgba(225, 229, 207, 0.7);
 padding: 5px;
-border-radius: 10px; 
+border-radius: 10px;
 max-width: 300px;
 margin: auto;
 }
@@ -377,4 +377,8 @@ margin: auto;
 background-color: white;
 }
 
+/* navlink focus/hover color */
+.nav-link:focus, .nav-link:hover {
+  color: #A0A992;
+}
 

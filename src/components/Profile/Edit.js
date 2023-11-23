@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ref as databaseRef, set as databaseSet, onValue } from 'firebase/database';
 import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { updateProfile } from 'firebase/auth';
-import { auth, realtimedb, storage } from '../../f-config'; 
-import { Link } from 'react-router-dom';
+import { auth, realtimedb, storage } from '../../f-config';
 
 const Edit = () => {
   const [firstName, setFirstName] = useState('');

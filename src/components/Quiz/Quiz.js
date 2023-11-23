@@ -59,8 +59,6 @@ function Quiz() {
         } else {
             setAnswers(prevAnswers => [...prevAnswers, answer]);
         }
-        // console.log("New Answer Added:", answer);
-        // console.log("Updated Answers Array:", answers);
     };
 
     return (
