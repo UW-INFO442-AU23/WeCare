@@ -32,10 +32,10 @@ export function ResCards(props) {
         <div className="card-body">
           <div className="col-sm">
             <h2 className="card-title text-center">{resData.title}</h2>
-            <p className="card-text">{resData.descr}</p>
-            <div class="text-center">
-
+            <p className="card-text text-left">{resData.descr}</p>
+            <div className="mt-auto text-center">
               <button type="button" class="btn res-btn" data-bs-toggle="modal" data-bs-target={resData.bs}>Learn more</button>
+            </div>
               {/* <!-- Vertically centered modal --> */}
               <div class="modal-dialog modal-dialog-centered">
                 {/* <!-- Modal --> */}
@@ -56,32 +56,13 @@ export function ResCards(props) {
                         {/* Render modbody3 content as HTML */}
                         <div dangerouslySetInnerHTML={renderHTML(resData.modbody3 || '')} />
                       </div>
-                      {/* {resData.modbody}
-                       <br></br>
-                        <br></br> */}
-                      {/* <script>
-                      if({resData.modbody2} != ""){
-                        '\n'
-                        } else {
-                          <div>
-                              "no"
-                          </div>
-                        }
-                      </script> */}
-                       {/* {resData.modbody2} */}
-                       {/* {resData.modbody2br} */}
-                        {/* <br></br>
-                        <br></br>
-                        {resData.modbody3}
-                      </div> */}
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary m-1" data-bs-dismiss="modal">Close</button>
                       </div>
                     </div>
                   </div>
                   </div>
                 </div>
-            </div>
           </div>
         </div>
       </div>
@@ -111,6 +92,4 @@ function Resources(props) {
 }
 
 export default Resources;
-
-
 

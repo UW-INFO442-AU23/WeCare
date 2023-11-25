@@ -32,13 +32,12 @@
     "ariamodlabel": "modalThreeLabel",
     "modtitleid": "modalThreeLabel",
     "modtitle": "Washington hunger facts",
-    "modbody": "Currently in Washington state, 1 in 8 children, or 197,550 children, and 1 in 11 people, or 688,170 people are facing hunger. 30% of the households receiving SNAP benefits, formerly known as food stamps, have children.",
-    "modbody2": "A food survey of Washington residents conducted by Washington State University and the University of Washington School of Public Health found that grocery bills are the biggest source of financial stress for Washington residents who experience food insecurity. ",
-    "modbody3": "<ul><li>Of the 5,052 responses:</li><ul><li>41% of people had incomes of $35,000 or less and 71% had incomes of $75,000 or less</li><li>49% experienced food insecurity in the past month (as of January 2023), and used 55% used food assistance in the past month</li></ul><li>USDA found that food prices increased by about 10% in 2022, and predicted an increase of an additional 7% this year (2023)</li></ul>"
+    "modbody": "  In Washington state, hunger affects 1 in 8 children (197,550 people in total) and 1 in 11 people (688,170 people in total). 30% of households receiving SNAP benefits have kids. A survey by Washington State University and the University of Washington found that grocery expenses cause the most financial strain for those facing food insecurity.",
+    "modbody2": "<ul><li>Among 5,052 respondents:</li><ul><li>41% had incomes below $35,000, while 71% earned $75,000 or less.</li><li>49% experienced food insecurity in January 2023, with 55% using food assistance.</li></ul><li>USDA reported a 10% food price increase in 2022 and anticipated a further 7% rise in 2023.</li></ul>"
   },
   {
     "title": "",
-    "descr": "Check out our GitHub repo and learn more about the creators of WeCare",
+    "descr": "Explore our GitHub repo and learn more about WeCare's creators",
     "img": "../img/githublogo.png",
     "bs": "#modalFour",
     "modid": "modalFour",
