@@ -3,7 +3,6 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
-  /* font-family: "Arial"; */
 }
 
 @font-face {
@@ -12,9 +11,9 @@ src: url(https://fonts.google.com/specimen/Poppins);
 }
 
 #root {
-min-height: 100vh;
-display: flex;
-flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -43,22 +42,9 @@ p.mission {
     margin: 5em 12em 0 12em ;
     }
 
-  /* Quiz page */
-  .quizbody{
-    margin: 5em 12em 0 12em ;
-  }
-
-  #button-forquiz{
-    flex-direction: row;
-    flex-wrap: nowrap;
-    display: inline-block;
-    /* flex: content;
-    display: inline-flex;
-    justify-content: center; */
-  }
-
-
 }
+
+
 .carousel{
 
 /* margin:auto; */
@@ -152,10 +138,11 @@ margin-bottom: 30px;
 .q-btn {
   padding: 20px;
   width: 25%;
-  background-color:#B6C0A5;
+  background-color: #B6C0A5;
   border-radius: 35px;
   border: none;
-  }
+}
+
 
 /* Quiz questions */
 #q-button {
@@ -169,13 +156,19 @@ font-weight: bold;
 
 /* Media query for responsive layout */
 @media (max-width: 768px) {
-.parent {
-  flex-direction: column;
-}
-.child {
-  flex: 0;
-  width: 100%;
-}
+  .parent {
+    flex-direction: column;
+  }
+  .child {
+    flex: 0;
+    width: 100%;
+  }
+  .q-btn {
+    width: auto; /* Adjust width for smaller screens */
+  }
+  .t-quiz, .t-resources {
+    width: 40%;
+  }
 }
 
 /* resources page */
@@ -316,35 +309,21 @@ position: relative;
 min-height: 100vh; /* Full height */
 }
 
-p.lead {
-font-size: 18px;
-padding: 25px;
-min-width: 500px;
-border-radius: 20px;
-margin: 20px;
-/* box-shadow: rgba(0,0,0,0.9) 0 0 10px; */
-/* background-color: rgb(186, 198, 186); */
-background-color: #E1E5CF;
-color: black;
+.quiz-instructions {
+  font-size: 1.125rem; /* Responsive font size */
+  padding: 25px;
+  border-radius: 20px;
+  margin: 20px;
+  background-color: #E1E5CF;
+  color: black;
 }
+
 
 .leadtitle {
 font-weight: bold;
 font-size: 35px;
 color: black;
 }
-
-/* .content-container::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: inherit;
-opacity: 0.5;
-z-index: -1;
-} */
 
 
 /* homepage carousel slideshow */
