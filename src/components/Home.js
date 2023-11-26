@@ -103,8 +103,6 @@ function Home() {
 export default Home;
 
 
-// import { Header } from "./Resources";
-
 // function Home() {
 //     return (
 //         <div>

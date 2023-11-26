@@ -4,7 +4,6 @@ import { ref as databaseRef, onValue, remove } from 'firebase/database';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../AuthContext';
 import { auth, realtimedb } from '../../f-config';
-import './style.css';
 
 const sanitizeCharityNameForFirebaseKey = (name) => {
   return name.replace(/^\d+\.\s+/, '').replace(/[.#$[\]]/g, '');

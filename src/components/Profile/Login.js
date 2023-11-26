@@ -3,7 +3,6 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../f-config';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthContext';
-import './style.css';
 
 const Login = () => {
   const navigate = useNavigate();

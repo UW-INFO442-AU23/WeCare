@@ -3,7 +3,6 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth} from '../../f-config';
 import { AuthContext } from '../../AuthContext';
-import './style.css';  // Import your CSS file for styling
 
 const Register = () => {
   const navigate = useNavigate();
