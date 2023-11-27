@@ -24,14 +24,14 @@ export function ResCards(props) {
   };
 
   return (
-    <div className="d-flex col-md-6 col-lg-3 py-3">
+    <div className="d-flex col-md-6 col-lg-3 py-3" id="rescardrow">
       <div className="card w-100">
         <div class="text-center">
           <img className="card-img w-75 cardback" src={resData.img} alt={resData.name} />
         </div>
         <div className="card-body">
           <div className="col-sm">
-            <h2 className="card-title text-center">{resData.title}</h2>
+            {/* <h2 className="card-title text-center">{resData.title}</h2> */}
             <p className="card-text text-left">{resData.descr}</p>
             <div className="mt-auto text-center">
               <button type="button" class="btn res-btn" data-bs-toggle="modal" data-bs-target={resData.bs}>Learn more</button>
@@ -74,9 +74,8 @@ export function ResCards(props) {
 function Resources(props) {
   const reslist = props.res;
   const newCardArray = reslist.map((obj) => {
-    return <ResCards key={obj.title} resData={obj} />;
+    return <ResCards key={obj.modtitle} resData={obj} />;
   });
-
   return (
     <div className="container">
       <div class="resbody">

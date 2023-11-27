@@ -165,6 +165,11 @@ font-weight: bold;
 }
 
 /* resources page */
+/* 
+#rescardrow{
+  background-color: #B6C0A5;
+  width: 100%;
+} */
 
 .resbody{
 margin-top: 5rem;
@@ -172,10 +177,11 @@ margin-top: 5rem;
 }
 
 .card {
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-background-color: #E1E5CF;
+/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+/* background-color: #E1E5CF; */
+border-color: #B6C0A5;
 border-radius: 15px;
-border-width : 0;
+border-width : 5px;
 }
 
 .cardback{
@@ -221,6 +227,7 @@ margin: 50px;
 font-weight: bold;
 }
 
+
 /* background image */
 .content-container {
 /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/public/img/quizresultbackground.png) center center no-repeat; */
@@ -238,6 +245,10 @@ background-size: cover;
 /* background-attachment: fixed; */
 position: relative;
 min-height: 100vh; /* Full height */
+}
+
+#quiz-pic{
+  width: 100%;
 }
 
 .quiz-instructions {

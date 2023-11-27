@@ -104,7 +104,7 @@ const Edit = () => {
           <label>Profile Picture:</label>
           <input type="file" onChange={handleImageChange} />
         </div>
-        <button className="btn btn-light" type="submit">Save Changes</button>
+        <button className="btn btn-outline-secondary mx-5" type="submit">Save Changes</button>
       </form>
     </div>
   );
