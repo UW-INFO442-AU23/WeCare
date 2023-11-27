@@ -1,4 +1,5 @@
 import { Header } from "./Resources/Resources";
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -90,10 +91,8 @@ function Home() {
           </div>
       </div>
       <div class="text-center" id="button-forquiz">
-
-          <button type="button" className="btn t-quiz"><a href="/quiz">Take quiz</a></button>
-          <button type="button" className="btn t-resources"><a href="/resources">Learn more</a></button>
-
+        <button type="button" className="btn t-quiz"><Link to="/quiz">Take Quiz</Link></button>
+        <button type="button" className="btn t-resources"><Link to="/resources">Learn more</Link></button>
       </div>
 
     </div>
