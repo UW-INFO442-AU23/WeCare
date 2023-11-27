@@ -66,8 +66,10 @@ function Home() {
       </div>
       <div class="text-center" id="button-forquiz">
 
-          <button type="button" className="btn t-quiz"><a href="/quiz">Take quiz</a></button>
-          <button type="button" className="btn t-resources"><a href="/resources">Learn more</a></button>
+          {/* <button type="button" className="btn t-quiz"><a href="/quiz">Take quiz</a></button> */}
+          <a href="/quiz" className="btn t-quiz">Take quiz</a>
+          {/* <button type="button" className="btn t-resources"><a href="/resources">Learn more</a></button> */}
+          <a href="/resources" className="btn t-quiz">Learn more</a>
 
       </div>
 
