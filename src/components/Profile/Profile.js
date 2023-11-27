@@ -115,10 +115,10 @@ const Profile = () => {
                   </div>
                 </div>
                 <div class="text-center edlogbtn">
-                <button className="logout-button" onClick={handleLogout}>
+                <button className="btn btn-outline-danger logout-button" onClick={handleLogout}>
                   Logout
                 </button>
-                <NavLink to="/edit" className="edit-button">
+                <NavLink to="/edit" className="btn btn-outline-primary edit-button">
                   Edit
                 </NavLink>
                 </div>

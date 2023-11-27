@@ -44,7 +44,7 @@ function QuizContent({ questions, onAnswer, answers, onReset }) {
                 Progress: {currentQuestion + 1} / {questions.length}
             </div>
             <div className="text-center mt-2">
-                <button className="btn btn-secondary" onClick={handleBackClick}>Back</button>
+                <button className="btn btn-outline-secondary" onClick={handleBackClick}>Back</button>
             </div>
         </div>
     );

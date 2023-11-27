@@ -477,7 +477,7 @@ background-color: white;
   margin-top: 10px;
 }
 
-.logout-button {
+/* .logout-button {
   background-color: #dc3545;
   color: #fff;
   border: none;
@@ -494,7 +494,7 @@ background-color: white;
   margin-top: 10px;
   text-decoration: none;
   display: inline-block;
-}
+} */
 
 .edit-con{
   background-color: #E1E5CF;

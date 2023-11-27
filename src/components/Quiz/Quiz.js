@@ -65,7 +65,7 @@ return (
     <div className="container mt-4 quizbody mx-6 px-6">
         {!started && (
             <div className="mb-4">
-                <div className="text-center">
+                <div className="text-center my-5">
                     {Header("Hunger Insight Quiz")}
                 </div>
                 <div className="lead my-5 quiz-instructions">

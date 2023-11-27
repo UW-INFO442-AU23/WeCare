@@ -82,21 +82,25 @@ const Edit = () => {
 
   return (
     <div id="container-bg">
-      <h1>Edit Profile</h1>
+      <h1 class="py-5">
+          <div class="text-center">
+            Edit profile
+            </div>
+        </h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div class="mx-5">
           <label>First and Last Name:</label>
           <input type="text" value={firstName} onChange={handleFirstLastNameChange} />
         </div>
-        <div>
+        <div class="mx-5">
           <label>Pronouns:</label>
           <input type="text" value={pronouns} onChange={handlePronouns} />
         </div>
-        <div>
+        <div class="mx-5">
           <label>Address:</label>
           <input type="text" value={address} onChange={handleAddress} />
         </div>
-        <div>
+        <div class="mx-5">
           <label>Profile Picture:</label>
           <input type="file" onChange={handleImageChange} />
         </div>
