@@ -40,8 +40,8 @@
     "ariamodlabel": "GitHub",
     "modtitleid": "modalFourLabel",
     "modtitle": "GitHubTeam",
-    "modbody": "This website was created for a group project for our INFO 442 class at the University of Washington, Seattle.",
-    "modbody2": "Our team consists of Marala Berdyeva, Remi Kahn, Ananya Mishra, Beril Ozhan, and Qinruo Yang.",
-    "modbody3": "Our GitHub repository can be found at <a href='https://github.com/UW-INFO442-AU23/WeCare' target='_blank'>https://github.com/UW-INFO442-AU23/WeCare</a>"
+    "modbody": "This website was created for a group project for our INFO 442 class at the University of Washington, Seattle. Our team consists of Marala Berdyeva, Remi Kahn, Ananya Mishra, Beril Ozhan, and Qinruo Yang.",
+    "modbody2": "Our GitHub repository can be found at <u><a href='https://github.com/UW-INFO442-AU23/WeCare' target='_blank'>https://github.com/UW-INFO442-AU23/WeCare</a><u>",
+    "modbody3": "All images and credit can be found in our README file on our repository."
   }
 ]
