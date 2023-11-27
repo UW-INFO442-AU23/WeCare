@@ -60,64 +60,6 @@ function Quiz() {
             setAnswers(prevAnswers => [...prevAnswers, answer]);
         }
     };
-
-    // return (
-    //     <div className="container mt-4 quizbody mx-6 px-6">
-    //         {!started && (
-    //             <div className="mb-4">
-    //                 <div className="text-center my-5">
-    //                     {Header("Hunger Insight Quiz")}
-    //                 </div>
-    //                 <div className="parent container" id="parent-box">
-    //     <div className="child d-flex col-md-6 col-lg-3 v-center">
-    //       <img src="../img/quiz-pic.png" className="d-block" id="quiz-pic" alt="animated food"/>
-    //     </div>
-    //     <div className="child d-flex col-md-6 col-lg-3 py-3">
-    //       <div>
-    //       <h1 style={{ textAlign: 'left', fontSize: '1.2em', fontWeight: 'bold'}}>Quiz Instructions</h1>
-    //                     <ul>
-    //                         <li>
-    //                             Answer 5 questions about:
-    //                             <ul>
-    //                                 <li>Engagement</li>
-    //                                 <li>Impact</li>
-    //                                 <li>Culture</li>
-    //                                 <li>Local vs global impact</li>
-    //                                 <li>Health focus</li>
-    //                             </ul>
-    //                         </li>
-    //                         <li>
-    //                             Click on the answer that better encompasses what you value and agree with.
-    //                         </li>
-    //                         <li>
-    //                             Press the back button if you need to move to the previous question or to the quiz home page.
-    //                         </li>
-    //                     </ul>
-    //                 </div>
-    //         </div>
-    //     </div>
-      
-    //                 {/* <div className="lead my-5 quiz-instructions"> */}
-                        
-    //                 <div className="text-center">
-    //                     <p className="fw-bold">
-    //                         Ready to find your match and contribute to the Zero Hunger goal? Let's get started!
-    //                     </p>
-    //                 </div>
-    //             </div>
-    //         )}
-    //         {started ? (
-    //             <QuizContent questions={questions} onAnswer={handleAnswer} answers={answers} onReset={handleResetQuiz} />
-    //         ) : (
-    //             <div className="text-center">
-    //                 <button className="btn q-btn" onClick={handleStartQuiz}>Start Quiz</button>
-    //             </div>
-    //         )}
-    //     </div>
-    // );
-    // }
-    
-    // export default Quiz;
     
 
 return (
