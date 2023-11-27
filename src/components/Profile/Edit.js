@@ -112,15 +112,15 @@ const Edit = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <label>First and Last Name:</label>
-          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
+          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder= "e.g. Jennifer Coolidge"/>
         </div>
         <div>
           <label>Pronouns:</label>
-          <input type="text" name="pronouns" value={formData.pronouns} onChange={handleChange} />
+          <input type="text" name="pronouns" value={formData.pronouns} onChange={handleChange} placeholder= "e.g. she/her, he/him, they/them"/>
         </div>
         <div>
           <label>City:</label>
-          <input type="text" name="address" value={formData.address} onChange={handleChange} />
+          <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder= "e.g. Seattle"/>
         </div>
         <div>
           <label>Profile Picture:</label>
