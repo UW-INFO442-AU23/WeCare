@@ -70,8 +70,6 @@ const Profile = () => {
     return <div>Loading profile...</div>;
   }
 
-  console.log(user);
-
   return (
     <div id="container-bg">
       <div className="overallprofile">

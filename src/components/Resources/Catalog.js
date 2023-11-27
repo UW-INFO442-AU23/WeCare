@@ -27,7 +27,7 @@ const columns = [
   { id: 'charity', label: 'Charities', minWidth: 200, align: 'left' },
   { id: 'focus', label: 'Focus Area', minWidth: 200, align: 'center' },
   { id: 'rating', label: 'Charity Navigator Rating', minWidth: 150, align: 'center'},
-  { id: 'rating', label: 'Save/Unsave', minWidth: 150, align: 'center'}
+  { id: 'saveUnsave', label: 'Save/Unsave', minWidth: 150, align: 'center'}
 ];
 
 const initialRows = [

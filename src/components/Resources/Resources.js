@@ -39,7 +39,7 @@ export function ResCards(props) {
               {/* <!-- Vertically centered modal --> */}
               <div className="modal-dialog modal-dialog-centered">
                 {/* <!-- Modal --> */}
-                <div className="modal fade" id={resData.modid} tabindex="-1" aria-labelledby={resData.ariamodlabel} aria-hidden="true">
+                <div className="modal fade" id={resData.modid} tabIndex="-1" aria-labelledby={resData.ariamodlabel} aria-hidden="true">
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header">
