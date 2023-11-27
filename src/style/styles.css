@@ -42,6 +42,10 @@ p.mission {
     margin: 5em 12em 0 12em ;
     }
 
+    .quizbody{
+      margin: 5em 12em 0 12em ;
+      }
+
 }
 
 .carousel{
@@ -115,7 +119,7 @@ background-color: transparent;
 }
 
 /* Take quiz and learn more buttons */
-.t-quiz:hover, .t-resources:hover{
+.t-quiz:hover, .t-resources:hover, .q-btn:hover{
 background-color: #B6C0A5;
 }
 
@@ -131,13 +135,19 @@ background-color: #B6C0A5;
 .q-btn {
   padding: 20px;
   width: 25%;
-  background-color: #B6C0A5;
+  border: 3px solid #B6C0A5;
   border-radius: 35px;
-  border: none;
 }
 
 
 /* Quiz questions */
+/* 
+.quizbody{
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+} */
+
 #q-button {
 background-color: #E1E5CF;
 padding: 40px;
@@ -197,6 +207,10 @@ padding-left: 10px;
 .res-btn{
 color: #3971e0;
 font-weight: bold;
+}
+
+table, th, td {
+  border: 2px solid #B6C0A5;
 }
 
 

@@ -183,9 +183,9 @@ export default function BasicTable() {
                       <TableCell align="center">{row.rating}</TableCell>
                       <TableCell align="center">
                         {row.isSaved ? (
-                          <button className="btn btn-outline-secondary" onClick={() => handleUnsave(row)}>Unsave</button>
+                          <button className="btn btn-outline-secondary my-1" onClick={() => handleUnsave(row)}>Unsave</button>
                         ) : (
-                          <button className="btn btn-outline-primary" onClick={() => handleSave(row)}>Save</button>
+                          <button className="btn btn-outline-primary my-1" onClick={() => handleSave(row)}>Save</button>
                         )}
                       </TableCell>
                     </TableRow>

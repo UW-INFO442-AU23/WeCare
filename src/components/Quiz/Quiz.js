@@ -121,10 +121,11 @@ function Quiz() {
     
 
 return (
-    <div className="container mt-4 quizbody mx-6 px-6">
+    <div className="container">
+        <div class="mt-4 quizbody">
         {!started && (
             <div className="mb-4">
-                <div className="text-center my-5">
+                <div className="my-5">
                     {Header("Hunger Insight Quiz")}
                 </div>
                 <div className="lead my-5 quiz-instructions">
@@ -162,6 +163,7 @@ return (
                 <button className="btn q-btn" onClick={handleStartQuiz}>Start Quiz</button>
             </div>
         )}
+    </div>
     </div>
 );
 }
