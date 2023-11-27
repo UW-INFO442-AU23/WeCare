@@ -79,7 +79,6 @@ function Resources(props) {
   return (
     <div className="container">
       <div className="resbody">
-      {/* Container div for the Bootstrap grid */}
       {Header("Learn More")}
       <div className="row mx-0 my-5">
         {newCardArray}

@@ -27,7 +27,6 @@ function App(props) {
             <Route path="/profile" element={<ProtectedRoute component={Profile} redirectTo="/login" />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />}/>
-            {/* <Route path="/reset" element={<ForgotPassword/>} /> */}
             <Route path='/edit' element={<Edit/>}/>
           </Routes>
         </div>

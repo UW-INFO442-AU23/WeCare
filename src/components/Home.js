@@ -1,5 +1,4 @@
 import { Header } from "./Resources/Resources";
-import { Link } from 'react-router-dom';
 
 function Home() {
   return (
