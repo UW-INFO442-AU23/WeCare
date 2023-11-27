@@ -45,6 +45,11 @@ The aim of our project is to bridge this gap of awareness, believing that enligh
 - Log in & Sign up
 - Customize profile
 
+## Libraries & Framework
+
+- MUI
+- Bootstrap
+
 ## Testing Protocol
 
 
