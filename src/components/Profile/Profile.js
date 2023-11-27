@@ -74,7 +74,7 @@ const Profile = () => {
 
   return (
     <div id="container-bg">
-      <div class="overallprofile">
+      <div className="overallprofile">
       <div className="profile-container">
         <section className="profile-section">
           <div className="profile-content">
@@ -114,7 +114,7 @@ const Profile = () => {
                     </div>
                   </div>
                 </div>
-                <div class="text-center edlogbtn">
+                <div className="text-center edlogbtn">
                 <button className="btn btn-outline-danger logout-button" onClick={handleLogout}>
                   Logout
                 </button>

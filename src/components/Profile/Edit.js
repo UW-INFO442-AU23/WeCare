@@ -110,19 +110,19 @@ const Edit = () => {
     <div id="container-bg">
       <h1 className="text-center py-5">Edit Profile</h1>
       <form onSubmit={handleSubmit}>
-        <div class="mx-5">
+        <div className="mx-5">
           <label>First and Last Name:</label>
           <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder= "e.g. Jennifer Coolidge"/>
         </div>
-        <div class="mx-5">
+        <div className="mx-5">
           <label>Pronouns:</label>
           <input type="text" name="pronouns" value={formData.pronouns} onChange={handleChange} placeholder= "e.g. she/her, he/him, they/them"/>
         </div>
-        <div class="mx-5">
+        <div className="mx-5">
           <label>City:</label>
           <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder= "e.g. Seattle"/>
         </div>
-        <div class="mx-5">
+        <div className="mx-5">
           <label>Profile Picture:</label>
           <input type="file" onChange={handleImageChange} />
           <p>Please upload a JPG or PNG file.</p>
