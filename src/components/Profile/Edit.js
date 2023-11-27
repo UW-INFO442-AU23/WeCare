@@ -108,27 +108,27 @@ const Edit = () => {
 
   return (
     <div id="container-bg">
-      <h1>Edit Profile</h1>
+      <h1 className="text-center py-5">Edit Profile</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div class="mx-5">
           <label>First and Last Name:</label>
           <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder= "e.g. Jennifer Coolidge"/>
         </div>
-        <div>
+        <div class="mx-5">
           <label>Pronouns:</label>
           <input type="text" name="pronouns" value={formData.pronouns} onChange={handleChange} placeholder= "e.g. she/her, he/him, they/them"/>
         </div>
-        <div>
+        <div class="mx-5">
           <label>City:</label>
           <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder= "e.g. Seattle"/>
         </div>
-        <div>
+        <div class="mx-5">
           <label>Profile Picture:</label>
           <input type="file" onChange={handleImageChange} />
           <p>Please upload a JPG or PNG file.</p>
           {displayedImage && <img src={displayedImage} alt="Profile" style={{ width: '100px', height: '100px', marginTop: '10px' }} />}
         </div>
-        <button className="btn btn-light" type="submit">Save Changes</button>
+        <button className="btn btn-outline-secondary mx-5" type="submit">Save Changes</button>
       </form>
     </div>
   );
