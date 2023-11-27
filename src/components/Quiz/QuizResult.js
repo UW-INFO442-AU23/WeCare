@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import charityData from '../../data/charityData.json'; // Import the JSON data
 
+// used the mui library to create the quiz result cards: https://mui.com/material-ui/react-card/
+
 function CharityCard({ href, image, title, description }) {
   return (
     <div className="charitycards">
