@@ -45,10 +45,15 @@ The aim of our project is to bridge this gap of awareness, believing that enligh
 - Log in & Sign up
 - Customize profile
 
+## Libraries & Framework
+
+- MUI
+- Bootstrap
+
 ## Testing Protocol
 
 
-|   | Feature 1: Quiz | Feature 2: Resources Cards | Feature 3: Charity Catalog | Feature 4: Log In & Sign up | Feature 5: Customize Profile |
+|   | Feature 1: Quiz | Feature 2: Resources Cards | Feature 3: Charity Catalog & Save Charity | Feature 4: Log In & Sign up | Feature 5: Customize Profile |
 | ------------- | ------------- | ------------ | ------------- | ------------ | ------------ |
 | Requirement Specifications  | The quiz provides five questions to match individuals with specific charities based on their preferences. The question will display immediately when the user presses start quiz and after the user answers a question, the next question will come in sequential order. The progress bar will show the user progress in both a bar form and numerical form depending on which question they are on. The user may also go back to change their answer or go back to the initial quiz page. Once the user completes all five questions they will be matched with five charities. | On the Resources page, we will have four cards where users can click to learn more about various topics or other resources. | On the Resources page, we will include a charity catalog where users can look through multiple charities in a table format. Users can also save/unsave these charities to their profile. If a user wants to learn more about a specific charity they can click on the charity name to navigate to its website. | The user may log in using an appropriate email and password. If a user does not have an account they may sign up using an email and password. Once a user is signed in they can go to the profile tab and customize their information. A user may log out by navigating to the profile tab and clicking log out. | Once a user is logged in or has signed up, they can edit their profile. Options to edit include a profile photo, name, city, and pronouns. |
 | Testing Cases  |<ul><li>User clicks start quiz button.</li><li>User answers a couple questions then presses back button.</li><li>User takes quiz multiple times, answering with different options.</li></ul>  | <ul><li>User clicks on learn more button.</li><li>User presses x to close learn more pop up.</li></ul> | <ul><li>User saves a charity.</li><li>User unsaves a charity.</li><li>User is not logged in and attempts to save charity. They are then prompted to log in.</li></ul>  |<ul><li>User logs in.</li><li>User logs in with wrong credentials.</li><li>User signs up.</li><li>User logs out.</li><li>User inputs incorrect email format. </li></ul> | <ul><li>User edits profile information and saves changes.</li><li>User adds jpg or png file for profile image.</li></ul> |
