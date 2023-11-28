@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth} from '../../f-config';
+import { auth } from '../../f-config';
 import { AuthContext } from '../../AuthContext';
 
 const Register = () => {

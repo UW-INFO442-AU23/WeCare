@@ -18,10 +18,11 @@ const Profile = () => {
     address: '',
   });
   const [savedCharities, setSavedCharities] = useState([]);
+  const [isProfileLoading, setIsProfileLoading] = useState(true);
 
   useEffect(() => {
     if (user) {
-      // Fetch user details from realtimedb
+      setIsProfileLoading(true); // Start loading when fetching user data
       const userRef = databaseRef(realtimedb, `users/${user.uid}`);
       onValue(userRef, (snapshot) => {
         const data = snapshot.val();
@@ -32,11 +33,13 @@ const Profile = () => {
             pronouns: data.pronouns || '',
             address: data.address || '',
           });
-          if (data.savedCharities) {
-            setSavedCharities(Object.values(data.savedCharities));
-          }
+          setSavedCharities(data.savedCharities ? Object.values(data.savedCharities) : []);
         }
+        setIsProfileLoading(false); // Stop loading after data is fetched
       });
+    } else {
+      setProfileData(null); // Reset profile data if no user
+      setIsProfileLoading(false);
     }
   }, [user]);
 
@@ -66,8 +69,14 @@ const Profile = () => {
       .catch(error => console.error('Error unsaving charity:', error));
   };
 
-  if (isLoading) {
+  const isDataLoading = isLoading || isProfileLoading;
+
+  if (isDataLoading) {
     return <div>Loading profile...</div>;
+  }
+
+  if (!user) {
+    return <p>You are not logged in. Please log in to view your profile.</p>;
   }
 
   return (
@@ -98,7 +107,6 @@ const Profile = () => {
                       <h3>Saved Charities</h3>
                         <ul>
                           {savedCharities.map((charity, index) => (
-                            // probably needs to put into css file
                             <li key={index} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                               <a href={charity.link} target="_blank" rel="noopener noreferrer">
                                 {displayCharityName(charity.charity)}
