@@ -6,7 +6,7 @@ function Home() {
       {Header("Our Mission")}
       <p className="mission">In a world where hunger is on the rise, WeCare aims to raise awareness on the growing challenges of food insecurity within the state of Washington. Through our interactive quizzes and informative resources, we are committed to empowering individuals with knowledge and actionable avenues to combat this pervasive issue of hunger.</p>
 
-      <div id="carouselExampleAutoplaying" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+      <div id="carouselExampleAutoplaying" className="carousel slide carousel-fade hide-on-small" data-bs-ride="carousel" data-bs-interval="3000">
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src="../img/Home-1.png" className="d-block w-100 custom-img" alt="animated food"></img>

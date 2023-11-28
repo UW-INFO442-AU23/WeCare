@@ -1,39 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { ref as databaseRef, get, set as databaseSet, onValue } from 'firebase/database';
 import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { auth, realtimedb, storage } from '../../f-config';
+import { realtimedb, storage } from '../../f-config';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../AuthContext';
 
 const Edit = () => {
   const [image, setImage] = useState(null);
-  const [user, setUser] = useState(null);
+  const { user } = useContext(AuthContext);
   const [formData, setFormData] = useState({ firstName: '', pronouns: '', address: '' });
   const [currentPhotoURL, setCurrentPhotoURL] = useState(null);
   const [displayedImage, setDisplayedImage] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchUserData = async () => {
-      const currentUser = auth.currentUser;
-      if (currentUser) {
-        setUser(currentUser);
-        const userRef = databaseRef(realtimedb, `users/${currentUser.uid}`);
-        onValue(userRef, (snapshot) => {
-          const data = snapshot.val();
-          if (data) {
-            setFormData({
-              firstName: data.displayName || '',
-              pronouns: data.pronouns || '',
-              address: data.address || '',
-            });
-            setCurrentPhotoURL(data.photoURL || null);
-            setDisplayedImage(data.photoURL || null);
-          }
-        });
-      }
-    };
-    fetchUserData();
-  }, []);
+    if (user) {
+      const userRef = databaseRef(realtimedb, `users/${user.uid}`);
+      onValue(userRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          setFormData({
+            firstName: data.displayName || '',
+            pronouns: data.pronouns || '',
+            address: data.address || '',
+          });
+          setCurrentPhotoURL(data.photoURL || null);
+          setDisplayedImage(data.photoURL || null);
+        }
+      });
+    }
+  }, [user]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
