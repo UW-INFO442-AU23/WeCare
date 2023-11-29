@@ -5,9 +5,9 @@
     "bs": "#modalOne",
     "modid": "modalOne",
     "ariamodlabel": "Charity Navigator",
-    "modtitleid": "modalOneLabel",
-    "modtitle": "CharityNavigator",
-    "modbody": "Charity Navigator is a website that helps donors evaluate the credibility of more than 200,000 charitable organizations in the US. It gives information on the charity's results, best practices for accountability and transparency, and financial stability."
+    "modtitleid": "CharityNavigator",
+    "modtitle": "Charity Navigator",
+    "modbody": "<u><a href='https://www.charitynavigator.org' target='_blank'>Charity Navigator</a></u> is a website that helps donors evaluate the credibility of more than 200,000 charitable organizations in the US. It gives information on the charity's results, best practices for accountability and transparency, and financial stability."
   },
   {
     "descr": "Learn more about global resources aiding hunger crisis",
@@ -15,8 +15,8 @@
     "bs": "#modalTwo",
     "modid": "modalTwo",
     "ariamodlabel": "Global resources",
-    "modtitleid": "modalTwoLabel",
-    "modtitle": "GlobalResources",
+    "modtitleid": "GlobalResources",
+    "modtitle": "Global resources",
     "modbody": "Feeding America - the largest US charity by revenue is a non-profit organization that feeds more than 46 million people through programs such as food pantries, soup kitchens, shelters, and other community agencies",
     "modbody2": "World Food Programme - an international organization that is a part of the United Nations that aims to provide food assistance around the world. It is the largest humanitarian organization in the world and has been the key provider of school meals. It is headquartered in Rome and has offices in 80 countries.",
     "modbody3": "Heifer International - a global nonprofit that aims to eradicate hunger and poverty using sustainable and values-based development in communities."
@@ -27,8 +27,8 @@
     "bs": "#modalThree",
     "modid": "modalThree",
     "ariamodlabel": "Washington hunger facts",
-    "modtitleid": "modalThreeLabel",
-    "modtitle": "WashingtonFacts",
+    "modtitleid": "WashingtonFacts",
+    "modtitle": "Washington hunger facts",
     "modbody": "  In Washington state, hunger affects 1 in 8 children (197,550 people in total) and 1 in 11 people (688,170 people in total). 30% of households receiving SNAP benefits have kids. A survey by Washington State University and the University of Washington found that grocery expenses cause the most financial strain for those facing food insecurity.",
     "modbody2": "<ul><li>Among 5,052 respondents:</li><ul><li>41% had incomes below $35,000, while 71% earned $75,000 or less.</li><li>49% experienced food insecurity in January 2023, with 55% using food assistance.</li></ul><li>USDA reported a 10% food price increase in 2022 and anticipated a further 7% rise in 2023.</li></ul>"
   },
@@ -38,8 +38,8 @@
     "bs": "#modalFour",
     "modid": "modalFour",
     "ariamodlabel": "GitHub",
-    "modtitleid": "modalFourLabel",
-    "modtitle": "GitHubTeam",
+    "modtitleid": "GitHubTeam",
+    "modtitle": "GitHub repository and the team",
     "modbody": "This website was created for a group project for our INFO 442 class at the University of Washington, Seattle. Our team consists of Marala Berdyeva, Remi Kahn, Ananya Mishra, Beril Ozhan, and Qinruo Yang.",
     "modbody2": "Our GitHub repository can be found at <u><a href='https://github.com/UW-INFO442-AU23/WeCare' target='_blank'>https://github.com/UW-INFO442-AU23/WeCare</a><u>",
     "modbody3": "All images and credit can be found in our README file on our repository."

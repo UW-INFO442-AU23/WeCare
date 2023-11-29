@@ -111,7 +111,7 @@ const Profile = () => {
                               <a href={charity.link} target="_blank" rel="noopener noreferrer">
                                 {displayCharityName(charity.charity)}
                               </a>
-                              <button onClick={() => handleUnsaveCharity(charity.charity)} style={{ marginLeft: '10px' }}>
+                              <button onClick={() => handleUnsaveCharity(charity.charity)} style={{ marginLeft: '10px' }} className="btn btn-outline-secondary my-3">
                                 Unsave
                               </button>
                             </li>

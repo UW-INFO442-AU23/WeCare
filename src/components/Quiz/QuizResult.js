@@ -38,7 +38,7 @@ function CharityCard({ href, image, title, description }) {
 function QuizResult({ answers }) {
   const renderCard = (questionIndex) => {
     const cardProps = charityData[questionIndex][answers[questionIndex]];
-    return <CharityCard {...cardProps} />;
+    return <CharityCard {...cardProps}/>;
   };
 
   return (

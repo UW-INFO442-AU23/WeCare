@@ -242,6 +242,9 @@ margin: 50px;
 font-weight: bold;
 }
 
+/* .charitycards{
+  height:200%;
+} */
 
 /* background image */
 .content-container {
@@ -273,6 +276,10 @@ min-height: 100vh; /* Full height */
   margin: 20px;
   background-color: #E1E5CF;
   color: black;
+}
+
+.quizrescard{
+  height: 100%;
 }
 
 /* homepage carousel slideshow */

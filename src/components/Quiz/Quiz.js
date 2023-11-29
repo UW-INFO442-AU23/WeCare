@@ -96,8 +96,9 @@ return (
                         Ready to find your match and contribute to the Zero Hunger goal? Let's get started!
                     </p>
                 </div>
-            </div>
+            </div>  
         )}
+        </div>
         {started ? (
             <QuizContent questions={questions} onAnswer={handleAnswer} answers={answers} onReset={handleResetQuiz} />
         ) : (
@@ -106,7 +107,7 @@ return (
             </div>
         )}
     </div>
-    </div>
+    
 );
 }
 
