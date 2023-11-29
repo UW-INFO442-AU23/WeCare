@@ -6,7 +6,6 @@ function QuizContent({ questions, onAnswer, answers, onReset }) {
 
     const handleAnswerClick = (index) => {
         onAnswer(index);
-        // console.log("Answer Selected for Question", currentQuestion + 1, ":", questions[currentQuestion].options[index]);
         setCurrentQuestion(prevQuestion => prevQuestion + 1);
     };
 
@@ -29,8 +28,7 @@ function QuizContent({ questions, onAnswer, answers, onReset }) {
             <h2>{questions[currentQuestion].question}</h2>
             {questions[currentQuestion].options.map((option, index) => (
                 <div key={index} className="mb-2">
-                    {/* <button className="btn btn-primary btn-block" */}
-                    <div class="text-center">
+                    <div className="text-center">
                     <button className="btn btn-block" id="q-button" onClick={() => handleAnswerClick(index)}>
                         {option}
                     </button>

@@ -82,7 +82,7 @@ max-width: 560px;
 
 
 /* Video description styling */
-p.descr {
+div.descr {
 font-size: 15px;
 padding: 20px;
 border-radius: 20px;
@@ -175,7 +175,7 @@ font-weight: bold;
 }
 
 /* resources page */
-/* 
+/*
 #rescardrow{
   background-color: #B6C0A5;
   width: 100%;
@@ -284,6 +284,17 @@ min-height: 100vh; /* Full height */
 background-color: rgba(0, 0, 0, 0.5);
 color: white;
 } */
+
+/* hide Carousel on small screens */
+.hide-on-small {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hide-on-small {
+      display: block;
+  }
+}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {

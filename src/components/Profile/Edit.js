@@ -1,39 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { ref as databaseRef, get, set as databaseSet, onValue } from 'firebase/database';
 import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { auth, realtimedb, storage } from '../../f-config';
+import { realtimedb, storage } from '../../f-config';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../AuthContext';
 
 const Edit = () => {
   const [image, setImage] = useState(null);
-  const [user, setUser] = useState(null);
+  const { user } = useContext(AuthContext);
   const [formData, setFormData] = useState({ firstName: '', pronouns: '', address: '' });
   const [currentPhotoURL, setCurrentPhotoURL] = useState(null);
   const [displayedImage, setDisplayedImage] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchUserData = async () => {
-      const currentUser = auth.currentUser;
-      if (currentUser) {
-        setUser(currentUser);
-        const userRef = databaseRef(realtimedb, `users/${currentUser.uid}`);
-        onValue(userRef, (snapshot) => {
-          const data = snapshot.val();
-          if (data) {
-            setFormData({
-              firstName: data.displayName || '',
-              pronouns: data.pronouns || '',
-              address: data.address || '',
-            });
-            setCurrentPhotoURL(data.photoURL || null);
-            setDisplayedImage(data.photoURL || null);
-          }
-        });
-      }
-    };
-    fetchUserData();
-  }, []);
+    if (user) {
+      const userRef = databaseRef(realtimedb, `users/${user.uid}`);
+      onValue(userRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          setFormData({
+            firstName: data.displayName || '',
+            pronouns: data.pronouns || '',
+            address: data.address || '',
+          });
+          setCurrentPhotoURL(data.photoURL || null);
+          setDisplayedImage(data.photoURL || null);
+        }
+      });
+    }
+  }, [user]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -110,19 +106,19 @@ const Edit = () => {
     <div id="container-bg">
       <h1 className="text-center py-5">Edit Profile</h1>
       <form onSubmit={handleSubmit}>
-        <div class="mx-5">
+        <div className="mx-5">
           <label>First and Last Name:</label>
           <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder= "e.g. Jennifer Coolidge"/>
         </div>
-        <div class="mx-5">
+        <div className="mx-5">
           <label>Pronouns:</label>
           <input type="text" name="pronouns" value={formData.pronouns} onChange={handleChange} placeholder= "e.g. she/her, he/him, they/them"/>
         </div>
-        <div class="mx-5">
+        <div className="mx-5">
           <label>City:</label>
           <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder= "e.g. Seattle"/>
         </div>
-        <div class="mx-5">
+        <div className="mx-5">
           <label>Profile Picture:</label>
           <input type="file" onChange={handleImageChange} />
           <p>Please upload a JPG or PNG file.</p>
