@@ -1,26 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import QuizResult from './QuizResult';
 
 function QuizContent({ questions, onAnswer, answers, onReset }) {
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
+    useEffect(() => {
+        const savedCurrentQuestion = localStorage.getItem('currentQuestion');
+        if (savedCurrentQuestion) {
+          setCurrentQuestion(Number(savedCurrentQuestion));
+        }
+    }, []);
+
     const handleAnswerClick = (index) => {
         onAnswer(index);
-        setCurrentQuestion(prevQuestion => prevQuestion + 1);
+        setCurrentQuestion(prevQuestion => {
+          const newQuestionIndex = prevQuestion + 1;
+          localStorage.setItem('currentQuestion', newQuestionIndex.toString()); // Save progress
+          return newQuestionIndex;
+        });
     };
+
 
     const handleBackClick = () => {
         if (currentQuestion === 0) {
-            onReset();
+          onReset();
         } else {
-            onAnswer(null);
-            setCurrentQuestion(prevQuestion => prevQuestion - 1);
+          onAnswer(null);
+          setCurrentQuestion(prevQuestion => {
+            const newQuestionIndex = prevQuestion - 1;
+            localStorage.setItem('currentQuestion', newQuestionIndex.toString()); // Save progress
+            return newQuestionIndex;
+          });
         }
-    };
+      };
 
     // Check if we've reached the end of the questions array
     if (currentQuestion >= questions.length) {
-        return <QuizResult answers={answers} />;
+        return <QuizResult answers={answers} onResetQuiz={onReset} />;
     }
 
     return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import QuizContent from './QuizContent';
 import { Header } from '../Resources/Resources';
 
@@ -44,6 +44,14 @@ function Quiz() {
     const [started, setStarted] = useState(false);
     const [answers, setAnswers] = useState([]);
 
+    useEffect(() => {
+        const savedAnswers = localStorage.getItem('quizAnswers');
+        if (savedAnswers) {
+          setAnswers(JSON.parse(savedAnswers));
+          setStarted(true);
+        }
+      }, []);
+
     const handleStartQuiz = () => {
         setStarted(true);
     };
@@ -51,15 +59,25 @@ function Quiz() {
     const handleResetQuiz = () => {
         setStarted(false);
         setAnswers([]);
+        localStorage.removeItem('quizAnswers');
+        localStorage.removeItem('currentQuestion');
     };
 
     const handleAnswer = (answer) => {
         if (answer === null) {
-            setAnswers(prevAnswers => prevAnswers.slice(0, -1)); // Remove the last answer
+          setAnswers(prevAnswers => {
+            const updatedAnswers = prevAnswers.slice(0, -1);
+            localStorage.setItem('quizAnswers', JSON.stringify(updatedAnswers));
+            return updatedAnswers;
+          });
         } else {
-            setAnswers(prevAnswers => [...prevAnswers, answer]);
+          setAnswers(prevAnswers => {
+            const updatedAnswers = [...prevAnswers, answer];
+            localStorage.setItem('quizAnswers', JSON.stringify(updatedAnswers));
+            return updatedAnswers;
+          });
         }
-    };
+      };
 
 
 return (

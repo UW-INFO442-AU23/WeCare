@@ -75,7 +75,7 @@ function CharityCard({ href, image, title, description, onShowModal }) {
   );
 }
 
-function QuizResult({ answers }) {
+function QuizResult({ answers, onResetQuiz }) {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
@@ -90,6 +90,10 @@ function QuizResult({ answers }) {
   const handleLoginClick = () => {
     navigate('/login');
     setShowModal(false);
+  };
+
+  const handleRestartQuiz = () => {
+    onResetQuiz();
   };
 
   const renderCard = (questionIndex) => {
@@ -108,6 +112,10 @@ function QuizResult({ answers }) {
       <h1 className="charityhead">Your Top Charities</h1>
       <div className="card-charities">
         {answers.map((answer, index) => renderCard(index))}
+      </div>
+      {/* restart quiz btn */}
+      <div className="text-center mt-4">
+        <button className="btn btn-outline-primary" onClick={onResetQuiz}>Restart Quiz</button>
       </div>
 
       <div className={`modal fade ${showModal ? 'show' : ''}`} id="loginModal" tabIndex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" style={{ display: showModal ? 'block' : 'none' }}>
