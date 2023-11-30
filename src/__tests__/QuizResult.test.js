@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import QuizResult from '../components/Quiz/QuizResult';
 import { AuthContext } from '../AuthContext';
 import '@testing-library/jest-dom';
@@ -10,7 +11,9 @@ const mockAuthContext = {
 
 const customRender = (ui, { providerProps, ...renderOptions }) => {
   return render(
-    <AuthContext.Provider value={providerProps}>{ui}</AuthContext.Provider>,
+    <BrowserRouter> {/* Wrap the UI with BrowserRouter */}
+      <AuthContext.Provider value={providerProps}>{ui}</AuthContext.Provider>
+    </BrowserRouter>,
     renderOptions
   );
 };

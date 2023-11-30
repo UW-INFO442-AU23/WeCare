@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
@@ -16,7 +17,7 @@ const sanitizeCharityNameForFirebaseKey = (name) => {
   return name.replace(/^\d+\.\s+/, '').replace(/[.#$[\]]/g, '');
 };
 
-function CharityCard({ href, image, title, description, charityName }) {
+function CharityCard({ href, image, title, description, onShowModal }) {
   const { user } = useContext(AuthContext);
   const [isSaved, setIsSaved] = useState(false);
 
@@ -26,12 +27,8 @@ function CharityCard({ href, image, title, description, charityName }) {
       const savedCharitiesRef = databaseRef(realtimedb, `users/${user.uid}/savedCharities/${sanitizedCharityName}`);
 
       get(savedCharitiesRef).then((snapshot) => {
-        if (snapshot.exists()) {
-          setIsSaved(true);
-        } else {
-          setIsSaved(false);
-        }
-      }).catch(error => {
+        setIsSaved(snapshot.exists());
+      }).catch((error) => {
         console.error('Error fetching saved charity status:', error);
       });
     }
@@ -39,7 +36,7 @@ function CharityCard({ href, image, title, description, charityName }) {
 
   const handleSaveUnsave = () => {
     if (!user) {
-      console.log('User not logged in');
+      onShowModal();
       return;
     }
     const userId = user.uid;
@@ -47,26 +44,16 @@ function CharityCard({ href, image, title, description, charityName }) {
     const charityRef = databaseRef(realtimedb, `users/${userId}/savedCharities/${sanitizedCharityName}`);
 
     if (isSaved) {
-      remove(charityRef).then(() => {
-        setIsSaved(false);
-      });
+      remove(charityRef).then(() => setIsSaved(false));
     } else {
-      set(charityRef, { charity: title }).then(() => {
-        setIsSaved(true);
-      });
+      set(charityRef, { charity: title }).then(() => setIsSaved(true));
     }
   };
 
   return (
     <div className="charitycards">
       <Card sx={{ maxWidth: 345, borderRadius: 4 }}>
-        <CardMedia
-          component="img"
-          height="140"
-          image={image}
-          alt={title}
-        />
-        {/* minHeight sets all the card to be have 280px height, in our case make all cards the same size */}
+        <CardMedia component="img" height="140" image={image} alt={title} />
         <CardContent style={{ minHeight: '280px' }}>
           <Typography gutterBottom variant="h4" component="div">
             {title}
@@ -89,9 +76,31 @@ function CharityCard({ href, image, title, description, charityName }) {
 }
 
 function QuizResult({ answers }) {
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleLoginClick = () => {
+    navigate('/login');
+    setShowModal(false);
+  };
+
   const renderCard = (questionIndex) => {
     const cardProps = charityData[questionIndex][answers[questionIndex]];
-    return <CharityCard key={cardProps.title + questionIndex} {...cardProps} />;
+    return (
+      <CharityCard
+        key={cardProps.title + questionIndex}
+        {...cardProps}
+        onShowModal={handleShowModal}
+      />
+    );
   };
 
   return (
@@ -100,10 +109,26 @@ function QuizResult({ answers }) {
       <div className="card-charities">
         {answers.map((answer, index) => renderCard(index))}
       </div>
+
+      <div className={`modal fade ${showModal ? 'show' : ''}`} id="loginModal" tabIndex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" style={{ display: showModal ? 'block' : 'none' }}>
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="loginModalLabel">Login Required</h5>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={handleCloseModal}></button>
+            </div>
+            <div className="modal-body">
+              You need to be logged in to save charities.
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={handleCloseModal}>Close</button>
+              <button type="button" className="btn btn-primary" onClick={handleLoginClick}>Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
-
 export default QuizResult;
-
