@@ -60,11 +60,11 @@ function Quiz() {
             setAnswers(prevAnswers => [...prevAnswers, answer]);
         }
     };
-    
+
 
 return (
     <div className="container">
-        <div class="mt-4 quizbody">
+        <div className="mt-4 quizbody">
         {!started && (
             <div className="mb-4">
                 <div className="my-5">
@@ -96,7 +96,7 @@ return (
                         Ready to find your match and contribute to the Zero Hunger goal? Let's get started!
                     </p>
                 </div>
-            </div>  
+            </div>
         )}
         </div>
         {started ? (
@@ -107,7 +107,7 @@ return (
             </div>
         )}
     </div>
-    
+
 );
 }
 
