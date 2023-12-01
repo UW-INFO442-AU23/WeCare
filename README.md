@@ -50,6 +50,18 @@ The aim of our project is to bridge this gap of awareness, believing that enligh
 - MUI
 - Bootstrap
 
+## Installation & Setup
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Run the following commands:
+   ```
+   npm install
+   npm start
+   ```
+
+**Live Website**: [WeCare](https://wecare-26feb.web.app/)
+
 ## Testing Protocol
 
 
@@ -80,18 +92,6 @@ Users when editing their profile can enter any text in the "First and Last Name"
 ## User Personas
 
 You can find the 3 user personas we have made [here](deliverables/user-personas).
-
-## Installation & Setup
-
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Run the following commands:
-   ```
-   npm install
-   npm start
-   ```
-
-**Live Website**: [WeCare](https://wecare-26feb.web.app/)
 
 ## References
 - Daniel C. (2002). "MAKE PUBLIC AWARE OF WORLD HUNGER". South Florida Sun - Sentinel. [Link](https://www.proquest.com/newspapers/make-public-aware-world-hunger/docview/387991123/se-2)
