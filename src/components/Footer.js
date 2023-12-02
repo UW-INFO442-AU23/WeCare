@@ -28,7 +28,7 @@ function Footer() {
       <div className="text-center p-4 bg-dark-subtle">
         © 2023
         <a className="text-reset fw-bold" href="https://wecare-26feb.web.app/"> WeCare </a>
-        INFO 442-2023
+        INFO 442
       </div>
     </div>
   );
