@@ -16,16 +16,6 @@ src: url(https://fonts.google.com/specimen/Poppins);
   flex-direction: column;
 }
 
-/* not used */
-/* Styling for home page banner */
-.home-img {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 /* Mission Statement styling */
 p.mission {
   /* margin: 3rem; */
@@ -141,21 +131,17 @@ background-color: #B6C0A5;
 
 
 /* Quiz questions */
-/* 
-.quizbody{
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-} */
 
 #q-button {
-background-color: #E1E5CF;
-padding: 40px;
-width:100%;
-
-font-size: 20px;
-font-weight: bold;
+  background-color: #E1E5CF;
+  padding: 40px;
+  max-width: 100%;
+  width: 90%;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: bold;
 }
+
 
 /* Media query for responsive layout */
 @media (max-width: 768px) {
@@ -175,11 +161,6 @@ font-weight: bold;
 }
 
 /* resources page */
-/*
-#rescardrow{
-  background-color: #B6C0A5;
-  width: 100%;
-} */
 
 .resbody{
 margin-top: 5rem;
