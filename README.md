@@ -107,6 +107,10 @@ You can find the 3 user personas we have made [here](deliverables/user-personas)
 - https://deohs.washington.edu/nwcohs/blog/policy-informing-research-economic-determinants-health
 - https://www.vecteezy.com/vector-art/13339301-volunteer-holds-a-box-of-food-food-donation-concept-humanitarian-assistance-to-poor-people-charity-and-donation-cartoon-flat-vector-illustration-isolated-on-white-background
 - https://stock.adobe.com/images/volunteer-distributing-food-to-people-during-coronavirus-covid-19-epidemic/346032075
+- https://www.charitynavigator.org/about-us/link-to-us/
+- https://www.vecteezy.com/vector-art/357012-vector-globe-icon
+- https://www.vecteezy.com/vector-art/14215095-magnifying-glass-line-icon-on-white-background
+- https://github.com/logosv
 
 
 
