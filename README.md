@@ -100,6 +100,16 @@ You can find the 3 user personas we have made [here](deliverables/user-personas)
 - “Hunger Report 2023: Food Insecurity Barely Budged amid Inflation, End of Pandemic Aid.” Capital Area Food Bank, Capital Area Food Bank, 27 Sept. 2023, www.capitalareafoodbank.org/blog/2023/09/12/hunger report-2023/#:~:text=The%20pandemic’s%20ongoing%20economic%20upheaval,region%2C%20according%20to%20the%20survey.
 - Mansfield, Heather. “6 Reasons Why People Do Not Donate Money to Charity.” Nonprofit Tech for Good, Nonprofit Tech for Good, 18 Oct. 2020, www.nptechforgood.com/2020/10/18/6-reasons-why-people-do-not-donate-money-to-charity/.
 
+### Links to images
+- https://stock.adobe.com/images/food-drive-grocery-donation-as-charity-product-share-for-poor-outline-concept/412082966
+- https://www.shutterstock.com/search/cash-donation-box
+- https://www.cspdailynews.com/foodservice/steal-idea-help-reduce-food-waste
+- https://deohs.washington.edu/nwcohs/blog/policy-informing-research-economic-determinants-health
+- https://www.vecteezy.com/vector-art/13339301-volunteer-holds-a-box-of-food-food-donation-concept-humanitarian-assistance-to-poor-people-charity-and-donation-cartoon-flat-vector-illustration-isolated-on-white-background
+- https://stock.adobe.com/images/volunteer-distributing-food-to-people-during-coronavirus-covid-19-epidemic/346032075
+
+
+
 
 
 
