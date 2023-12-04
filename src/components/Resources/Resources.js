@@ -33,7 +33,7 @@ export function ResCards(props) {
           <div className="col-sm">
             {/* <h2 className="card-title text-center">{resData.title}</h2> */}
             <p className="card-text text-left">{resData.descr}</p>
-            <div className="mt-auto text-center">
+            <div className="text-center">
               <button type="button" className="btn res-btn" data-bs-toggle="modal" data-bs-target={resData.bs}>Learn more</button>
             </div>
               {/* <!-- Vertically centered modal --> */}

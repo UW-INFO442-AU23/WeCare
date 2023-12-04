@@ -35,6 +35,9 @@ p.mission {
     .quizbody{
       margin: 5em 12em 0 12em ;
       }
+      .card-text{
+        height: 100px;
+      }
 
 }
 
@@ -175,6 +178,10 @@ border-radius: 15px;
 /* border-width : 5px; */
 border: none;
 }
+
+/* .card-text{
+  height: 100px;
+} */
 
 .cardback{
 margin-top:10%;
