@@ -17,9 +17,9 @@
     "ariamodlabel": "Global resources",
     "modtitleid": "GlobalResources",
     "modtitle": "Global resources",
-    "modbody": "Feeding America - the largest US charity by revenue is a non-profit organization that feeds more than 46 million people through programs such as food pantries, soup kitchens, shelters, and other community agencies",
-    "modbody2": "World Food Programme - an international organization that is a part of the United Nations that aims to provide food assistance around the world. It is the largest humanitarian organization in the world and has been the key provider of school meals. It is headquartered in Rome and has offices in 80 countries.",
-    "modbody3": "Heifer International - a global nonprofit that aims to eradicate hunger and poverty using sustainable and values-based development in communities."
+    "modbody": "<u><a href='https://www.feedingamerica.org/' target='_blank'>Feeding America</a></u> - the largest US charity by revenue is a non-profit organization that feeds more than 46 million people through programs such as food pantries, soup kitchens, shelters, and other community agencies",
+    "modbody2": "<u><a href='https://www.wfp.org/' target='_blank'>World Food Programme</a></u> - an international organization that is a part of the United Nations that aims to provide food assistance around the world. It is the largest humanitarian organization in the world and has been the key provider of school meals. It is headquartered in Rome and has offices in 80 countries.",
+    "modbody3": "<u><a href='https://www.heifer.org/' target='_blank'>Heifer International</a></u> - a global nonprofit that aims to eradicate hunger and poverty using sustainable and values-based development in communities."
   },
   {
     "descr": "Learn more fast facts about the hunger crisis in Washington state",

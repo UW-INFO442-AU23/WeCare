@@ -112,7 +112,7 @@ background-color: transparent;
 }
 
 /* Take quiz and learn more buttons */
-.t-quiz:hover, .t-resources:hover, .q-btn:hover{
+.t-quiz:hover, .t-resources:hover, .q-btn:hover, .r-btn:hover{
 background-color: #B6C0A5;
 }
 
@@ -132,6 +132,13 @@ background-color: #B6C0A5;
   border-radius: 35px;
 }
 
+/* Restart quiz button */
+.r-btn {
+  padding: 20px;
+  width: 25%;
+  border: 3px solid #B6C0A5;
+  border-radius: 35px;
+}
 
 /* Quiz questions */
 
@@ -178,10 +185,6 @@ border-radius: 15px;
 /* border-width : 5px; */
 border: none;
 }
-
-/* .card-text{
-  height: 100px;
-} */
 
 .cardback{
 margin-top:10%;
