@@ -162,7 +162,7 @@ background-color: #B6C0A5;
     flex: 0;
     width: 100%;
   }
-  .q-btn {
+  .q-btn, .r-btn {
     width: auto; /* Adjust width for smaller screens */
   }
   .t-quiz, .t-resources {

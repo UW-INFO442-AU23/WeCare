@@ -115,7 +115,7 @@ function QuizResult({ answers, onResetQuiz }) {
       </div>
       {/* restart quiz btn */}
       <div className="text-center mt-4">
-        <button class="btn btn-outline-success" onClick={onResetQuiz}>Restart Quiz</button>
+        <button class="btn r-btn" onClick={onResetQuiz}>Restart Quiz</button>
       </div>
 
       <div className={`modal fade ${showModal ? 'show' : ''}`} id="loginModal" tabIndex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" style={{ display: showModal ? 'block' : 'none' }}>
