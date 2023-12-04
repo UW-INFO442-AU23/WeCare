@@ -95,7 +95,7 @@ return (
                             Answer 5 questions about:
                             <ul>
                                 <li>Engagement</li>
-                                <li>Environmental impact</li>
+                                <li>Environmental Impact</li>
                                 <li>Culture</li>
                                 <li>Local vs global impact</li>
                                 <li>Health focus</li>
